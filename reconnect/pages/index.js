@@ -4,6 +4,7 @@ import styles from "../styles/Home.module.css";
 import DisplayLogo from "../component/DisplayLogo/DisplayLogo";
 import MascotSmall from "../component/MascotSmall/MascotSmall";
 import MoodQuestion from "../component/MoodQuestion/MoodQuestion";
+import Gratitude from "../component/Gratitude/Gratitude";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
           How are you feeling?
         </h1>
         <MoodQuestion className={styles.moodQuestion} />
+        <Gratitude/>
       </main>
     </div>
   );

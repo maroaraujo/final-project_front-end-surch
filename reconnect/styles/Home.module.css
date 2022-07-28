@@ -147,8 +147,29 @@
 
 .mascotSmall {
   position: absolute;
-  left: 84.85%;
-  right: 14.68%;
-  top: 7.38%;
-  bottom: 92.53%;
+  left: 72.22%;
+  right: 8.46%;
+  top: 6.18%;
+  bottom: 91.15%;
+}
+
+/*Start of main page gratitude styling*/
+.gratitudeBox{
+  gap:0;
+}
+.gratitudeContainer{
+  display: flex;
+  background:#CBE2EF;
+  border-radius: 15px;
+  margin-top: 21px;
+  width:374px;
+  justify-content: space-around;
+}
+.brain{
+  position: absolute;
+  width: 69px;
+  height: 23px;
+  left: 331px;
+  top: 425px;
+
 }
