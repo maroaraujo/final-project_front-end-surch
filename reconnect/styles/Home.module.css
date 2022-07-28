@@ -1,15 +1,16 @@
- .container {
-  padding: 0 2rem;
+.container {
+  display: flex;
+  justify-content: top;
 }
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: top;
   align-items: center;
+  margin-top: 2rem;
 }
 /*
 .footer {
@@ -129,8 +130,25 @@
 }
  */
 /*Start of mood questions styling*/
-.moodQuestionContainer{
+.moodQuestionContainer {
   display: flex;
   align-items: center;
-  background-color: #0070f3;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 5px #cbe2ef;
+  border-radius: 10px;
+}
+
+.moodStateContainer {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mascotSmall {
+  position: absolute;
+  left: 84.85%;
+  right: 14.68%;
+  top: 7.38%;
+  bottom: 92.53%;
 }

@@ -15,14 +15,14 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <DisplayLogo />
-        <MascotSmall />
+        <DisplayLogo className={styles.displayLogo} />
+        <MascotSmall className={styles.mascotSmall} />
         <h1 className={styles.title}>
           Hi Guest,
           <br />
           How are you feeling?
         </h1>
-        <MoodQuestion />
+        <MoodQuestion className={styles.moodQuestion} />
       </main>
     </div>
   );
