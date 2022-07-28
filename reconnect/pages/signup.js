@@ -1,3 +1,8 @@
 export default function signup() {
-    return (<h1>Sign Up Page</h1>)
-}
+    return (
+    <main>    
+    <h1>Sign Up Page</h1>
+    <a href="/api/auth/login">Login</a>
+    </main>
+    );
+    }
