@@ -129,6 +129,7 @@
   }
 }
  */
+
 /*Start of mood questions styling*/
 .moodQuestionContainer {
   display: flex;
@@ -146,7 +147,7 @@
 }
 
 .mascotSmall {
-/*   position: relative;
+  /*   position: relative;
   left: 72.22%;
   right: 8.46%;
   top: 6.18%;
@@ -154,31 +155,52 @@
 }
 
 /*Start of main page gratitude styling*/
-.gratitudeBox{
+.gratitudeBox {
   margin: 0;
 }
-.gratitudeContainer{
+.gratitudeContainer {
   display: flex;
-  background:#CBE2EF;
+  background: #cbe2ef;
   border-radius: 15px;
   margin-top: 21px;
-  width:374px;
+  width: 374px;
   justify-content: space-around;
 }
-.seeAll{
+.seeAll {
   position: absolute;
   width: 69px;
   height: 23px;
   left: 331px;
   top: 425px;
-
 }
-.quoteBox{
-  margin-top:21px;
-  background: #5584B1;
+.quoteBox {
+  margin-top: 21px;
+  background: #5584b1;
   width: 374px;
   height: 123px;
 }
-.quoteText{
+.quoteText {
   font-size: 20px;
+}
+
+/*Start of Tab Bar styling*/
+
+.bottomNav {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  border-top: 1px solid var(--grey-color);
+  z-index: 3;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bnTab {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
