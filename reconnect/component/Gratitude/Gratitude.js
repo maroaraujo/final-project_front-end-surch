@@ -11,7 +11,7 @@ export default function Gratitude(){
                 <input placeholder="type here"></input>
                 <p>date | reason</p>
             </div>
-                <p className={styles.seeAll}>see all</p>
+                <h5 className={styles.seeAll}>see all</h5>
         </div>
     )
 }
