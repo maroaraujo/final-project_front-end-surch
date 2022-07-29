@@ -2,13 +2,14 @@ import Styles from "../../styles/Home.module.css";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import {
-  RiHomeSmile2Line,
-  RiHomeSmile2Fill,
-  RiSearchEyeFill,
-} from "react-icons/ri";
-import { BiSearchAlt } from "react-icons/bi";
-import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
-import { RiUser5Line, RiUser5Fill } from "react-icons/ri";
+  IoHomeSharp,
+  IoHomeOutline,
+  IoStarOutline,
+  IoStar,
+  IoSettingsOutline,
+  IoSettingsSharp,
+} from "react-icons/io5";
+import { AiOutlinePlusSquare, AiFillPlusSquare } from "react-icons/ai";
 
 function TabBar(props) {
   const router = useRouter();
@@ -19,14 +20,14 @@ function TabBar(props) {
       case "home":
         router.push("/");
         break;
-      case "search":
-        router.push("/search");
+      case "favourites":
+        router.push("/");
         break;
-      case "saved":
-        router.push("/saved");
+      case "add":
+        router.push("/");
         break;
       case "account":
-        router.push("/account");
+        router.push("/");
         break;
       default:
         router.push("/");
@@ -35,18 +36,18 @@ function TabBar(props) {
   }, [activeTabs, router]);
 
   // ***** to update icons *****//
-
+  // title of icon and box around icon with rounded corners
   return (
     <div className={`${Styles.bottomNav}`}>
       <div className={`${Styles.bnTab}`}>
         {activeTabs === "home" ? (
-          <RiHomeSmile2Fill
+          <IoHomeSharp
             size="35"
             color="#000"
             onClick={() => setActiveTabs("home")}
           />
         ) : (
-          <RiHomeSmile2Line
+          <IoHomeOutline
             size="35"
             color="#000"
             onClick={() => setActiveTabs("home")}
@@ -54,44 +55,44 @@ function TabBar(props) {
         )}
       </div>
       <div className={`${Styles.bnTab}`}>
-        {activeTabs === "search" ? (
-          <RiSearchEyeFill
+        {activeTabs === "favourites" ? (
+          <IoStar
             size="35"
             color="#000"
-            onClick={() => setActiveTabs("search")}
+            onClick={() => setActiveTabs("favourites")}
           />
         ) : (
-          <BiSearchAlt
+          <IoStarOutline
             size="35"
             color="#000"
-            onClick={() => setActiveTabs("search")}
+            onClick={() => setActiveTabs("favourites")}
           />
         )}
       </div>
       <div className={`${Styles.bnTab}`}>
-        {activeTabs === "saved" ? (
-          <AiFillHeart
+        {activeTabs === "add" ? (
+          <AiFillPlusSquare
             size="35"
             color="#000"
-            onClick={() => setActiveTabs("saved")}
+            onClick={() => setActiveTabs("add")}
           />
         ) : (
-          <AiOutlineHeart
+          <AiOutlinePlusSquare
             size="35"
             color="#000"
-            onClick={() => setActiveTabs("saved")}
+            onClick={() => setActiveTabs("add")}
           />
         )}
       </div>
       <div className={`${Styles.bnTab}`}>
         {activeTabs === "account" ? (
-          <RiUser5Fill
+          <IoSettingsSharp
             size="35"
             color="#000"
             onClick={() => setActiveTabs("account")}
           />
         ) : (
-          <RiUser5Line
+          <IoSettingsOutline
             size="35"
             color="#000"
             onClick={() => setActiveTabs("account")}
