@@ -14,6 +14,7 @@ function TabBar(props) {
   const router = useRouter();
   const [activeTabs, setActiveTabs] = useState(props.name);
   useEffect(() => {
+    // ***** to update links to proper pages *****//
     switch (activeTabs) {
       case "home":
         router.push("/");
@@ -32,6 +33,8 @@ function TabBar(props) {
         break;
     }
   }, [activeTabs, router]);
+
+  // ***** to update icons *****//
 
   return (
     <div className={`${Styles.bottomNav}`}>
