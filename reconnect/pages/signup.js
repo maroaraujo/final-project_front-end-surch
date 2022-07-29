@@ -1,8 +1,10 @@
+import Link from "next/link";
+
 export default function signup() {
     return (
     <main>    
     <h1>Sign Up Page</h1>
-    <a href="/api/auth/login">Login</a>
+    <Link href="/api/auth/login">Login</Link>
     </main>
     );
     }
