@@ -5,6 +5,7 @@ import DisplayLogo from "../component/DisplayLogo/DisplayLogo";
 import MascotSmall from "../component/MascotSmall/MascotSmall";
 import MoodQuestion from "../component/MoodQuestion/MoodQuestion";
 import Gratitude from "../component/Gratitude/Gratitude";
+import Quote from "../component/Quote/Quote"
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
         </h1>
         <MoodQuestion className={styles.moodQuestion} />
         <Gratitude/>
+        <Quote/>
       </main>
     </div>
   );
