@@ -7,7 +7,6 @@ import MascotSmall from "../component/MascotSmall/MascotSmall";
 import MoodQuestion from "../component/MoodQuestion/MoodQuestion";
 import Gratitude from "../component/Gratitude/Gratitude";
 import Quote from "../component/Quote/Quote";
-import TabBar from "../component/TabBar/TabBar";
 import { useUser } from "@auth0/nextjs-auth0";
 
 export default function Home() {
@@ -32,7 +31,6 @@ export default function Home() {
         <MoodQuestion className={styles.moodQuestion} />
         <Gratitude />
         <Quote />
-        <TabBar />
       </main>
     </div>
   );
