@@ -167,7 +167,8 @@
   background: #cbe2ef;
   border-radius: 15px;
   margin-top: 21px;
-
+  max-height: 10rem;
+}
 
 /*Start of Tab Bar styling*/
 
@@ -190,9 +191,6 @@
   justify-content: center;
   align-items: center;
 }
-  width:374px;
-  justify-content: space-evenly;
-}
 
 .seeAll{
   position: relative;
@@ -205,6 +203,7 @@
   margin-top:21px;
   background: #5584B1;
   border-radius: 15px;
+  margin-bottom:21px;
 }
 .quoteText{
   color:white;
@@ -223,4 +222,8 @@
     width: 100%;
     flex-direction: column;
   }
+}
+.challenges{
+  display:flex;
+  justify-content: space-around;
 }

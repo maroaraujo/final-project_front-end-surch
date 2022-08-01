@@ -6,8 +6,13 @@ import MascotSmall from "../component/MascotSmall/MascotSmall";
 import MoodQuestion from "../component/MoodQuestion/MoodQuestion";
 import Gratitude from "../component/Gratitude/Gratitude";
 import Quote from "../component/Quote/Quote"
+import ChallengeCard from "../component/ChallengeCard/ChallengeCard";
 
 export default function Home() {
+
+  function onClick(){
+    alert("hello");
+  }
   return (
     <div className={styles.container}>
       <Head>
@@ -27,6 +32,13 @@ export default function Home() {
         <MoodQuestion className={styles.moodQuestion} />
         <Gratitude/>
         <Quote/>
+        <h1 className={styles.title}>Challenges of the week</h1>
+        <div className={styles.challenges}>
+          <ChallengeCard onClick={onClick} challenge={"Go to the Park"}/>
+          <ChallengeCard challenge={"Walk 5k steps"}/>
+          <ChallengeCard challenge={"Get 15 mins of sun"}/>
+          <ChallengeCard challenge={"Go for a coffee with a friend"}/>
+        </div>
       </main>
     </div>
   );
