@@ -53,7 +53,7 @@ function TabBar(props) {
             onClick={() => setActiveTabs("home")}
           />
         )}
-        <p className={`${Styles.bnTabText}`}>Home</p>
+        <span>Home</span>
       </div>
       <div className={`${Styles.bnTab}`}>
         {activeTabs === "favourites" ? (

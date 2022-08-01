@@ -7,7 +7,6 @@ export default function signup() {
       <h1>Sign Up Page</h1>
       <Link href="/api/auth/login">Login</Link>
       <Link href="/api/auth/logout">Logout</Link>
-      <Home />
     </main>
   );
 }
