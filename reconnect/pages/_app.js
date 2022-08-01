@@ -2,14 +2,15 @@ import "../styles/globals.css";
 import React from "react";
 import { UserProvider } from "@auth0/nextjs-auth0";
 import TabBar from "../component/TabBar/TabBar";
-// import { useUser } from "@auth0/nextjs-auth0";
+import { useUser } from "@auth0/nextjs-auth0";
+import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }) {
-  // const { user, error, isLoading } = useUser();
-  // console.log(user);
+  const router = useRouter();
+  const showTabBar = router.pathname === "/" ? false : true;
   return (
     <UserProvider>
-      <TabBar />
+      {showTabBar && <TabBar />}
       <Component {...pageProps} />
     </UserProvider>
   );

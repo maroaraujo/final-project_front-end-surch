@@ -43,7 +43,7 @@ function TabBar(props) {
   // const { state, dispatch } = useContext(GlobalContext);
 
   return (
-    {user ? null : (<div className={`${Styles.bottomNav}`}>
+    <div className={`${Styles.bottomNav}`}>
       <div className={`${Styles.bnTab}`}>
         {activeTabs === "home" ? (
           <IoHomeSharp
@@ -108,8 +108,7 @@ function TabBar(props) {
         )}
         <span>Account</span>
       </div>
-    </div>) }
-    
+    </div>
   );
 }
 

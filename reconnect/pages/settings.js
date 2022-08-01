@@ -8,7 +8,6 @@ export default function Settings() {
     <main>
       <h1>Settings</h1>
       {user ? <Logout /> : null}
-      <TabBar />
     </main>
   );
 }
