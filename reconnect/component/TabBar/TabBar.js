@@ -15,28 +15,25 @@ function TabBar(props) {
   const router = useRouter();
   const [activeTabs, setActiveTabs] = useState(props.name);
   useEffect(() => {
-    // ***** to update links to proper pages *****//
     switch (activeTabs) {
       case "home":
         router.push("/home");
         break;
       case "favourites":
-        router.push("/");
+        router.push("/favourites");
         break;
       case "add":
-        router.push("/");
+        router.push("/add");
         break;
-      case "account":
-        router.push("/");
+      case "settings":
+        router.push("/settings");
         break;
-      default:
-        router.push("/");
-        break;
+      // default:
+      //   router.push("/");
+      // break;
     }
   }, [activeTabs, router]);
 
-  // ***** to update icons *****//
-  // title of icon and box around icon with rounded corners
   return (
     <div className={`${Styles.bottomNav}`}>
       <div className={`${Styles.bnTab}`}>
@@ -88,17 +85,17 @@ function TabBar(props) {
         <span>Add</span>
       </div>
       <div className={`${Styles.bnTab}`}>
-        {activeTabs === "account" ? (
+        {activeTabs === "settings" ? (
           <IoSettingsSharp
             size="35"
             color="#000"
-            onClick={() => setActiveTabs("account")}
+            onClick={() => setActiveTabs("settings")}
           />
         ) : (
           <IoSettingsOutline
             size="35"
             color="#000"
-            onClick={() => setActiveTabs("account")}
+            onClick={() => setActiveTabs("settings")}
           />
         )}
         <span>Account</span>
