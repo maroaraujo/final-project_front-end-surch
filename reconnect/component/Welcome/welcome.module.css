@@ -1,0 +1,43 @@
+.welcomecontainer {
+  display: flex;
+  justify-content: top;
+  background-color: #CBE2EF;
+}
+
+.welcomemain {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  margin-top: 2rem;
+  background: rgb(37, 78, 123);
+  background: linear-gradient(
+    0deg,
+    rgba(37, 78, 123, 1) 30%,
+    rgba(203, 226, 239, 1) 50%
+  );
+}
+
+.sun {
+    display: flex;
+    margin-bottom: 0;
+    align-items: center;
+    object-fit: cover;
+    object-position: top;
+    height: 572px;
+  }
+  .getstarted{
+    color:#254E7B;
+    background-color: #F8F3EA;
+    height: 63px ;
+    width: 374px;
+    border-radius: 15px;
+    border-color:#F8F3EA ;
+    bottom: 30px;
+    margin-top: -150px;
+    z-index: 1;
+    font-size: 16px;
+  }

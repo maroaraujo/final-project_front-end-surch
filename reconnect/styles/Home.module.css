@@ -3,12 +3,14 @@
   justify-content: top;
 }
 
+
 .welcomecontainer {
   display: flex;
   justify-content: top;
   background-color: #cbe2ef;
   margin: 1rem;
 }
+
 
 .main {
   min-height: 100vh;
@@ -69,6 +71,7 @@
   margin: 0;
   line-height: 1.15;
   font-size: 30px;
+  top: 133px
 }
 
 .title,
@@ -95,7 +98,6 @@
   flex-direction: column;
   align-items: center;
 }
-
 
 
 /*Start of main page gratitude styling*/
@@ -167,3 +169,4 @@
     flex-direction: column;
   }
 }
+
