@@ -1,7 +1,14 @@
 .container {
   display: flex;
   justify-content: top;
+
+.welcomecontainer {
+  display: flex;
+  justify-content: top;
+  background-color: #CBE2EF;
+
   margin: 1rem;
+
 }
 
 .main {
@@ -11,9 +18,28 @@
   flex-direction: column;
   justify-content: top;
   align-items: center;
+  margin-top: 2rem;
+}
+
+.welcomemain {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  margin-top: 2rem;
+  background: rgb(37, 78, 123);
+  background: linear-gradient(
+    0deg,
+    rgba(37, 78, 123, 1) 30%,
+    rgba(203, 226, 239, 1) 50%
+  );
+  align-items: center;
   margin-top: 1rem;
 }
-/*
+
 .footer {
   display: flex;
   flex: 1;
@@ -129,7 +155,22 @@
     filter: invert(1);
   }
 }
- */
+
+.sun {
+  display: flex;
+  margin-bottom: 0;
+  align-items: center;
+}
+.getstarted{
+  color:#254E7B;
+  background-color: #F8F3EA;
+  height: 63px ;
+  width: 374px;
+  border-radius: 15px;
+  border-color:#F8F3EA ;
+  margin-bottom: -10%;
+}
+
 
 /*Start of mood questions styling*/
 .moodQuestionContainer {
@@ -226,3 +267,4 @@
     flex-direction: column;
   }
 }
+
