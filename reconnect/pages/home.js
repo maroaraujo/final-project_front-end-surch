@@ -45,6 +45,7 @@ export default function Home() {
           <ChallengeCard challenge={"Go for a coffee with a friend"}/>
         </div>
         <div>
+        <h1 className={styles.title}>All Activities</h1>
         <ActivityCard title={"Meditation"} image={meditationPic} />
         <ActivityCard title={"Breathing Exercises"} image={breathingPic} />
         <ActivityCard title={"Stretching"} image={stretchingPic} />
