@@ -7,12 +7,12 @@ import MoodQuestion from "../component/MoodQuestion/MoodQuestion";
 import Gratitude from "../component/Gratitude/Gratitude";
 import Quote from "../component/Quote/Quote"
 import ChallengeCard from "../component/ChallengeCard/ChallengeCard";
+import Quote from "../component/Quote/Quote";
+import { useUser } from "@auth0/nextjs-auth0";
 
 export default function Home() {
+  const { user, error, isLoading } = useUser();
 
-  function onClick(){
-    alert("hello");
-  }
   return (
     <div className={styles.container}>
       <Head>
@@ -39,6 +39,7 @@ export default function Home() {
           <ChallengeCard challenge={"Get 15 mins of sun"}/>
           <ChallengeCard challenge={"Go for a coffee with a friend"}/>
         </div>
+
       </main>
     </div>
   );
