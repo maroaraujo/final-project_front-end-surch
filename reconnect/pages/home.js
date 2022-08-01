@@ -7,7 +7,6 @@ import MoodQuestion from "../component/MoodQuestion/MoodQuestion";
 import Gratitude from "../component/Gratitude/Gratitude";
 import Quote from "../component/Quote/Quote"
 import ChallengeCard from "../component/ChallengeCard/ChallengeCard";
-import Quote from "../component/Quote/Quote";
 import { useUser } from "@auth0/nextjs-auth0";
 
 export default function Home() {
