@@ -1,0 +1,32 @@
+.moodLogTitle {
+  display: flex;
+  justify-content: center;
+  color: #254e7b;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+}
+/* 
+.moodLogTitleContainer {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}*/
+
+.backButton {
+  position: absolute;
+  top: 4.8%;
+  left: 5%;
+  height: 30px;
+  width: 30px;
+}
+
+.barChartContainer {
+  max-width: 440px;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
