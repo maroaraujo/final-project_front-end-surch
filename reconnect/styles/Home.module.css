@@ -204,6 +204,8 @@
   background: #5584B1;
   border-radius: 15px;
   margin-bottom:21px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .quoteText{
   color:white;
@@ -225,5 +227,6 @@
 }
 .challenges{
   display:flex;
+  flex-direction:row;
   justify-content: space-around;
 }
