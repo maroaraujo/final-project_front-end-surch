@@ -67,6 +67,7 @@
   margin: 0;
   line-height: 1.15;
   font-size: 30px;
+  top: 133px
 }
 
 .title,
@@ -156,6 +157,9 @@
   display: flex;
   margin-bottom: 0;
   align-items: center;
+  object-fit: cover;
+  object-position: top;
+  height: 572px;
 }
 .getstarted{
   color:#254E7B;
@@ -164,5 +168,8 @@
   width: 374px;
   border-radius: 15px;
   border-color:#F8F3EA ;
-  margin-bottom: -10%;
+  bottom: 30px;
+  margin-top: -150px;
+  z-index: 1;
+  font-size: 16px;
 }

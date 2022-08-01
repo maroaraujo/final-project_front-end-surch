@@ -7,7 +7,7 @@ import happysun from "../public/images/happy sun.png"
 
 export default function Welcome() {
   return (
-    <div >
+    <div className={styles.welcomecontainer}>
       <Head>
         <title>Welcome to Reconnect</title>
         <meta name="description" content="Wellness App" />
