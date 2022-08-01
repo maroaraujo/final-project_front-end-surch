@@ -53,6 +53,7 @@ function TabBar(props) {
             onClick={() => setActiveTabs("home")}
           />
         )}
+        <span>Home</span>
       </div>
       <div className={`${Styles.bnTab}`}>
         {activeTabs === "favourites" ? (
@@ -68,6 +69,7 @@ function TabBar(props) {
             onClick={() => setActiveTabs("favourites")}
           />
         )}
+        <span>Favourites</span>
       </div>
       <div className={`${Styles.bnTab}`}>
         {activeTabs === "add" ? (
@@ -83,6 +85,7 @@ function TabBar(props) {
             onClick={() => setActiveTabs("add")}
           />
         )}
+        <span>Add</span>
       </div>
       <div className={`${Styles.bnTab}`}>
         {activeTabs === "account" ? (
@@ -98,6 +101,7 @@ function TabBar(props) {
             onClick={() => setActiveTabs("account")}
           />
         )}
+        <span>Account</span>
       </div>
     </div>
   );
