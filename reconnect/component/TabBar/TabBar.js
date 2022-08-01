@@ -47,13 +47,13 @@ function TabBar(props) {
       <div className={`${Styles.bnTab}`}>
         {activeTabs === "home" ? (
           <IoHomeSharp
-            size="35"
+            size="50"
             color="#000"
             onClick={() => setActiveTabs("home")}
           />
         ) : (
           <IoHomeOutline
-            size="35"
+            size="50"
             color="#000"
             onClick={() => setActiveTabs("home")}
           />
@@ -63,13 +63,13 @@ function TabBar(props) {
       <div className={`${Styles.bnTab}`}>
         {activeTabs === "favourites" ? (
           <IoStar
-            size="35"
+            size="50"
             color="#000"
             onClick={() => setActiveTabs("favourites")}
           />
         ) : (
           <IoStarOutline
-            size="35"
+            size="50"
             color="#000"
             onClick={() => setActiveTabs("favourites")}
           />
@@ -79,13 +79,13 @@ function TabBar(props) {
       <div className={`${Styles.bnTab}`}>
         {activeTabs === "add" ? (
           <AiFillPlusSquare
-            size="35"
+            size="50"
             color="#000"
             onClick={() => setActiveTabs("add")}
           />
         ) : (
           <AiOutlinePlusSquare
-            size="35"
+            size="50"
             color="#000"
             onClick={() => setActiveTabs("add")}
           />
@@ -95,13 +95,13 @@ function TabBar(props) {
       <div className={`${Styles.bnTab}`}>
         {activeTabs === "settings" ? (
           <IoSettingsSharp
-            size="35"
+            size="50"
             color="#000"
             onClick={() => setActiveTabs("settings")}
           />
         ) : (
           <IoSettingsOutline
-            size="35"
+            size="50"
             color="#000"
             onClick={() => setActiveTabs("settings")}
           />
