@@ -1,4 +1,5 @@
 import Head from "next/head";
+
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import DisplayLogo from "../component/DisplayLogo/DisplayLogo";
@@ -7,8 +8,11 @@ import MoodQuestion from "../component/MoodQuestion/MoodQuestion";
 import Gratitude from "../component/Gratitude/Gratitude";
 import Quote from "../component/Quote/Quote";
 import TabBar from "../component/TabBar/TabBar";
+import { useUser } from "@auth0/nextjs-auth0";
 
 export default function Home() {
+  const { user, error, isLoading } = useUser();
+  console.log(user);
   return (
     <div className={styles.container}>
       <Head>

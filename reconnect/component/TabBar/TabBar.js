@@ -18,7 +18,7 @@ function TabBar(props) {
     // ***** to update links to proper pages *****//
     switch (activeTabs) {
       case "home":
-        router.push("/");
+        router.push("/home");
         break;
       case "favourites":
         router.push("/");
