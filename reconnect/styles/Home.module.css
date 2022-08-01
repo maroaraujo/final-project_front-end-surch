@@ -1,14 +1,13 @@
 .container {
   display: flex;
   justify-content: top;
+}
 
 .welcomecontainer {
   display: flex;
   justify-content: top;
-  background-color: #CBE2EF;
-
+  background-color: #cbe2ef;
   margin: 1rem;
-
 }
 
 .main {
@@ -65,9 +64,8 @@
 .title a:focus,
 .title a:active {
   text-decoration: underline;
-} */
-
-.title {
+}
+*/ .title {
   margin: 0;
   line-height: 1.15;
   font-size: 30px;
@@ -267,4 +265,3 @@
     flex-direction: column;
   }
 }
-
