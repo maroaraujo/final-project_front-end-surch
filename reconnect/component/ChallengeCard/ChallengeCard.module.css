@@ -1,0 +1,16 @@
+.challengeText{
+    font-size: 14px;
+    inline-size: 5rem;
+    overflow-wrap: break-word;
+    hyphens: manual;
+    margin:0;
+    text-align: center;
+  }
+  .card{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    background: #cbe2ef;
+    border-radius: 10px;
+    margin:1vh;
+  }
