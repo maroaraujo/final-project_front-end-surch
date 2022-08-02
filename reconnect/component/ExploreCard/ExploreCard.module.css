@@ -1,0 +1,35 @@
+.exploreText{
+    font-size: 14px;
+    overflow-wrap: break-word;
+    hyphens: manual;
+    margin:0;
+    text-align: left;
+    color:"white"
+  }
+  .exploreCard{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    background: #cbe2ef;
+    border-radius: 10px;
+    max-width: 85.65px;
+    padding: 0.3vw;
+  }
+  .sleepTips{
+    background-image: url("../public/images/Better sleep tips.png");
+    background-size: cover;
+    height:5rem;
+    width:5rem;
+  }
+  .increaseHappiness{
+    background-image: url("../public/images/increase\ happiness.png");
+    background-size: cover;
+    height:5rem;
+    width:5rem;
+  }
+  .healthyMeals{
+    background-image: url("../public/images/quick\ health\ food.png");
+    background-size: cover;
+    height:5rem;
+    width:5rem;
+  }

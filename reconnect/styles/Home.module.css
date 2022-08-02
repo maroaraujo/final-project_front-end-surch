@@ -232,3 +232,12 @@
 .displayLogo{
   margin-top: 3vh;
 }
+
+/* Explore cards */
+
+.exploreBox{
+  display:flex;
+  flex-direction:row;
+  justify-content: space-evenly;
+  margin: 1vh;
+}
