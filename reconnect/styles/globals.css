@@ -15,6 +15,18 @@
   --bar-left-fri: 50%;
   --bar-left-sat: 60%;
   --bar-left-sun: 70%;
+  --bar-bottom-awful: 20%;
+  --bar-bottom-bad: 40%;
+  --bar-bottom-ok: 60%;
+  --bar-bottom-good: 75%;
+  --bar-bottom-great: 92%;
+  --bar-left-mood1: 8%;
+  --bar-left-mood2: 17.5%;
+  --bar-left-mood3: 27.5%;
+  --bar-left-mood4: 38%;
+  --bar-left-mood5: 48%;
+  --bar-left-mood6: 58%;
+  --bar-left-mood7: 68%;
 }
 
 html,
