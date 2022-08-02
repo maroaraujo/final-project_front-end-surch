@@ -45,7 +45,8 @@
   margin: 0;
   line-height: 1.15;
   font-size: 30px;
-  top: 133px
+  top: 133px;
+  z-index: 1;
 }
 
 .title,
@@ -131,3 +132,8 @@
   }
 }
 
+.cloudybackground{
+  position: absolute;
+  top: 88px;
+  z-index: -1;
+}
