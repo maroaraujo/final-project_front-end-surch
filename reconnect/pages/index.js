@@ -1,4 +1,9 @@
-import Link from "next/link";
+
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
+import DisplayLogo from "../component/DisplayLogo/DisplayLogo";
+import MascotSmall from "../component/MascotSmall/MascotSmall";
+import MoodQuestion from "../component/MoodQuestion/MoodQuestion";
 import { useUser } from "@auth0/nextjs-auth0";
 import Login from "../component/Login/login";
 import Head from "next/head";
@@ -13,6 +18,7 @@ import landingpage from "../public/images/LandingPage.png"
 
 export default function Signup() {
   const { user, error, isLoading } = useUser();
+
     return (
     <div>
     <Head>
@@ -41,3 +47,4 @@ export default function Signup() {
     
     );
     }
+

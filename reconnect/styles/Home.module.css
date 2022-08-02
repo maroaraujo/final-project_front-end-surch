@@ -3,14 +3,14 @@
   justify-content: top;
 }
 
+
 .welcomecontainer {
   display: flex;
   justify-content: top;
-  background-color: #CBE2EF;
-
+  background-color: #cbe2ef;
   margin: 1rem;
-
 }
+
 
 .main {
   min-height: 100vh;
@@ -84,12 +84,14 @@
 .title a:focus,
 .title a:active {
   text-decoration: underline;
+
 } 
 
 .title {
   margin: 0;
   line-height: 1.15;
   font-size: 30px;
+  top: 133px
 }
 
 .title,
@@ -97,98 +99,6 @@
   text-align: center;
 }
 
-/* .description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-}
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
-  }
-  .code {
-    background: #111;
-  }
-  .logo img {
-    filter: invert(1);
-  }
-}
-
-.sun {
-  display: flex;
-  margin-bottom: 0;
-  align-items: center;
-}
-.getstarted{
-  color:#254E7B;
-  background-color: #F8F3EA;
-  height: 63px ;
-  width: 374px;
-  border-radius: 15px;
-  border-color:#F8F3EA ;
-  margin-bottom: -10%;
-}
 
 
 /*Start of mood questions styling*/
@@ -209,14 +119,6 @@
   align-items: center;
 }
 
-.mascotSmall {
-  position: relative;
-  left: 72.22%;
-  right: 8.46%;
-  top: 6.18%;
-  bottom: 91.15%; 
-}
-
 /*Start of main page gratitude styling*/
 .gratitudeBox {
   margin: 0;
@@ -233,10 +135,11 @@
 
 .bottomNav {
   width: 100%;
-  height: 50px;
+  height: 7.5vh;
   position: fixed;
   bottom: 0;
-  border-top: 1px solid var(--grey-color);
+  border: 1px solid lightgrey;
+  border-radius: 8px;
   z-index: 3;
   background-color: #fff;
   display: flex;
@@ -245,34 +148,39 @@
 }
 .bnTab {
   width: 25%;
-  height: 100%;
+  height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  width:374px;
-  justify-content: space-evenly;
+  flex-direction: column;
 }
 
-.seeAll{
+.bnTabText {
+  height: 20%;
+}
+
+.seeAll {
   position: relative;
-  margin-top:15vh;
+  margin-top: 15vh;
   margin-bottom: 1vh;
   margin-left: -10vh;
 }
 
-.quoteBox{
-  margin-top:21px;
-  background: #5584B1;
+.quoteBox {
+  margin-top: 21px;
+  background: #5584b1;
   border-radius: 15px;
+  margin-bottom:21px;
+  margin-right: auto;
+  margin-left: auto;
 }
-.quoteText{
-  color:white;
-  padding:2vh;
-  margin:0
+.quoteText {
+  color: white;
+  padding: 2vh;
+  margin: 0;
 }
-.quoteAuthor{
-  color:white;
+.quoteAuthor {
+  color: white;
   margin: 1vh;
   padding-bottom: 1vh;
   padding-left: 1vh;
@@ -284,4 +192,20 @@
     flex-direction: column;
   }
 }
+.activityCard{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items:center;
+  padding: 1vh;
+}
+.activityText{
+  margin-bottom: -5vh;
+  z-index: 1;
+}
 
+.challenges{
+  display:flex;
+  flex-direction:row;
+  justify-content: space-around;
+}
