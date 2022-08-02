@@ -1,6 +1,7 @@
 .container {
   display: flex;
   justify-content: top;
+}
 
 .welcomecontainer {
   display: flex;
@@ -18,7 +19,25 @@
   flex-direction: column;
   justify-content: top;
   align-items: center;
-  margin-top: 2rem;
+  
+}
+
+.signuptitle {
+  color: #254E7B;
+}
+
+.signuptext1 {
+  color:#254E7B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signupfooter {
+  color:#254E7B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .welcomemain {
@@ -65,7 +84,7 @@
 .title a:focus,
 .title a:active {
   text-decoration: underline;
-} */
+} 
 
 .title {
   margin: 0;
@@ -191,11 +210,11 @@
 }
 
 .mascotSmall {
-  /*   position: relative;
+  position: relative;
   left: 72.22%;
   right: 8.46%;
   top: 6.18%;
-  bottom: 91.15%; */
+  bottom: 91.15%; 
 }
 
 /*Start of main page gratitude styling*/
@@ -208,7 +227,7 @@
   background: #cbe2ef;
   border-radius: 15px;
   margin-top: 21px;
-
+}
 
 /*Start of Tab Bar styling*/
 
@@ -230,7 +249,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
+
   width:374px;
   justify-content: space-evenly;
 }
