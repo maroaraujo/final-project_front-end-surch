@@ -33,7 +33,7 @@ export default function Home() {
         <Quote/>
         <h1 className={styles.title}>Challenges of the week</h1>
         <div className={styles.challenges}>
-          <ChallengeCard onClick={onClick} challenge={"Go to the Park"}/>
+          <ChallengeCard challenge={"Go to the Park"}/>
           <ChallengeCard challenge={"Walk 5k steps"}/>
           <ChallengeCard challenge={"Get 15 mins of sun"}/>
           <ChallengeCard challenge={"Go for a coffee with a friend"}/>
