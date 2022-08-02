@@ -13,7 +13,6 @@ import breathingPic from "../public/images/Breathing.png"
 import stretchingPic from "../public/images/Stretching.png"
 import yogaPic from "../public/images/Yoga.png"
 import { useUser } from "@auth0/nextjs-auth0";
-import Carousel from "../component/Carousel/Carousel";
 
 export default function Home() {
   const { user, error, isLoading } = useUser();
@@ -27,8 +26,10 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <DisplayLogo className={styles.displayLogo} />
+        <DisplayLogo  />
+        <div className={styles.mascotContainer}>
         <MascotSmall className={styles.mascotSmall} />
+        </div>
         <h1 className={styles.title}>
           Hi Guest,
           <br />
