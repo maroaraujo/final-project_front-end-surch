@@ -12,6 +12,25 @@
   align-items: center;
 }
 
+.signuptitle {
+  color: #254E7B;
+}
+
+.signuptext1 {
+  color:#254E7B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signupfooter {
+  color:#254E7B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
 .footer {
   display: flex;
   flex: 1;
@@ -37,7 +56,8 @@
 .title a:focus,
 .title a:active {
   text-decoration: underline;
-}
+
+} 
 
 .title {
   margin: 0;
@@ -53,62 +73,95 @@
   text-align: center;
 }
 
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
 
-.grid {
+/*Start of mood questions styling*/
+.moodQuestionContainer {
   display: flex;
   align-items: center;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 5px #cbe2ef;
+  border-radius: 15px;
+  width: 90vw;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.moodStateContainer {
+  padding: 2vh;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*Start of main page gratitude styling*/
+.gratitudeContainer {
+  display: flex;
+  background: #cbe2ef;
+  border-radius: 15px;
+  margin-top: 21px;
+  width: 90vw;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.gratitudeBox {
+  margin-left: -7vw;
+}
+
+/*Start of Tab Bar styling*/
+
+.bottomNav {
+  width: 100%;
+  height: 7.5vh;
+  position: fixed;
+  bottom: 0;
+  border: 1px solid lightgrey;
+  border-radius: 8px;
+  z-index: 3;
+  background-color: #fff;
+  display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
+  align-items: center;
+}
+.bnTab {
+  width: 25%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+.bnTabText {
+  height: 20%;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.seeAll {
+  position: relative;
+  margin-top: 15vh;
+  margin-bottom: 1vh;
+  margin-left: -10vh;
 }
 
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.quoteBox {
+  background: #5584b1;
+  border-radius: 15px;
+  width:90vw;
+  margin-top: 2vh;
+  margin-bottom: 1vh;
 }
-
-.card p {
+.quoteText {
+  color: white;
+  padding: 2vh;
   margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
 }
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
+.quoteAuthor {
+  color: white;
+  margin: 1vh;
+  padding-bottom: 1vh;
+  padding-left: 1vh;
 }
 
 @media (max-width: 600px) {
@@ -117,6 +170,7 @@
     flex-direction: column;
   }
 }
+
 
 @media (prefers-color-scheme: dark) {
   .card,
@@ -149,5 +203,42 @@
 
 .subtitle{
   margin:1vh
+}
+
+
+.activityCard{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items:center;
+  width:90vw;
+  padding-top: 1vh;
+}
+.activityText{
+  margin-bottom: -5vh;
+  z-index: 1;
+}
+
+.challenges{
+  display:flex;
+  flex-direction:row;
+  justify-content: space-around;
+  width:90vw;
+  gap:8px;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+.spacetoNavBar{
+  height: 10vh;
+}
+.mascotContainer{
+  position: absolute;
+  top:8vh;
+  left:auto;
+  bottom: auto;
+  right: 7vw;
+}
+.displayLogo{
+  margin-top: 3vh;
 }
 

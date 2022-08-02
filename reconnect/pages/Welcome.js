@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/welcome.module.css";
+import styles from "../component/Welcome/welcome.module.css";
 import stylesHome from "../styles/Home.module.css";
 import DisplayLogo from "../component/DisplayLogo/DisplayLogo";
 import happysun from "../public/images/happy sun.png"
