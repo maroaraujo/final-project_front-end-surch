@@ -31,10 +31,37 @@ export const options = {
   plugins: {
     legend: {
       position: "top",
+      align: "start",
+      labels: {
+        boxWidth: 7,
+        usePointStyle: true,
+        pointStyle: "circle",
+        labelString: "another one",
+      },
+      title: {
+        display: true,
+        text: "This week's stats",
+        color: "#000",
+        font: {
+          size: 18,
+        },
+      },
     },
-    title: {
-      display: true,
-      text: "This week's stats",
+  },
+  scales: {
+    xAxis: {
+      display: false,
+    },
+    yAxes: [
+      {
+        max: 5,
+      },
+    ],
+  },
+  elements: {
+    bar: {
+      barPercentage: 0.3,
+      categoryPercentage: 1,
     },
   },
 };
@@ -76,6 +103,50 @@ export default function MoodLog() {
         </article>
         <div className={styles.barChartContainer}>
           <Bar options={options} data={data} />
+        </div>
+        {/* Code example for other bar Charts */}
+        <div className={styles.barChart}>
+          <div className={styles.barChart1Container}>
+            <div className={styles.bar1}>
+              <p>Mon</p>
+            </div>
+            <div className={styles.bar2}>
+              <p>Tues</p>
+            </div>
+            <div className={styles.bar3}>
+              <p>Wed</p>
+            </div>
+            <div className={styles.bar4}>
+              <p>Thu</p>
+            </div>
+            <div className={styles.bar5}>
+              <p>Fri</p>
+            </div>
+            <div className={styles.bar6}>
+              <p>Sat</p>
+            </div>
+            <div className={styles.bar7}>
+              <p>Sun</p>
+            </div>
+
+            <ul className={styles.yAxis}>
+              <li>
+                <div>Great</div>
+              </li>
+              <li>
+                <div>Good</div>
+              </li>
+              <li>
+                <div>Ok</div>
+              </li>
+              <li>
+                <div>Bad</div>
+              </li>
+              <li>
+                <div>Awful</div>
+              </li>
+            </ul>
+          </div>
         </div>
       </main>
     </div>
