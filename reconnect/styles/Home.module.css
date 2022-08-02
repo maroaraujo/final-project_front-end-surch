@@ -19,7 +19,25 @@
   flex-direction: column;
   justify-content: top;
   align-items: center;
-  margin-top: 2rem;
+  
+}
+
+.signuptitle {
+  color: #254E7B;
+}
+
+.signuptext1 {
+  color:#254E7B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signupfooter {
+  color:#254E7B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .welcomemain {
@@ -66,7 +84,9 @@
 .title a:focus,
 .title a:active {
   text-decoration: underline;
-}
+
+} 
+
 .title {
   margin: 0;
   line-height: 1.15;
@@ -98,7 +118,6 @@
   flex-direction: column;
   align-items: center;
 }
-
 
 /*Start of main page gratitude styling*/
 .gratitudeBox {
