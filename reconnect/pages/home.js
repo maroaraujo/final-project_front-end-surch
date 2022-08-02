@@ -13,6 +13,7 @@ import breathingPic from "../public/images/Breathing.png"
 import stretchingPic from "../public/images/Stretching.png"
 import yogaPic from "../public/images/Yoga.png"
 import { useUser } from "@auth0/nextjs-auth0";
+import Carousel from "../component/Carousel/Carousel";
 
 export default function Home() {
   const { user, error, isLoading } = useUser();
@@ -39,7 +40,6 @@ export default function Home() {
         <h1 className={styles.title}>Challenges of the week</h1>
         <div className={styles.challenges}>
           <ChallengeCard challenge={"Go to the Park"}/>
-          <ChallengeCard challenge={"Go to the Park"}/>
           <ChallengeCard challenge={"Walk 5k steps"}/>
           <ChallengeCard challenge={"Get 15 mins of sun"}/>
           <ChallengeCard challenge={"Go for a coffee with a friend"}/>
@@ -51,6 +51,10 @@ export default function Home() {
         <ActivityCard title={"Stretching"} image={stretchingPic} />
         <ActivityCard title={"Yoga "} image={yogaPic} />
         </div>
+        <div className={styles.spacetoNavBar}>
+
+        </div>
+        
       </main>
     </div>
   );
