@@ -10,94 +10,103 @@ import {
   IoSettingsSharp,
 } from "react-icons/io5";
 import { AiOutlinePlusSquare, AiFillPlusSquare } from "react-icons/ai";
+import { useUser } from "@auth0/nextjs-auth0";
+// import { GlobalContext } from "../../context/globalContext";
+// import { useContext } from "react";
+
+//need onclick function to change state of activeTabs
 
 function TabBar(props) {
+  const { user, error, isLoading } = useUser();
+
   const router = useRouter();
   const [activeTabs, setActiveTabs] = useState(props.name);
   useEffect(() => {
-    // ***** to update links to proper pages *****//
     switch (activeTabs) {
       case "home":
-        router.push("/");
+        router.push("/home");
         break;
       case "favourites":
-        router.push("/");
+        router.push("/favourites");
         break;
       case "add":
-        router.push("/");
+        router.push("/add");
         break;
-      case "account":
-        router.push("/");
+      case "settings":
+        router.push("/settings");
         break;
-      default:
-        router.push("/");
-        break;
+      // default:
+      //   router.push("/home");
+      //   break;
     }
   }, [activeTabs, router]);
+  // const { state, dispatch } = useContext(GlobalContext);
 
-  // ***** to update icons *****//
-  // title of icon and box around icon with rounded corners
   return (
     <div className={`${Styles.bottomNav}`}>
       <div className={`${Styles.bnTab}`}>
         {activeTabs === "home" ? (
           <IoHomeSharp
-            size="35"
+            size="50"
             color="#000"
             onClick={() => setActiveTabs("home")}
           />
         ) : (
           <IoHomeOutline
-            size="35"
+            size="50"
             color="#000"
             onClick={() => setActiveTabs("home")}
           />
         )}
+        <span>Home</span>
       </div>
       <div className={`${Styles.bnTab}`}>
         {activeTabs === "favourites" ? (
           <IoStar
-            size="35"
+            size="50"
             color="#000"
             onClick={() => setActiveTabs("favourites")}
           />
         ) : (
           <IoStarOutline
-            size="35"
+            size="50"
             color="#000"
             onClick={() => setActiveTabs("favourites")}
           />
         )}
+        <span>Favourites</span>
       </div>
       <div className={`${Styles.bnTab}`}>
         {activeTabs === "add" ? (
           <AiFillPlusSquare
-            size="35"
+            size="50"
             color="#000"
             onClick={() => setActiveTabs("add")}
           />
         ) : (
           <AiOutlinePlusSquare
-            size="35"
+            size="50"
             color="#000"
             onClick={() => setActiveTabs("add")}
           />
         )}
+        <span>Add</span>
       </div>
       <div className={`${Styles.bnTab}`}>
-        {activeTabs === "account" ? (
+        {activeTabs === "settings" ? (
           <IoSettingsSharp
-            size="35"
+            size="50"
             color="#000"
-            onClick={() => setActiveTabs("account")}
+            onClick={() => setActiveTabs("settings")}
           />
         ) : (
           <IoSettingsOutline
-            size="35"
+            size="50"
             color="#000"
-            onClick={() => setActiveTabs("account")}
+            onClick={() => setActiveTabs("settings")}
           />
         )}
+        <span>Account</span>
       </div>
     </div>
   );
