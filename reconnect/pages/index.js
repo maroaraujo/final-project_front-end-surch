@@ -15,9 +15,6 @@ export default function Signup() {
   const { user, error, isLoading } = useUser();
     return (
     <div>
-    <Head>
-      <title>Reconnect</title>
-    </Head>
     
     <main className={styles.main}> 
     <Image className={styles.landingpage} src={landingpage} alt={landingpage} />
