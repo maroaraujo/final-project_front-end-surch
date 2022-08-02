@@ -173,6 +173,17 @@
     flex-direction: column;
   }
 }
+.activityCard{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items:center;
+  padding: 1vh;
+}
+.activityText{
+  margin-bottom: -5vh;
+  z-index: 1;
+}
 
 .challenges{
   display:flex;
