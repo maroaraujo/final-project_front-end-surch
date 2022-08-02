@@ -14,7 +14,7 @@ function moodtracker() {
     <h1 className={styles.title}>How are <br/>
     you feeling?</h1>
     <CloudyBackground/>
-    
+    <MoodQuestion/>
     <h6 className={styles.subtitle}>Please Select</h6>
     <h4 className={styles.subtitle}>What makes you feel this way?</h4>
     <input className ={stylesMoodTracker.input} type="text" placeholder="type here ..."/>
