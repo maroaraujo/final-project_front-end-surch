@@ -26,8 +26,10 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <DisplayLogo className={styles.displayLogo} />
+        <DisplayLogo  />
+        <div className={styles.mascotContainer}>
         <MascotSmall className={styles.mascotSmall} />
+        </div>
         <h1 className={styles.title}>
           Hi Guest,
           <br />
@@ -38,7 +40,6 @@ export default function Home() {
         <Quote/>
         <h1 className={styles.title}>Challenges of the week</h1>
         <div className={styles.challenges}>
-          <ChallengeCard challenge={"Go to the Park"}/>
           <ChallengeCard challenge={"Go to the Park"}/>
           <ChallengeCard challenge={"Walk 5k steps"}/>
           <ChallengeCard challenge={"Get 15 mins of sun"}/>
@@ -51,6 +52,10 @@ export default function Home() {
         <ActivityCard title={"Stretching"} image={stretchingPic} />
         <ActivityCard title={"Yoga "} image={yogaPic} />
         </div>
+        <div className={styles.spacetoNavBar}>
+
+        </div>
+        
       </main>
     </div>
   );
