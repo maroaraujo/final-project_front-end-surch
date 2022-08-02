@@ -12,12 +12,11 @@ import meditationPic from "../public/images/maditation.png"
 import breathingPic from "../public/images/Breathing.png"
 import stretchingPic from "../public/images/Stretching.png"
 import yogaPic from "../public/images/Yoga.png"
+import { useUser } from "@auth0/nextjs-auth0";
 
 export default function Home() {
+  const { user, error, isLoading } = useUser();
 
-  function onClick(){
-    alert("hello");
-  }
   return (
     <div className={styles.container}>
       <Head>
@@ -39,7 +38,8 @@ export default function Home() {
         <Quote/>
         <h1 className={styles.title}>Challenges of the week</h1>
         <div className={styles.challenges}>
-          <ChallengeCard onClick={onClick} challenge={"Go to the Park"}/>
+          <ChallengeCard challenge={"Go to the Park"}/>
+          <ChallengeCard challenge={"Go to the Park"}/>
           <ChallengeCard challenge={"Walk 5k steps"}/>
           <ChallengeCard challenge={"Get 15 mins of sun"}/>
           <ChallengeCard challenge={"Go for a coffee with a friend"}/>
