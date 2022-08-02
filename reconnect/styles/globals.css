@@ -1,3 +1,22 @@
+:root {
+  /* CSS variables for BarChart */
+  --color-primary: #254e7b;
+  --color-secondary: #85c1e5;
+  --font-size-barChart: 12px;
+  --bar-height-awful: 20%;
+  --bar-height-bad: 40%;
+  --bar-height-ok: 60%;
+  --bar-height-good: 80%;
+  --bar-height-great: 100%;
+  --bar-left-mon: 10%;
+  --bar-left-tues: 20%;
+  --bar-left-wed: 30%;
+  --bar-left-thu: 40%;
+  --bar-left-fri: 50%;
+  --bar-left-sat: 60%;
+  --bar-left-sun: 70%;
+}
+
 html,
 body {
   padding: 0;
@@ -20,7 +39,7 @@ a {
     color-scheme: light;
   }
   body {
-    color: #254E7B;
+    color: #254e7b;
     background: white;
   }
 }

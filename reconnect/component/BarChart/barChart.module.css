@@ -1,0 +1,224 @@
+/* 
+Start of BarChart using CSS and html only
+}*/
+.barChart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.barChart1Container {
+  position: relative;
+  width: 80%;
+  border: 1px solid #bbb;
+  border-top: none;
+  border-right: none;
+  margin-top: 2rem;
+  z-index: 0;
+}
+
+.yAxis {
+  position: relative;
+  top: 0;
+  left: -30px;
+  width: 100%;
+  z-index: 10;
+  list-style-type: none;
+  font-size: 12px;
+}
+
+.yAxis li {
+  position: relative;
+  left: -11px;
+  height: 2rem;
+  border-top: solid 1px rgb(217, 215, 215);
+}
+
+.yAxis li::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -30px;
+  height: 100%;
+  width: 30px;
+}
+
+.yAxis li div {
+  position: absolute;
+  left: -35px;
+}
+
+.bar1 {
+  width: 0.7rem;
+  border-radius: 25px;
+  height: 20%;
+  background-color: #254e7b;
+  position: absolute;
+  left: 10%;
+  bottom: 0;
+  z-index: 11;
+  display: flex;
+  justify-content: center;
+}
+
+.bar1 p {
+  position: absolute;
+  bottom: -2rem;
+  font-size: 12px;
+}
+
+.bar2 {
+  width: 0.7rem;
+  border-radius: 25px;
+  height: 40%;
+  background-color: #85c1e5;
+  position: absolute;
+  left: 20%;
+  bottom: 0;
+  z-index: 11;
+  display: flex;
+  justify-content: center;
+}
+
+.bar2 p {
+  position: absolute;
+  bottom: -2rem;
+  font-size: 12px;
+}
+
+.bar3 {
+  width: 0.7rem;
+  border-radius: 25px;
+  height: 60%;
+  background-color: #254e7b;
+  position: absolute;
+  left: 30%;
+  bottom: 0;
+  z-index: 11;
+  display: flex;
+  justify-content: center;
+}
+
+.bar3 p {
+  position: absolute;
+  bottom: -2rem;
+  font-size: 12px;
+}
+
+.bar4 {
+  width: 0.7rem;
+  border-radius: 25px;
+  height: 93%;
+  background-color: #85c1e5;
+  position: absolute;
+  left: 40%;
+  bottom: 0;
+  z-index: 11;
+  display: flex;
+  justify-content: center;
+}
+
+.bar4 p {
+  position: absolute;
+  bottom: -2rem;
+  font-size: 12px;
+}
+
+.bar5 {
+  width: 0.7rem;
+  border-radius: 25px;
+  height: 76%;
+  background-color: #254e7b;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  z-index: 11;
+  display: flex;
+  justify-content: center;
+}
+
+.bar5 p {
+  position: absolute;
+  bottom: -2rem;
+  font-size: 12px;
+}
+
+.bar6 {
+  width: 0.7rem;
+  border-radius: 25px;
+  height: 76%;
+  background-color: #85c1e5;
+  position: absolute;
+  left: 60%;
+  bottom: 0;
+  z-index: 11;
+  display: flex;
+  justify-content: center;
+}
+
+.bar6 p {
+  position: absolute;
+  bottom: -2rem;
+  font-size: 12px;
+}
+
+.bar7 {
+  width: 0.7rem;
+  border-radius: 25px;
+  height: 76%;
+  background-color: #254e7b;
+  position: absolute;
+  left: 70%;
+  bottom: 0;
+  z-index: 11;
+  display: flex;
+  justify-content: center;
+}
+
+.bar7 p {
+  position: absolute;
+  bottom: -2rem;
+  font-size: 12px;
+}
+
+.bar1Mood {
+  position: absolute;
+  left: 8%;
+  bottom: 20%;
+}
+
+.bar2Mood {
+  position: absolute;
+  left: 17.5%;
+  bottom: 40%;
+}
+
+.bar3Mood {
+  position: absolute;
+  left: 27.5%;
+  bottom: 60%;
+}
+
+.bar4Mood {
+  position: absolute;
+  left: 38%;
+  bottom: 92%;
+}
+
+.bar5Mood {
+  position: absolute;
+  left: 48%;
+  bottom: 75%;
+}
+
+.bar6Mood {
+  position: absolute;
+  left: 58%;
+  bottom: 75%;
+}
+
+.bar7Mood {
+  position: absolute;
+  left: 68%;
+  bottom: 75%;
+}
