@@ -10,6 +10,7 @@
   flex-direction: column;
   justify-content: top;
   align-items: center;
+  color:#254E7B;
 }
 
 .signuptitle {
@@ -65,6 +66,7 @@
   font-size: 30px;
   margin-top: 3vh;
   z-index: 1;
+  color:#254E7B;
 }
 
 
@@ -241,5 +243,39 @@
 }
 .displayLogo{
   margin-top: 3vh;
+}
+
+/* Explore cards */
+
+.exploreBox{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 1vh;
+  width:90vw
+}
+.sleepTips{
+  background-image: url("../public/images/Better sleep tips.png");
+  background-size: cover;
+  height:7rem;
+  width:7rem;
+  border-radius: 10px;
+  margin:1vw;
+}
+.increaseHappiness{
+  background-image: url("../public/images/increase\ happiness.png");
+  background-size: cover;
+  height:7rem;
+  width:7rem;
+  border-radius: 10px;
+  margin:1vw;
+}
+.healthyMeals{
+  background-image: url("../public/images/quick\ health\ food.png");
+  background-size: cover;
+  height:7rem;
+  width:7rem;
+  border-radius: 10px;
+  margin:1vw;
 }
 
