@@ -13,6 +13,7 @@ import breathingPic from "../public/images/Breathing.png"
 import stretchingPic from "../public/images/Stretching.png"
 import yogaPic from "../public/images/Yoga.png"
 import { useUser } from "@auth0/nextjs-auth0";
+import ExploreCard from "../component/ExploreCard/ExploreCard";
 
 export default function Home() {
   const { user, error, isLoading } = useUser();
@@ -45,6 +46,20 @@ export default function Home() {
           <ChallengeCard challenge={"Get 15 mins of sun"}/>
           <ChallengeCard challenge={"Go for a coffee with a friend"}/>
         </div>
+
+        <h1 className={styles.title}>Explore</h1>
+        <div className={styles.exploreBox}>
+          <div className={styles.sleepTips}>
+            <ExploreCard title={"Better Sleep tips"}/>
+          </div>
+          <div className={styles.increaseHappiness}>
+            <ExploreCard title={"Increase Happiness"}/>
+          </div>
+          <div className={styles.healthyMeals}>
+            <ExploreCard title={"Quick Healthy Meals"}/>
+          </div>
+        </div>
+
         <div>
         <h1 className={styles.title}>All Activities</h1>
         <ActivityCard title={"Meditation"} image={meditationPic} />
