@@ -21,7 +21,7 @@ Start of BarChart using CSS and html only
   position: relative;
   top: 0;
   left: -30px;
-  width: 100%;
+  width: 90vw;
   z-index: 10;
   list-style-type: none;
   font-size: 12px;
@@ -46,15 +46,16 @@ Start of BarChart using CSS and html only
 .yAxis li div {
   position: absolute;
   left: -35px;
+  top: -12px;
 }
 
 .bar1 {
   width: 0.7rem;
   border-radius: 25px;
-  height: 20%;
+  height: 23%;
   background-color: #254e7b;
   position: absolute;
-  left: 10%;
+  left: 12.5%;
   bottom: 0;
   z-index: 11;
   display: flex;
@@ -70,10 +71,10 @@ Start of BarChart using CSS and html only
 .bar2 {
   width: 0.7rem;
   border-radius: 25px;
-  height: 40%;
+  height: 41%;
   background-color: #85c1e5;
   position: absolute;
-  left: 20%;
+  left: 25%;
   bottom: 0;
   z-index: 11;
   display: flex;
@@ -89,10 +90,10 @@ Start of BarChart using CSS and html only
 .bar3 {
   width: 0.7rem;
   border-radius: 25px;
-  height: 60%;
+  height: 59%;
   background-color: #254e7b;
   position: absolute;
-  left: 30%;
+  left: 37.5%;
   bottom: 0;
   z-index: 11;
   display: flex;
@@ -111,7 +112,7 @@ Start of BarChart using CSS and html only
   height: 93%;
   background-color: #85c1e5;
   position: absolute;
-  left: 40%;
+  left: 50%;
   bottom: 0;
   z-index: 11;
   display: flex;
@@ -130,7 +131,7 @@ Start of BarChart using CSS and html only
   height: 76%;
   background-color: #254e7b;
   position: absolute;
-  left: 50%;
+  left: 62.5%;
   bottom: 0;
   z-index: 11;
   display: flex;
@@ -149,7 +150,7 @@ Start of BarChart using CSS and html only
   height: 76%;
   background-color: #85c1e5;
   position: absolute;
-  left: 60%;
+  left: 75%;
   bottom: 0;
   z-index: 11;
   display: flex;
@@ -168,7 +169,7 @@ Start of BarChart using CSS and html only
   height: 76%;
   background-color: #254e7b;
   position: absolute;
-  left: 70%;
+  left: 87.5%;
   bottom: 0;
   z-index: 11;
   display: flex;
@@ -181,7 +182,7 @@ Start of BarChart using CSS and html only
   font-size: 12px;
 }
 
-.bar1Mood {
+/* .bar1Mood {
   position: absolute;
   left: 8%;
   bottom: 20%;
@@ -221,4 +222,4 @@ Start of BarChart using CSS and html only
   position: absolute;
   left: 68%;
   bottom: 75%;
-}
+} */

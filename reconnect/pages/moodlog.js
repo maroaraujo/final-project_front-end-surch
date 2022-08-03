@@ -39,10 +39,8 @@ export default function MoodLog() {
           srcBar1={awful}
           srcBar2={bad}
           srcBar3={ok}
-          srcBar4={great}
-          srcBar5={good}
-          srcBar6={good}
-          srcBar7={good}
+          srcBar4={good}
+          srcBar5={great}
         />
       </main>
     </div>
