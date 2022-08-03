@@ -36,7 +36,7 @@ export default function Home() {
           <br />
           How are you feeling?
         </h1>
-        <MoodQuestion className={styles.moodQuestion} />
+        <MoodQuestion className={styles.moodQuestion} url={"https://reconnect-surch.netlify.app/moodtracker"}/>
         <Gratitude/>
         <Quote/>
         <h1 className={styles.title}>Challenges of the week</h1>
@@ -50,13 +50,13 @@ export default function Home() {
         <h1 className={styles.title}>Explore</h1>
         <div className={styles.exploreBox}>
           <div className={styles.sleepTips}>
-            <ExploreCard title={"Better Sleep tips"}/>
+            <ExploreCard url={"https://www.healthline.com/nutrition/17-tips-to-sleep-better"} title={"Better Sleep tips"}/>
           </div>
           <div className={styles.increaseHappiness}>
-            <ExploreCard title={"Increase Happiness"}/>
+            <ExploreCard url={"https://www.nhs.uk/mental-health/self-help/tips-and-support/how-to-be-happier/"} title={"Increase Happiness"}/>
           </div>
           <div className={styles.healthyMeals}>
-            <ExploreCard title={"Quick Healthy Meals"}/>
+            <ExploreCard url={"https://www.bbcgoodfood.com/recipes/collection/quick-and-healthy-recipes"} title={"Quick Healthy Meals"}/>
           </div>
         </div>
 

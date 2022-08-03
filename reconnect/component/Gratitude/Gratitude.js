@@ -2,6 +2,7 @@ import Image from "next/image";
 import brain from "../../public/images/brain.png"
 import styles from "../../styles/Home.module.css"
 
+
 export default function Gratitude(){
     return(
         <div className={styles.gratitudeContainer}>
@@ -11,7 +12,7 @@ export default function Gratitude(){
                 <input placeholder="type here"></input>
                 <p>date | reason</p>
             </div>
-                <h5 className={styles.seeAll}>see all</h5>
+                <a href={"https://reconnect-surch.netlify.app/gratitudewall"} className={styles.seeAll}>see all</a>
         </div>
     )
 }
