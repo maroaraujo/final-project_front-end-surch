@@ -1,0 +1,17 @@
+.exploreText{
+    font-size: 14px;
+    overflow-wrap: break-word;
+    margin: 0.2vh;
+    text-align: left;
+    flex-direction: column;
+    height:5rem;
+    width:5rem;  
+    align-items:baseline;
+    padding: 68px 0px 0px 7px;
+  }
+  .exploreCard{
+    flex-direction: column;
+    justify-content: flex-end;
+    height:5rem;
+    width:5rem  
+  }
