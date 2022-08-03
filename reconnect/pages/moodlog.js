@@ -36,11 +36,13 @@ export default function MoodLog() {
 
         {/* Code example for other bar Charts */}
         <BarChart
-          srcBar1={awful}
-          srcBar2={bad}
-          srcBar3={ok}
-          srcBar4={good}
-          srcBar5={great}
+          date1={"3 Aug"}
+          date2={"2 Aug"}
+          date3={"1 Aug"}
+          date4={"31 Jul"}
+          date5={"30 Jul"}
+          date6={"29 Jul"}
+          date7={"28 Jul"}
         />
       </main>
     </div>
