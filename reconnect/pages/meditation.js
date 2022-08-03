@@ -1,8 +1,11 @@
-import ReactPlayer from 'react-player';
-import { useState, useEffect } from 'react';
+//import ReactPlayer from 'react-player';
+//import { useState, useEffect } from 'react';
+//import BackButton from "../component/Button/Button";
+import styles from "../styles/Home.module.css"
 import { useRouter } from "next/router";
-import styles from "../styles/video.module.css"
+import stylesvideo from "../styles/video.module.css"
 import Image from 'next/image'
+
 
 export default function Meditation () {
 
@@ -13,17 +16,19 @@ export default function Meditation () {
 
 
     return (
-    <div>
+    <div className={styles.main}>
+        
+        <h1 className={styles.title}>Meditation</h1>
         <Image src='https://i.ytimg.com/vi/O-6f5wQXSu8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBajCqSN4D6cgnZT8SnZ-RcV0ILNg' alt='10 minutes meditation video thumbnail' layout={imageSize.layout} height={imageSize.height} width={imageSize.width} onClick={onClick}/>
-        <div className = {styles.description}>
-        <Image src='https://yt3.ggpht.com/ytc/AMLnZu9W9BmtsaFckXGETbmvsahvSx1FzE3m4xQH5g_z=s176-c-k-c0x00ffffff-no-rj' alt='Goodful thumbnail' layout="intrinsic" height={400} width={400}/>
+        <div className = {stylesvideo.description}>
         <p>10-Minute Meditation For Anxiety</p>
         </div>
     </div>
     )
-
     }
-    
+
+    //This will need to go back in just before h1 before merging, also remove other comments at import
+    //<BackButton url={"https://reconnect-surch.netlify.app/home"}/>
 
 
 
