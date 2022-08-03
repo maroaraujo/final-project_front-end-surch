@@ -12,7 +12,7 @@ export default function Achievement(){
             <CloudyBackground/>
             <BackButton/>
             <div className={stylesAchievement.puzzleContainer}>
-                <Image  src={puzzle} layout="fill"  quality={100}/>
+                <Image  src={puzzle} alt="puzzle" layout="fill"  quality={100}/>
             </div>
            <h1 className={stylesAchievement.subTitle}>
            Well done! You earned <br/> 
