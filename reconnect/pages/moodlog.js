@@ -1,5 +1,5 @@
 import Head from "next/head";
-import styles from "./moodlog.module.css";
+import styles from "../component/Moodlog/moodlog.module.css";
 import { HiArrowLeft } from "react-icons/hi";
 
 import { useUser } from "@auth0/nextjs-auth0";
@@ -10,6 +10,7 @@ import bad from "../public/images/bad.png";
 import ok from "../public/images/ok.png";
 import good from "../public/images/good.png";
 import great from "../public/images/great.png";
+import Calendar from "../component/Calendar/Calendar";
 
 export default function MoodLog() {
   const { user, error, isLoading } = useUser();
@@ -34,7 +35,7 @@ export default function MoodLog() {
           <h1 className={styles.moodLogTitle}>Mood Log</h1>
         </article>
 
-        {/* Code example for other bar Charts */}
+    
         <BarChart
           date1={"3 Aug"}
           date2={"2 Aug"}
@@ -44,6 +45,9 @@ export default function MoodLog() {
           date6={"29 Jul"}
           date7={"28 Jul"}
         />
+        <div className={styles.calendar}>
+        <Calendar/>
+        </div>
       </main>
     </div>
   );

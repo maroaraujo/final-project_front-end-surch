@@ -55,3 +55,9 @@ a {
     background: white;
   }
 }
+
+
+.sdp, .stp {
+  --shadow: transparent 0px 0px 0px 0px,transparent 0px 0px 0px 0px,rgba(0,0,0,0) 0px 0px 0px 0px,rgba(0,0,0,0) 0px 0px 0px 0px !important;
+  --theme-color: #85C1E5 !important;
+}

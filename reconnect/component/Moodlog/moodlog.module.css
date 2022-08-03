@@ -18,3 +18,15 @@
 .moodLogContainer {
   color: #254e7b;
 }
+
+
+.calendar{
+  display: flex ;
+  justify-content: center ;
+  text-align: center ;
+  margin: 5vh;
+  border: 1px solid;
+  border-color: #254e7b;
+  border-radius: 15px;
+  padding: 1vh;
+}
