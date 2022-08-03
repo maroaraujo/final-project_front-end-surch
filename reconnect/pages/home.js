@@ -50,13 +50,13 @@ export default function Home() {
         <h1 className={styles.title}>Explore</h1>
         <div className={styles.exploreBox}>
           <div className={styles.sleepTips}>
-            <ExploreCard className={styles.exploreText} title={"Better Sleep tips"}/>
+            <ExploreCard title={"Better Sleep tips"}/>
           </div>
           <div className={styles.increaseHappiness}>
-            <ExploreCard className={styles.exploreText} title={"Increase Happiness"}/>
+            <ExploreCard title={"Increase Happiness"}/>
           </div>
           <div className={styles.healthyMeals}>
-            <ExploreCard className={styles.exploreText} title={"Quick Healthy Meals"}/>
+            <ExploreCard title={"Quick Healthy Meals"}/>
           </div>
         </div>
 
