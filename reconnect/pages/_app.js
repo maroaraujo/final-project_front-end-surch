@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-  const showTabBar = router.pathname === "/" ? false : true;
+  const showTabBar = router.pathname === "/" || "/Welcome" ? false : true;
   return (
     <UserProvider>
       {showTabBar && <TabBar />}
