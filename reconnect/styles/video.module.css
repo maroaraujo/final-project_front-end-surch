@@ -1,0 +1,12 @@
+.description {
+ height: 1rem;
+ max-height: 10vh;
+ display: flexbox;
+ flex-direction: column;
+ justify-content: top;
+ align-items: center;
+border-radius: 50%;
+ 
+}
+
+

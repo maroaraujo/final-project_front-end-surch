@@ -3,15 +3,6 @@
   justify-content: top;
 }
 
-
-.welcomecontainer {
-  display: flex;
-  justify-content: top;
-  background-color: #cbe2ef;
-  margin: 1rem;
-}
-
-
 .main {
   min-height: 100vh;
   flex: 1;
@@ -19,27 +10,27 @@
   flex-direction: column;
   justify-content: top;
   align-items: center;
-  margin-top: 2rem;
+  color:#254E7B;
 }
 
-.welcomemain {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
+.signuptitle {
+  color: #254E7B;
+}
+
+.signuptext1 {
+  color:#254E7B;
   display: flex;
   flex-direction: column;
-  justify-content: top;
   align-items: center;
-  margin-top: 2rem;
-  background: rgb(37, 78, 123);
-  background: linear-gradient(
-    0deg,
-    rgba(37, 78, 123, 1) 30%,
-    rgba(203, 226, 239, 1) 50%
-  );
-  align-items: center;
-  margin-top: 1rem;
 }
+
+.signupfooter {
+  color:#254E7B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 .footer {
   display: flex;
@@ -66,13 +57,18 @@
 .title a:focus,
 .title a:active {
   text-decoration: underline;
-}
+
+} 
+
 .title {
   margin: 0;
   line-height: 1.15;
   font-size: 30px;
-  top: 133px
+  margin-top: 3vh;
+  z-index: 1;
+  color:#254E7B;
 }
+
 
 .title,
 .description {
@@ -88,7 +84,9 @@
   background-color: #ffffff;
   box-shadow: 0px 5px 5px #cbe2ef;
   border-radius: 15px;
-  padding: 2vh;
+  width: 90vw;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .moodStateContainer {
@@ -99,17 +97,19 @@
   align-items: center;
 }
 
-
 /*Start of main page gratitude styling*/
-.gratitudeBox {
-  margin: 0;
-  padding-right: 10vw;
-}
 .gratitudeContainer {
   display: flex;
   background: #cbe2ef;
   border-radius: 15px;
   margin-top: 21px;
+  width: 90vw;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.gratitudeBox {
+  margin-left: -7vw;
 }
 
 /*Start of Tab Bar styling*/
@@ -135,6 +135,7 @@
   align-items: center;
   flex-direction: column;
 }
+
 .bnTabText {
   height: 20%;
 }
@@ -147,9 +148,11 @@
 }
 
 .quoteBox {
-  margin-top: 21px;
   background: #5584b1;
   border-radius: 15px;
+  width:90vw;
+  margin-top: 2vh;
+  margin-bottom: 1vh;
 }
 .quoteText {
   color: white;
@@ -174,3 +177,111 @@
     --shadow: transparent 0px 0px 0px 0px,transparent 0px 0px 0px 0px,rgba(0,0,0,0) 0px 0px 0px 0px,rgba(0,0,0,0) 0px 0px 0px 0px !important;
   
 }
+
+
+@media (prefers-color-scheme: dark) {
+  .card,
+  .footer {
+    border-color: #222;
+  }
+  .code {
+    background: #111;
+  }
+  .logo img {
+    filter: invert(1);
+  }
+}
+
+.cloudybackground{
+  position: absolute;
+  top: 88px;
+  z-index: -1;
+}
+
+.button {
+  border-radius: 15px;
+  color: white;
+  background-color: #244E7A;
+  margin: 5vw;
+  width: 90vw;
+  height: 63px;
+  font-size: 16px;
+  z-index: 1;
+}
+
+.subtitle{
+  margin:1vh
+}
+
+
+.activityCard{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items:center;
+  width:90vw;
+  padding-top: 1vh;
+}
+.activityText{
+  margin-bottom: -5vh;
+  z-index: 1;
+}
+
+.challenges{
+  display:flex;
+  flex-direction:row;
+  justify-content: space-around;
+  width:90vw;
+  gap:8px;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+.spacetoNavBar{
+  height: 10vh;
+}
+.mascotContainer{
+  position: absolute;
+  top:8vh;
+  left:auto;
+  bottom: auto;
+  right: 7vw;
+}
+.displayLogo{
+  margin-top: 3vh;
+}
+
+/* Explore cards */
+
+.exploreBox{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 1vh;
+  width:90vw
+}
+.sleepTips{
+  background-image: url("../public/images/Better sleep tips.png");
+  background-size: cover;
+  height:7rem;
+  width:7rem;
+  border-radius: 10px;
+  margin:1vw;
+}
+.increaseHappiness{
+  background-image: url("../public/images/increase\ happiness.png");
+  background-size: cover;
+  height:7rem;
+  width:7rem;
+  border-radius: 10px;
+  margin:1vw;
+}
+.healthyMeals{
+  background-image: url("../public/images/quick\ health\ food.png");
+  background-size: cover;
+  height:7rem;
+  width:7rem;
+  border-radius: 10px;
+  margin:1vw;
+}
+
+
