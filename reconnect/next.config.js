@@ -5,5 +5,8 @@ module.exports = withPWA({
       dest: "public",
       register: true,
       skipWaiting: true
+  },
+  images: {
+    domains: ['i.ytimg.com','yt3.ggpht.com']
   }
 })
