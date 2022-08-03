@@ -1,14 +1,17 @@
 import ReactPlayer from 'react-player';
 import { useState, useEffect } from 'react';
 import { useRouter } from "next/router";
-import styles from "../styles/video.module.css"
-import Image from 'next/image'
+import styles from "../styles/video.module.css";
+import Image from 'next/image';
+import videoList from '../library/videoList';
+
 
 export default function Meditation () {
 
     const router = useRouter();
     const imageSize = {width:1280, height:720, layout:"intrinsic"};
     const onClick = () => {router.push('/video')};
+    console.log(videoList)
     
 
 

@@ -1,9 +1,23 @@
 import ReactPlayer from 'react-player';
-import meditation from '../library/videos';
+import meditation from '../library/videoList';
+import { useState } from 'react';
 
 export default function Video() {
-        
-    console.log(meditation)
+    
+    const [state, setState]= useState(initialState)
+    const initialState = {
+        url: "",
+        pip: false,
+        playing:true, 
+        controls: false, 
+        light: true, 
+        played: 0, 
+        loaded: 0
+    }
+
+    load = url => {
+
+    }
 
     
         
