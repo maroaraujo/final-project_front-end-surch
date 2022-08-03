@@ -51,7 +51,8 @@ export default function MoodLog() {
             <Image src={awful} alt={"awful"} width={71} height={71}></Image>
           </div>
         </div>
-        {/* create a div to fix navbar issue (navbar showing on top of last div) */}
+        {/* create a div to fix navbar issue (navbar showing on top of last div) 
+        bug*/}
       </main>
     </div>
   );
