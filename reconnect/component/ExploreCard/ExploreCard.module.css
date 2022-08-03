@@ -1,5 +1,5 @@
 .exploreText{
-    font-size: 12px;
+    font-size: 14px;
     overflow-wrap: break-word;
     margin: 0.2vh;
     text-align: left;
@@ -7,7 +7,7 @@
     height:5rem;
     width:5rem;  
     align-items:baseline;
-    padding: 43px 0px 0px 2px;
+    padding: 68px 0px 0px 7px;
   }
   .exploreCard{
     flex-direction: column;
