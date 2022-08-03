@@ -2,10 +2,7 @@ import ReactPlayer from 'react-player';
 import { useState, useEffect } from 'react';
 import { useRouter } from "next/router";
 import styles from "../styles/video.module.css"
-
-
 import Image from 'next/image'
-import { Router } from 'next/router';
 
 export default function Meditation () {
 
@@ -24,8 +21,10 @@ export default function Meditation () {
         </div>
     </div>
     )
+
+    }
     
-}
+
 
 
 
