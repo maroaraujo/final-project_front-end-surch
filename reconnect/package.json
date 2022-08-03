@@ -18,7 +18,9 @@
     "react-chartjs-2": "^4.3.1",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
-    "sassy-datepicker": "^0.8.0"
+    "sassy-datepicker": "^0.8.0",
+    "react-player": "^2.10.1"
+
   },
   "devDependencies": {
     "eslint": "8.20.0",
