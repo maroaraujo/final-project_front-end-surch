@@ -3,15 +3,6 @@
   justify-content: top;
 }
 
-
-.welcomecontainer {
-  display: flex;
-  justify-content: top;
-  background-color: #cbe2ef;
-  margin: 1rem;
-}
-
-
 .main {
   min-height: 100vh;
   flex: 1;
@@ -19,7 +10,7 @@
   flex-direction: column;
   justify-content: top;
   align-items: center;
-  
+  color:#254E7B;
 }
 
 .signuptitle {
@@ -40,24 +31,6 @@
   align-items: center;
 }
 
-.welcomemain {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: top;
-  align-items: center;
-  margin-top: 2rem;
-  background: rgb(37, 78, 123);
-  background: linear-gradient(
-    0deg,
-    rgba(37, 78, 123, 1) 30%,
-    rgba(203, 226, 239, 1) 50%
-  );
-  align-items: center;
-  margin-top: 1rem;
-}
 
 .footer {
   display: flex;
@@ -91,9 +64,11 @@
   margin: 0;
   line-height: 1.15;
   font-size: 30px;
-  top: 133px;
-  padding: 1vh;
+  margin-top: 3vh;
+  z-index: 1;
+  color:#254E7B;
 }
+
 
 .title,
 .description {
@@ -197,6 +172,42 @@
     flex-direction: column;
   }
 }
+
+
+@media (prefers-color-scheme: dark) {
+  .card,
+  .footer {
+    border-color: #222;
+  }
+  .code {
+    background: #111;
+  }
+  .logo img {
+    filter: invert(1);
+  }
+}
+
+.cloudybackground{
+  position: absolute;
+  top: 88px;
+  z-index: -1;
+}
+
+.button {
+  border-radius: 15px;
+  color: white;
+  background-color: #244E7A;
+  margin: 5vw;
+  width: 90vw;
+  height: 63px;
+  font-size: 16px;
+}
+
+.subtitle{
+  margin:1vh
+}
+
+
 .activityCard{
   display:flex;
   justify-content: center;
@@ -266,3 +277,4 @@
   border-radius: 10px;
   margin:1vw;
 }
+
