@@ -10,7 +10,7 @@ import great from "../../public/images/great.png";
 export default function BarChart(props) {
   return (
     <>
-      <h4 className={styles.barChartTitle}>Last week's stats</h4>
+      <h4 className={styles.barChartTitle}>Last Week's Stats</h4>
       <div className={styles.barChart}>
         <div className={styles.barChart1Container}>
           <div className={styles.bar1Container}>

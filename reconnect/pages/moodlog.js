@@ -1,9 +1,9 @@
 import Head from "next/head";
 import styles from "../component/Moodlog/moodlog.module.css";
 import { HiArrowLeft } from "react-icons/hi";
-
+import Image from "next/image";
 import { useUser } from "@auth0/nextjs-auth0";
-import React from "react";
+import React, { useState } from "react";
 import BarChart from "../component/BarChart/barChart";
 import awful from "../public/images/awful.png";
 import bad from "../public/images/bad.png";
@@ -11,9 +11,12 @@ import ok from "../public/images/ok.png";
 import good from "../public/images/good.png";
 import great from "../public/images/great.png";
 import Calendar from "../component/Calendar/Calendar";
+// import BackButton from "../component/BackButton/BackButton";
 
 export default function MoodLog() {
   const { user, error, isLoading } = useUser();
+  const [date, setDate] = useState(new Date());
+
   return (
     <div className={styles.moodLogContainer}>
       <Head>
@@ -23,19 +26,9 @@ export default function MoodLog() {
       </Head>
 
       <main className={styles.moodLogMain}>
-        <article className={styles.moodLogTitleContainer}>
-          <span>
-            <HiArrowLeft
-              size="50"
-              color="#000"
-              //   onClick={() => }   **** To be updated and add logic for back ****
-              className={styles.backButton}
-            />
-          </span>
-          <h1 className={styles.moodLogTitle}>Mood Log</h1>
-        </article>
+        {/* <BackButton url={"https://reconnect-surch.netlify.app/home"} /> */}
+        <h1 className={styles.title}>Mood Log</h1>
 
-    
         <BarChart
           date1={"3 Aug"}
           date2={"2 Aug"}
@@ -46,8 +39,19 @@ export default function MoodLog() {
           date7={"28 Jul"}
         />
         <div className={styles.calendar}>
-        <Calendar/>
+          <Calendar date={date} setDate={setDate} />
         </div>
+        <div className={styles.moodOfSelectedDate}>
+          <div className={styles.moodOfSelectedTextContainer}>
+            <h4>2 Aug 2022</h4>
+            <p>I was on the beach</p>
+            <p>I was with fam</p>
+          </div>
+          <div className={styles.moodOfSelectedEmoji}>
+            <Image src={awful} alt={"awful"} width={71} height={71}></Image>
+          </div>
+        </div>
+        {/* create a div to fix navbar issue (navbar showing on top of last div) */}
       </main>
     </div>
   );

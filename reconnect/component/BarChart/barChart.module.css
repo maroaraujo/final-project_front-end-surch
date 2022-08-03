@@ -5,6 +5,7 @@ Start of BarChart using CSS and html only
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 5vh;
 }
 
 .barChart1Container {
@@ -20,7 +21,7 @@ Start of BarChart using CSS and html only
   position: relative;
   top: 0;
   left: -30px;
-  width: 90vw;
+  width: 83.5vw;
   z-index: 10;
   list-style-type: none;
   font-size: 12px;
@@ -43,9 +44,11 @@ Start of BarChart using CSS and html only
 }
 
 .yAxis li div {
-  position: absolute;
-  left: -35px;
-  top: -12px;
+  /* position: absolute; */
+  /* left: -35px; */
+  margin-left: -10vw;
+  margin-top: -2vh;
+  /* top: -12px; */
 }
 
 .bar1 {

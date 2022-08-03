@@ -19,14 +19,25 @@
   color: #254e7b;
 }
 
-
-.calendar{
-  display: flex ;
-  justify-content: center ;
-  text-align: center ;
+.calendar {
+  display: flex;
+  justify-content: center;
+  text-align: center;
   margin: 5vh;
+  margin-top: 6vh;
+  margin-bottom: 3vh;
   border: 1px solid;
   border-color: #254e7b;
   border-radius: 15px;
   padding: 1vh;
+}
+.moodOfSelectedDate {
+  background-color: #cbe2ef;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1vh;
+  margin-left: 5vh;
+  margin-right: 5vh;
 }
