@@ -35,7 +35,7 @@ function TabBar(props) {
       //   router.push("/home");
       //   break;
     }
-  }, [activeTabs, router.pathname]);
+  }, [activeTabs, router]);
   // const { state, dispatch } = useContext(GlobalContext);
 
   return (
@@ -44,13 +44,13 @@ function TabBar(props) {
         {activeTabs === "home" ? (
           <IoHomeSharp
             size="50"
-            color="#254E7B"
+            color="#000"
             onClick={() => setActiveTabs("home")}
           />
         ) : (
           <IoHomeOutline
             size="50"
-            color="#254E7B"
+            color="#000"
             onClick={() => setActiveTabs("home")}
           />
         )}
@@ -60,13 +60,13 @@ function TabBar(props) {
         {activeTabs === "favourites" ? (
           <IoStar
             size="50"
-            color="#254E7B"
+            color="#000"
             onClick={() => setActiveTabs("favourites")}
           />
         ) : (
           <IoStarOutline
             size="50"
-            color="#254E7B"
+            color="#000"
             onClick={() => setActiveTabs("favourites")}
           />
         )}
@@ -76,13 +76,13 @@ function TabBar(props) {
         {activeTabs === "add" ? (
           <AiFillPlusSquare
             size="50"
-            color="#254E7B"
+            color="#000"
             onClick={() => setActiveTabs("add")}
           />
         ) : (
           <AiOutlinePlusSquare
             size="50"
-            color="#254E7B"
+            color="#000"
             onClick={() => setActiveTabs("add")}
           />
         )}
@@ -92,13 +92,13 @@ function TabBar(props) {
         {activeTabs === "settings" ? (
           <IoSettingsSharp
             size="50"
-            color="#254E7B"
+            color="#000"
             onClick={() => setActiveTabs("settings")}
           />
         ) : (
           <IoSettingsOutline
             size="50"
-            color="#254E7B"
+            color="#000"
             onClick={() => setActiveTabs("settings")}
           />
         )}
