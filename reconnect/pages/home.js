@@ -68,9 +68,7 @@ export default function Home() {
         <ActivityCard title={"Yoga "} image={yogaPic} url={"https://reconnect-surch.netlify.app/yoga"}/>
         </div>
         <div className={styles.spacetoNavBar}>
-
         </div>
-        
       </main>
     </div>
   );
