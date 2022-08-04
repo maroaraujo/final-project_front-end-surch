@@ -1,9 +1,14 @@
 import ReactPlayer from 'react-player';
-import React from 'react';
+import { useEffect, useState } from 'react';
+import videoList from '../library/videoList'
 
+export default function Video() {
 
-export default function VideoDescription({url,title}) {
-
+    
+    let url = videoList.meditation[0].videoUrl
+    let title = videoList.meditation[0].title
+    useEffect(() => {console.log(url)},[url])
+    
     let initialState = {
         url: null,
         pip: false,
@@ -89,4 +94,4 @@ export default function VideoDescription({url,title}) {
     
 }
 /*
- */
+        */
