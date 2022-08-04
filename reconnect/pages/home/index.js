@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../../styles/Home.module.css";
 import DisplayLogo from "../../component/DisplayLogo/DisplayLogo";
 import MascotSmall from "../../component/MascotSmall/MascotSmall";
@@ -13,7 +12,7 @@ import breathingPic from "../../public/images/Breathing.png"
 import stretchingPic from "../../public/images/Stretching.png"
 import yogaPic from "../../public/images/Yoga.png"
 import { useUser } from "@auth0/nextjs-auth0";
-import ExploreCard from "../component/ExploreCard/ExploreCard";
+import ExploreCard from "../../component/ExploreCard/ExploreCard";
 
 export default function Home() {
   const { user, error, isLoading } = useUser();
