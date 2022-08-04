@@ -26,7 +26,7 @@ function TabBar(props) {
         router.push("/favourites");
         break;
       case "add":
-        router.push("/add");
+        router.push("/moodtracker");
         break;
       case "settings":
         router.push("/settings");
