@@ -42,8 +42,13 @@ const yoga = [
     ]
 
 let videoList = {};
+
+breathing.map(e => e.id=nanoid())
+yoga.map(e => e.id=nanoid())
+stretching.map(e => e.id=nanoid())
+meditation.map(e => e.id=nanoid())
+
 export default videoList = {breathing, yoga, stretching, meditation}
 
-meditation.map(e=>(e.id=nanoid()))
 
 
