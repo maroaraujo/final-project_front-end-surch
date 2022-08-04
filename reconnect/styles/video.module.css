@@ -1,0 +1,38 @@
+.description {
+ height: 1rem;
+ max-height: 10vh;
+ display: flexbox;
+ flex-direction: column;
+ justify-content: top;
+ align-items: center;
+ border-radius: 50%;
+}
+
+.h4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+.p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0px;
+    margin-bottom: 20px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 0px 0px 10px;
+    margin: 10px 0px;
+    margin-bottom: 68.63px;
+}
+
+.background {
+    margin-top: -5vh;
+
+}

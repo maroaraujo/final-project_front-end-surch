@@ -11,10 +11,6 @@ import {
 } from "react-icons/io5";
 import { AiOutlinePlusSquare, AiFillPlusSquare } from "react-icons/ai";
 import { useUser } from "@auth0/nextjs-auth0";
-// import { GlobalContext } from "../../context/globalContext";
-// import { useContext } from "react";
-
-//need onclick function to change state of activeTabs
 
 function TabBar(props) {
   const { user, error, isLoading } = useUser();
