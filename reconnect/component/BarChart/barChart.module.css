@@ -1,0 +1,197 @@
+/* 
+Start of BarChart using CSS and html only
+}*/
+.barChart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5vh;
+}
+
+.barChart1Container {
+  position: relative;
+  width: 80%;
+  border: 1px solid #bbb;
+  border-top: none;
+  border-right: none;
+  z-index: 0;
+}
+
+.yAxis {
+  position: relative;
+  top: 0;
+  left: -30px;
+  width: 83.5vw;
+  z-index: 10;
+  list-style-type: none;
+  font-size: 12px;
+}
+
+.yAxis li {
+  position: relative;
+  left: -11px;
+  height: 2rem;
+  border-top: solid 1px rgb(217, 215, 215);
+}
+
+.yAxis li::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -30px;
+  height: 100%;
+  width: 30px;
+}
+
+.yAxis li div {
+  /* position: absolute; */
+  /* left: -35px; */
+  margin-left: -10vw;
+  margin-top: -2vh;
+  /* top: -12px; */
+}
+
+.bar1 {
+  width: 0.7rem;
+  border-radius: 25px;
+  height: 23%;
+  background-color: #254e7b;
+  position: absolute;
+  left: 12.5%;
+  bottom: 0;
+  z-index: 11;
+  display: flex;
+  justify-content: center;
+}
+
+.bar1 p {
+  position: absolute;
+  bottom: -3rem;
+  font-size: 12px;
+  text-align: center;
+}
+
+.bar2 {
+  width: 0.7rem;
+  border-radius: 25px;
+  height: 41%;
+  background-color: #85c1e5;
+  position: absolute;
+  left: 25%;
+  bottom: 0;
+  z-index: 11;
+  display: flex;
+  justify-content: center;
+}
+
+.bar2 p {
+  position: absolute;
+  bottom: -3rem;
+  font-size: 12px;
+  text-align: center;
+}
+
+.bar3 {
+  width: 0.7rem;
+  border-radius: 25px;
+  height: 59%;
+  background-color: #254e7b;
+  position: absolute;
+  left: 37.5%;
+  bottom: 0;
+  z-index: 11;
+  display: flex;
+  justify-content: center;
+}
+
+.bar3 p {
+  position: absolute;
+  bottom: -3rem;
+  font-size: 12px;
+  text-align: center;
+}
+
+.bar4 {
+  width: 0.7rem;
+  border-radius: 25px;
+  height: 93%;
+  background-color: #85c1e5;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  z-index: 11;
+  display: flex;
+  justify-content: center;
+}
+
+.bar4 p {
+  position: absolute;
+  bottom: -3rem;
+  font-size: 12px;
+  text-align: center;
+}
+
+.bar5 {
+  width: 0.7rem;
+  border-radius: 25px;
+  height: 76%;
+  background-color: #254e7b;
+  position: absolute;
+  left: 62.5%;
+  bottom: 0;
+  z-index: 11;
+  display: flex;
+  justify-content: center;
+}
+
+.bar5 p {
+  position: absolute;
+  bottom: -3rem;
+  font-size: 12px;
+  text-align: center;
+}
+
+.bar6 {
+  width: 0.7rem;
+  border-radius: 25px;
+  height: 76%;
+  background-color: #85c1e5;
+  position: absolute;
+  left: 75%;
+  bottom: 0;
+  z-index: 11;
+  display: flex;
+  justify-content: center;
+}
+
+.bar6 p {
+  position: absolute;
+  bottom: -3rem;
+  font-size: 12px;
+  text-align: center;
+}
+
+.bar7 {
+  width: 0.7rem;
+  border-radius: 25px;
+  height: 76%;
+  background-color: #254e7b;
+  position: absolute;
+  left: 87.5%;
+  bottom: 0;
+  z-index: 11;
+  display: flex;
+  justify-content: center;
+}
+
+.bar7 p {
+  position: absolute;
+  bottom: -3rem;
+  font-size: 12px;
+  text-align: center;
+}
+
+.barChartTitle {
+  text-align: center;
+  margin-top: -5vh;
+}
