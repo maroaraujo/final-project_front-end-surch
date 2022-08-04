@@ -2,7 +2,7 @@ import BackButton from "../component/BackButton/BackButton";
 import stylesAchievement from "../styles/Achievement.module.css";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
-import CloudyBackground from "../CloudyBackground/CloudyBackground";
+import CloudyBackground from "../component/CloudyBackground/CloudyBackground";
 import puzzle from "../public/images/3completedPuzzle.png";
 
 export default function Achievement() {
@@ -21,5 +21,4 @@ export default function Achievement() {
       </h1>
     </main>
   );
-
 }

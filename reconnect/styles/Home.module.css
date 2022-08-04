@@ -10,27 +10,26 @@
   flex-direction: column;
   justify-content: top;
   align-items: center;
-  color:#254E7B;
+  color: #254e7b;
 }
 
 .signuptitle {
-  color: #254E7B;
+  color: #254e7b;
 }
 
 .signuptext1 {
-  color:#254E7B;
+  color: #254e7b;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .signupfooter {
-  color:#254E7B;
+  color: #254e7b;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 
 .footer {
   display: flex;
@@ -57,8 +56,7 @@
 .title a:focus,
 .title a:active {
   text-decoration: underline;
-
-} 
+}
 
 .title {
   margin: 0;
@@ -66,16 +64,16 @@
   font-size: 30px;
   margin-top: 3vh;
   z-index: 1;
-  color:#254E7B;
+  color: #254e7b;
+  text-align: center;
+  margin-top: 27px;
+  margin-bottom: 24px;
 }
-
 
 .title,
 .description {
   text-align: center;
 }
-
-
 
 /*Start of mood questions styling*/
 .moodQuestionContainer {
@@ -150,7 +148,7 @@
 .quoteBox {
   background: #5584b1;
   border-radius: 15px;
-  width:90vw;
+  width: 90vw;
   margin-top: 2vh;
   margin-bottom: 1vh;
 }
@@ -173,11 +171,11 @@
   }
 }
 
-  .sdp, .stp {
-    --shadow: transparent 0px 0px 0px 0px,transparent 0px 0px 0px 0px,rgba(0,0,0,0) 0px 0px 0px 0px,rgba(0,0,0,0) 0px 0px 0px 0px !important;
-  
+.sdp,
+.stp {
+  --shadow: transparent 0px 0px 0px 0px, transparent 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px !important;
 }
-
 
 @media (prefers-color-scheme: dark) {
   .card,
@@ -192,7 +190,7 @@
   }
 }
 
-.cloudybackground{
+.cloudybackground {
   position: absolute;
   top: 88px;
   z-index: -1;
@@ -201,7 +199,7 @@
 .button {
   border-radius: 15px;
   color: white;
-  background-color: #244E7A;
+  background-color: #244e7a;
   margin: 5vw;
   width: 90vw;
   height: 63px;
@@ -209,79 +207,76 @@
   z-index: 1;
 }
 
-.subtitle{
-  margin:1vh
+.subtitle {
+  margin: 1vh;
 }
 
-
-.activityCard{
-  display:flex;
+.activityCard {
+  display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items:center;
-  width:90vw;
+  align-items: center;
+  width: 90vw;
   padding-top: 1vh;
 }
-.activityText{
+.activityText {
   margin-bottom: -5vh;
   z-index: 1;
 }
 
-.challenges{
-  display:flex;
-  flex-direction:row;
+.challenges {
+  display: flex;
+  flex-direction: row;
   justify-content: space-around;
-  width:90vw;
-  gap:8px;
+  width: 90vw;
+  gap: 8px;
   padding-top: 1vh;
   padding-bottom: 1vh;
 }
-.spacetoNavBar{
+.spacetoNavBar {
   height: 10vh;
 }
-.mascotContainer{
+.mascotContainer {
   position: absolute;
-  top:8vh;
-  left:auto;
+  top: 8vh;
+  left: auto;
   bottom: auto;
   right: 7vw;
 }
-.displayLogo{
+.displayLogo {
   margin-top: 3vh;
 }
 
 /* Explore cards */
 
-.exploreBox{
-  display:flex;
+.exploreBox {
+  display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin: 1vh;
-  width:90vw
+  width: 90vw;
 }
-.sleepTips{
+.sleepTips {
   background-image: url("../public/images/Better sleep tips.png");
   background-size: cover;
-  height:7rem;
-  width:7rem;
+  height: 7rem;
+  width: 7rem;
   border-radius: 10px;
-  margin:1vw;
+  margin: 1vw;
 }
-.increaseHappiness{
+.increaseHappiness {
   background-image: url("../public/images/increase\ happiness.png");
   background-size: cover;
-  height:7rem;
-  width:7rem;
+  height: 7rem;
+  width: 7rem;
   border-radius: 10px;
-  margin:1vw;
+  margin: 1vw;
 }
-.healthyMeals{
+.healthyMeals {
   background-image: url("../public/images/quick\ health\ food.png");
   background-size: cover;
-  height:7rem;
-  width:7rem;
+  height: 7rem;
+  width: 7rem;
   border-radius: 10px;
-  margin:1vw;
+  margin: 1vw;
 }
-
-

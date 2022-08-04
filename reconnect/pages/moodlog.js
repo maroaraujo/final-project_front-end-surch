@@ -11,7 +11,9 @@ import ok from "../public/images/ok.png";
 import good from "../public/images/good.png";
 import great from "../public/images/great.png";
 import Calendar from "../component/Calendar/Calendar";
-// import BackButton from "../component/BackButton/BackButton";
+import BackButton from "../component/BackButton/BackButton";
+import CloudyBackground from "../component/CloudyBackground/CloudyBackground";
+import stylesHome from "../styles/Home.module.css";
 
 export default function MoodLog() {
   const { user, error, isLoading } = useUser();
@@ -26,8 +28,9 @@ export default function MoodLog() {
       </Head>
 
       <main className={styles.moodLogMain}>
-        {/* <BackButton url={"https://reconnect-surch.netlify.app/home"} /> */}
-        <h1 className={styles.title}>Mood Log</h1>
+        <BackButton url={"https://reconnect-surch.netlify.app/home"} />
+        <h1 className={stylesHome.title}>Mood Log</h1>
+        <CloudyBackground />
 
         <BarChart
           date1={"3 Aug"}

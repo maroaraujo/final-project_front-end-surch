@@ -193,4 +193,5 @@ Start of BarChart using CSS and html only
 
 .barChartTitle {
   text-align: center;
+  margin-top: -5vh;
 }
