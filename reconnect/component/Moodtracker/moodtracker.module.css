@@ -1,8 +1,11 @@
-.input{
-    height: 15vh;
-    width: 90vw;
-    border-radius: 15px;
-    border-color: #244E7A;
-    font-size: 14px;
+.input {
+  height: 15vh;
+  width: 90vw;
+  border-radius: 15px;
+  border-color: #244e7a;
+  font-size: 14px;
 }
 
+.moodquestion {
+  margin-top: -5vh;
+}
