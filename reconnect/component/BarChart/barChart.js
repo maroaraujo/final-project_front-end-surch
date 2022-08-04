@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./barChart.module.css";
 import Image from "next/image";
 import awful from "../../public/images/awful.png";
@@ -11,45 +11,51 @@ import { useEffect } from "react";
 const dummyData = [
   {
     id: "1",
-    date: "2022, 07, 28",
+    date: "2022-07-28",
     mood: "great",
     whatmakesfeel: "I was on the beach",
     notes: "I was with family",
   },
   {
-    date: "29/07/2022",
+    date: "2022-07-29",
     mood: "bad",
     whatmakesfeel: "cough covid",
     notes: "",
   },
   {
-    date: "30/07/2022",
+    date: "2022-07-30",
     mood: "ok",
     whatmakesfeel: "pains",
     notes: "didn't eat much",
   },
   {
-    date: "31/07/2022",
+    date: "2022-07-31",
     mood: "ok",
     whatmakesfeel: "",
     notes: "",
   },
   {
-    date: "1/08/2022",
+    date: "2022-08-01",
     mood: "good",
     whatmakesfeel: "getting better",
     notes: "",
   },
   {
-    date: "2/08/2022",
+    date: "2022-08-02",
     mood: "great",
     whatmakesfeel: "I was on the beach again",
     notes: "made some friends",
   },
   {
-    date: "2022, 08, 03",
-    mood: "bad",
+    date: "2022-08-03",
+    mood: "awful",
     whatmakesfeel: "my friends cough covid",
+    notes: "my fault",
+  },
+  {
+    date: "2022-08-04",
+    mood: "ok",
+    whatmakesfeel: "testing",
     notes: "my fault",
   },
 ];
@@ -63,86 +69,87 @@ const moodCSSHeight = {
 };
 
 export default function BarChart(props) {
+  const [userMood, setUserMood] = useState(dummyData);
   //fetch the data
   // extract the mood of the
   //if statement for the type of mood
   //compare different mood and return the right height
   useEffect(() => {
-    const bar1Height = getComputedStyle(
-      document.documentElement
-    ).getPropertyValue("--bar1-height");
+    // This function is updating the CSS height of the bar depending on the mood
+    function setBarHeight(barNumber, arrayIndex) {
+      switch (userMood[arrayIndex].mood) {
+        case "awful":
+          document.documentElement.style.setProperty(
+            `--bar${barNumber}-height`,
+            "23%"
+          );
+          break;
 
-    const bar2Height = getComputedStyle(
-      document.documentElement
-    ).getPropertyValue("--bar2-height");
+        case "bad":
+          document.documentElement.style.setProperty(
+            `--bar${barNumber}-height`,
+            "41%"
+          );
+          break;
 
-    const bar3Height = getComputedStyle(
-      document.documentElement
-    ).getPropertyValue("--bar3-height");
+        case "ok":
+          document.documentElement.style.setProperty(
+            `--bar${barNumber}-height`,
+            "59%"
+          );
+          break;
 
-    const bar4Height = getComputedStyle(
-      document.documentElement
-    ).getPropertyValue("--bar4-height");
+        case "good":
+          document.documentElement.style.setProperty(
+            `--bar${barNumber}-height`,
+            "76%"
+          );
+          break;
 
-    const bar5Height = getComputedStyle(
-      document.documentElement
-    ).getPropertyValue("--bar5-height");
-
-    const bar6Height = getComputedStyle(
-      document.documentElement
-    ).getPropertyValue("--bar6-height");
-
-    const bar7Height = getComputedStyle(
-      document.documentElement
-    ).getPropertyValue("--bar7-height");
-  }, []);
-
-  function setBarHeight(barNumber, arrayIndex, mood) {
-    if (dummyData[arrayIndex].mood === mood) {
-      document.documentElement.style.setProperty(
-        `--bar${barNumber}-height`,
-        "23%"
-      );
+        case "great":
+          document.documentElement.style.setProperty(
+            `--bar${barNumber}-height`,
+            "93%"
+          );
+          break;
+      }
     }
 
-    // switch (dummyData[arrayIndex].mood) {
-    //   case "awful":
-    //     document.documentElement.style.setProperty(
-    //       `--bar${barNumber}-height`,
-    //       "23%"
-    //     );
-    //     break;
+    setBarHeight(1, userMood.length - 1);
+    setBarHeight(2, userMood.length - 2);
+    setBarHeight(3, userMood.length - 3);
+    setBarHeight(4, userMood.length - 4);
+    setBarHeight(5, userMood.length - 5);
+    setBarHeight(6, userMood.length - 6);
+    setBarHeight(7, userMood.length - 7);
+  }, [userMood]);
 
-    //   case "bad":
-    //     document.documentElement.style.setProperty(
-    //       `--bar${barNumber}-height`,
-    //       "41%"
-    //     );
-    //     break;
+  function getDate(arrayIndex) {
+    const date = userMood[arrayIndex].date;
 
-    //   case "ok":
-    //     document.documentElement.style.setProperty(
-    //       `--bar${barNumber}-height`,
-    //       "59%"
-    //     );
-    //     break;
+    function toMonthName(monthNumber) {
+      const date = new Date();
+      date.setMonth(monthNumber - 1);
 
-    //   case "good":
-    //     document.documentElement.style.setProperty(
-    //       `--bar${barNumber}-height`,
-    //       "76%"
-    //     );
-    //     break;
+      return date.toLocaleString("en-US", {
+        month: "short",
+      });
+    }
 
-    //   case "great":
-    //     document.documentElement.style.setProperty(
-    //       `--bar${barNumber}-height`,
-    //       "93%"
-    //     );
-    //     break;
+const month = date.chartAt(6,7)
+console.log(month)
+
+    
   }
 
-  setBarHeight(1, 6);
+  // the function below is to format the date for the calendar
+  // function getCalendarDate() {
+  //   const maxDate = userMood[userMood.length].date;
+  //   const minDate = userMood[0].date;
+
+  //   maxDate.replace(/-/g, ", ");
+  //   minDate.replace(/-/g, ", ");
+  // }
 
   return (
     <>
@@ -152,37 +159,37 @@ export default function BarChart(props) {
           <div className={styles.bar1Container}>
             <div className={styles.bar1}>
               {/* dummyData.length -1 , date and mood*/}
-              <p>{props.date1}</p>
+              <p>{getDate(userMood.length - 1)}</p>
             </div>
 
             <div className={styles.bar2}>
               {/* dummyData.length -2 */}
-              <p>{props.date2}</p>
+              <p>{getDate(userMood.length - 2)}</p>
             </div>
 
             <div className={styles.bar3}>
               {/* dummyData.length -3 */}
-              <p>{props.date3}</p>
+              <p>{getDate(userMood.length - 3)}</p>
             </div>
 
             <div className={styles.bar4}>
               {/* dummyData.length -4 */}
-              <p>{props.date4}</p>
+              <p>{getDate(userMood.length - 4)}</p>
             </div>
 
             <div className={styles.bar5}>
               {/* dummyData.length -5 */}
-              <p>{props.date5}</p>
+              <p>{getDate(userMood.length - 5)}</p>
             </div>
 
             <div className={styles.bar6}>
               {/* dummyData.length -6 */}
-              <p>{props.date6}</p>
+              <p>{getDate(userMood.length - 6)}</p>
             </div>
           </div>
           <div className={styles.bar7}>
             {/* dummyData.length -7 */}
-            <p>{props.date7}</p>
+            <p>{getDate(userMood.length - 7)}</p>
           </div>
 
           <ul className={styles.yAxis}>
