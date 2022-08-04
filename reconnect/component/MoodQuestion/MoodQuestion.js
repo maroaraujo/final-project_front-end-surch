@@ -5,17 +5,12 @@ import bad from "../../public/images/bad.png";
 import ok from "../../public/images/ok.png";
 import good from "../../public/images/good.png";
 import great from "../../public/images/great.png";
+import Image from "next/image";
 import styles from "../../styles/Home.module.css";
-import {useRouter} from "next/router"
 
-function MoodQuestion(props) {
-  const router = useRouter();
-
-    function handleClick(){
-       router.push(props.url)}
-
+function MoodQuestion() {
   return (
-    <div className={styles.moodQuestionContainer} onClick={handleClick}>
+    <div className={styles.moodQuestionContainer}>
       <MoodState src={awful} alt="awful" mood="Awful" />
       <MoodState src={bad} alt="bad" mood="Bad" />
       <MoodState src={ok} alt="ok" mood="OK" />
