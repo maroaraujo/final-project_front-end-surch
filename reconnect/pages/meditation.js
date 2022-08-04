@@ -7,6 +7,8 @@ import Image from "next/image";
 import videoList from "../library/videoList";
 import styles from "../styles/Home.module.css";
 import CloudyBackground from "../component/CloudyBackground/CloudyBackground.js";
+import BackButton from "../component/BackButton/BackButton"
+import VideoList from "../component/VideoList"
 
 //import BackButton from "../component/Button/Button";
 
@@ -18,7 +20,11 @@ export default function Meditation() {
   console.log(videoList);
 
   return (
-    <div>
+      <VideoList array={videoList.meditation}/>    
+      )}
+
+      /*
+      <div>
       <div >
         <BackButton url={"https://reconnect-surch.netlify.app/home"} />
         <h1 className={styles.title}>Meditation</h1>
@@ -26,7 +32,7 @@ export default function Meditation() {
       </div>
       <div>
         <Image 
-          src="https://i.ytimg.com/vi/O-6f5wQXSu8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBajCqSN4D6cgnZT8SnZ-RcV0ILNg"
+          src={videoList.medita}
           alt="10 minutes meditation video thumbnail"
           layout={imageSize.layout}
           height={imageSize.height}
@@ -54,4 +60,4 @@ export default function Meditation() {
         </p>
       </div>
       </div>
-      )
+      */

@@ -1,19 +1,22 @@
 import { useRouter } from "next/router";
-import stylesvideo from "../styles/video.module.css";
-import Image from 'next/image';
-import videoList from '../library/videoList';
-import styles from "../styles/Home.module.css";
-import Video from "../VideoDescription";
+import stylesvideo from "../../styles/video.module.css";
+import styles from "../../styles/Home.module.css";
 import BackButton from "../../component/BackButton/BackButton";
 import CloudyBackground from "../../component/CloudyBackground/CloudyBackground.js";
+import { useState } from "react";
+import videoList from "../../library/videoList";
+import Video from "../video"
 
 
 
 
-
-
-export default function VideoList (array) {
-
+export default function VideoList (type) {
+    
+    //const [array, setArray] = useState([])
+    
+    
+    let array=videoList.meditation
+    
 
     return (
     <div>
@@ -21,7 +24,7 @@ export default function VideoList (array) {
         <BackButton url={"https://reconnect-surch.netlify.app/home"} />
         <h1 className={styles.title}>Meditation</h1>
         <CloudyBackground className={stylesvideo.background}/>
-      </div>
+        </div>
         
         {array.map((video) => (
             <Video
