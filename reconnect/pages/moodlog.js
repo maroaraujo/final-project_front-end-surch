@@ -15,10 +15,68 @@ import BackButton from "../component/BackButton/BackButton";
 import CloudyBackground from "../component/CloudyBackground/CloudyBackground";
 import stylesHome from "../styles/Home.module.css";
 
+const dummyData = [
+  {
+    id: "0",
+    date: "2022-07-27",
+    mood: "great",
+    whatmakesfeel: "I was on the beach",
+    notes: "I was with family",
+  },
+  {
+    id: "1",
+    date: "2022-07-28",
+    mood: "great",
+    whatmakesfeel: "I was on the beach",
+    notes: "I was with family",
+  },
+  {
+    date: "2022-07-29",
+    mood: "bad",
+    whatmakesfeel: "cough covid",
+    notes: "",
+  },
+  {
+    date: "2022-07-30",
+    mood: "ok",
+    whatmakesfeel: "pains",
+    notes: "didn't eat much",
+  },
+  {
+    date: "2022-07-31",
+    mood: "ok",
+    whatmakesfeel: "",
+    notes: "",
+  },
+  {
+    date: "2022-08-01",
+    mood: "good",
+    whatmakesfeel: "getting better",
+    notes: "",
+  },
+  {
+    date: "2022-08-02",
+    mood: "great",
+    whatmakesfeel: "I was on the beach again",
+    notes: "made some friends",
+  },
+  {
+    date: "2022-08-03",
+    mood: "awful",
+    whatmakesfeel: "my friends cough covid",
+    notes: "my fault",
+  },
+  {
+    date: "2022-08-04",
+    mood: "ok",
+    whatmakesfeel: "testing",
+    notes: "my fault",
+  },
+];
 export default function MoodLog() {
   const { user, error, isLoading } = useUser();
   const [date, setDate] = useState(new Date());
-
+  const [userMood, setUserMood] = useState(dummyData);
 
   return (
     <div className={styles.moodLogContainer}>
@@ -33,17 +91,9 @@ export default function MoodLog() {
         <h1 className={stylesHome.title}>Mood Log</h1>
         <CloudyBackground />
 
-        <BarChart
-          date1={"3 Aug"}
-          date2={"2 Aug"}
-          date3={"1 Aug"}
-          date4={"31 Jul"}
-          date5={"30 Jul"}
-          date6={"29 Jul"}
-          date7={"28 Jul"}
-        />
+        <BarChart userMood={userMood} />
         <div className={styles.calendar}>
-          <Calendar date={date} setDate={setDate} />
+          <Calendar date={date} setDate={setDate} userMood={userMood} />
         </div>
         <div className={styles.moodOfSelectedDate}>
           <div className={styles.moodOfSelectedTextContainer}>
