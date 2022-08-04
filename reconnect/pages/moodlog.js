@@ -19,6 +19,7 @@ export default function MoodLog() {
   const { user, error, isLoading } = useUser();
   const [date, setDate] = useState(new Date());
 
+
   return (
     <div className={styles.moodLogContainer}>
       <Head>
@@ -28,7 +29,7 @@ export default function MoodLog() {
       </Head>
 
       <main className={styles.moodLogMain}>
-        <BackButton url={"https://reconnect-surch.netlify.app/home"} />
+        <BackButton url={"/moodtracker"} />
         <h1 className={stylesHome.title}>Mood Log</h1>
         <CloudyBackground />
 
