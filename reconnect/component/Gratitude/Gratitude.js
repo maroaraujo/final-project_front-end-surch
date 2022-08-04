@@ -15,7 +15,7 @@ export default function Gratitude(){
                     </div>
                 <p className={stylesGratitude.ptags}>date | reason</p>
             </div>
-                <h5 className={styles.seeAll}>see all</h5>
+            <a href={"https://reconnect-surch.netlify.app/gratitudewall"} className={styles.seeAll}>see all</a>
         </div>
     )
 }
