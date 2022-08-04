@@ -23,6 +23,9 @@
 }
 
 .signuptitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: #254e7b;
 }
 
