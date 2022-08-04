@@ -1,18 +1,18 @@
 import Head from "next/head";
 import styles from "../../styles/Home.module.css";
-import DisplayLogo from "../../component/DisplayLogo/DisplayLogo";
-import MascotSmall from "../../component/MascotSmall/MascotSmall";
-import MoodQuestion from "../../component/MoodQuestion/MoodQuestion";
-import Gratitude from "../../component/Gratitude/Gratitude";
-import Quote from "../../component/Quote/Quote";
-import ChallengeCard from "../../component/ChallengeCard/ChallengeCard";
-import ActivityCard from "../../component/ActivityCard/ActivityCard";
+import DisplayLogo from "../component/DisplayLogo/DisplayLogo";
+import MascotSmall from "../component/MascotSmall/MascotSmall";
+import MoodQuestion from "../component/MoodQuestion/MoodQuestion";
+import Gratitude from "../component/Gratitude/Gratitude";
+import Quote from "../component/Quote/Quote";
+import ChallengeCard from "../component/ChallengeCard/ChallengeCard";
+import ActivityCard from "../component/ActivityCard/ActivityCard";
 import meditationPic from "../../public/images/maditation.png";
 import breathingPic from "../../public/images/Breathing.png";
 import stretchingPic from "../../public/images/Stretching.png";
 import yogaPic from "../../public/images/Yoga.png";
 import { useUser } from "@auth0/nextjs-auth0";
-import ExploreCard from "../../component/ExploreCard/ExploreCard";
+import ExploreCard from "../component/ExploreCard/ExploreCard";
 
 export default function Home() {
   const { user, error, isLoading } = useUser();

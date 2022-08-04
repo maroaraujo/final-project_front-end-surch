@@ -1,8 +1,13 @@
 import ReactPlayer from 'react-player';
 import React from 'react';
+import { useState } from 'react';
 
 
-export default function VideoDescription({url,title}) {
+export default function VideoDescription({video}) {
+
+    const { videoUrl, title } = video
+
+    console.log('url',videoUrl,'title',title)
 
     let initialState = {
         url: null,
@@ -64,7 +69,7 @@ export default function VideoDescription({url,title}) {
         <>
         <ReactPlayer 
             ref={ref}
-            url={url}
+            url={videoUrl}
             playing={state.playing}
             onDuration={handleDuration} 
             onProgress={handleProgress}
@@ -77,12 +82,12 @@ export default function VideoDescription({url,title}) {
         <button onClick={handlePlayed}>skip</button>
         <h3>duration:{state.duration}</h3>
         <label for='progress bar'>video progress bar</label>
-        <input
+        {/* <input
             type='range' min={0} max={0.999999} step='any'
             value={state.played}
             onMouseDown={handleSeekMouseDown}
             onChange={handleSeekChange}
-            onMouseUp={handleSeekMouseUp}/>
+            onMouseUp={handleSeekMouseUp}/> */}
         <progress className='progress_Bar' max={1} value={state.played} />
         </>
     )

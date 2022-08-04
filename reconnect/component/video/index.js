@@ -1,20 +1,24 @@
 import React from "react";
 import Image from "next/image";
-import { Router } from "next/router";
+import { useRouter } from "next/router";
 import stylesvideo from "../../styles/video.module.css";
 
-export default function Video({imgUrl,title,id,description}) {
+export default function Video({imgUrl,title,id,description,type}) {
 
+    const router = useRouter();
     const imageSize = { width: 1280, height: 720, layout: "intrinsic" };
 
     function handleClick() {
-        Router.push('./'+id)
+        let path = `./${type}/${id}`;
+        console.log('path',path)
+        router.push(path)
     }
     
     
     return(
         <div>
         <Image 
+        key={id}
         src={imgUrl}
         alt={title + 'thumbnail'}
         layout={imageSize.layout}
