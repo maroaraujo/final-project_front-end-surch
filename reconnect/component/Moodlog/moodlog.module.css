@@ -1,0 +1,43 @@
+.moodLogTitle {
+  display: flex;
+  justify-content: center;
+  color: #254e7b;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.backButton {
+  position: absolute;
+  top: 4.8%;
+  left: 5%;
+  height: 30px;
+  width: 30px;
+}
+
+.moodLogContainer {
+  color: #254e7b;
+}
+
+.calendar {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 5vh;
+  margin-top: 6vh;
+  margin-bottom: 3vh;
+  border: 1px solid;
+  border-color: #254e7b;
+  border-radius: 15px;
+  padding: 1vh;
+}
+.moodOfSelectedDate {
+  background-color: #cbe2ef;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1vh;
+  margin-left: 5vh;
+  margin-right: 5vh;
+}

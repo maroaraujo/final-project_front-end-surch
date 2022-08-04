@@ -1,3 +1,34 @@
+:root {
+  /* CSS variables for BarChart */
+  --color-primary: #254e7b;
+  --color-secondary: #85c1e5;
+  --font-size-barChart: 12px;
+  --bar-height-awful: 20%;
+  --bar-height-bad: 40%;
+  --bar-height-ok: 60%;
+  --bar-height-good: 80%;
+  --bar-height-great: 100%;
+  --bar-left-mon: 10%;
+  --bar-left-tues: 20%;
+  --bar-left-wed: 30%;
+  --bar-left-thu: 40%;
+  --bar-left-fri: 50%;
+  --bar-left-sat: 60%;
+  --bar-left-sun: 70%;
+  --bar-bottom-awful: 20%;
+  --bar-bottom-bad: 40%;
+  --bar-bottom-ok: 60%;
+  --bar-bottom-good: 75%;
+  --bar-bottom-great: 92%;
+  --bar-left-mood1: 8%;
+  --bar-left-mood2: 17.5%;
+  --bar-left-mood3: 27.5%;
+  --bar-left-mood4: 38%;
+  --bar-left-mood5: 48%;
+  --bar-left-mood6: 58%;
+  --bar-left-mood7: 68%;
+}
+
 html,
 body {
   padding: 0;
@@ -20,7 +51,13 @@ a {
     color-scheme: light;
   }
   body {
-    color: #254E7B;
+    color: #254e7b;
     background: white;
   }
+}
+
+
+.sdp, .stp {
+  --shadow: transparent 0px 0px 0px 0px,transparent 0px 0px 0px 0px,rgba(0,0,0,0) 0px 0px 0px 0px,rgba(0,0,0,0) 0px 0px 0px 0px !important;
+  --theme-color: #85C1E5 !important;
 }
