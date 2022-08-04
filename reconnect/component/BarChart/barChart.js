@@ -136,10 +136,12 @@ export default function BarChart(props) {
       });
     }
 
-const month = date.chartAt(6,7)
-console.log(month)
+    const monthNumber = Number(date.slice(5, 7));
+    const dateNumber = Number(date.slice(8));
 
-    
+    const monthString = toMonthName(monthNumber);
+    const labelDate = dateNumber + " " + monthString;
+    return labelDate;
   }
 
   // the function below is to format the date for the calendar
