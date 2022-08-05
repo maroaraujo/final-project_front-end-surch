@@ -3,14 +3,12 @@
   justify-content: top;
 }
 
-
 .welcomecontainer {
   display: flex;
   justify-content: top;
   background-color: #cbe2ef;
   margin: 1rem;
 }
-
 
 .main {
   min-height: 100vh;
@@ -43,7 +41,6 @@
   align-items: center;
 }
 
-
 .welcomemain {
   min-height: 100vh;
   padding: 4rem 0;
@@ -69,10 +66,10 @@
   padding: 2rem 0;
   border-top: 1px solid #eaeaea;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
   margin-top: 3vh;
   z-index: 1;
-  color:#254E7B;
+  color: #254e7b;
 }
 
 .footer a {
@@ -169,6 +166,9 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.bnTab span {
+  color: #254e7b;
 }
 
 .bnTabText {

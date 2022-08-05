@@ -8,6 +8,8 @@ import {
   IoStar,
   IoSettingsOutline,
   IoSettingsSharp,
+  IoJournal,
+  IoJournalOutline,
 } from "react-icons/io5";
 import { AiOutlinePlusSquare, AiFillPlusSquare } from "react-icons/ai";
 import { useUser } from "@auth0/nextjs-auth0";
@@ -21,6 +23,9 @@ function TabBar(props) {
     switch (activeTabs) {
       case "home":
         router.push("/home");
+        break;
+      case "moodlog":
+        router.push("/moodlog");
         break;
       case "favourites":
         router.push("/favourites");
@@ -36,7 +41,6 @@ function TabBar(props) {
       //   break;
     }
   }, [activeTabs, router.pathname]);
-  // const { state, dispatch } = useContext(GlobalContext);
 
   return (
     <div className={`${Styles.bottomNav}`}>
@@ -55,6 +59,22 @@ function TabBar(props) {
           />
         )}
         <span>Home</span>
+      </div>
+      <div className={`${Styles.bnTab}`}>
+        {activeTabs === "moodlog" ? (
+          <IoJournal
+            size="50"
+            color="#254E7B"
+            onClick={() => setActiveTabs("moodlog")}
+          />
+        ) : (
+          <IoJournalOutline
+            size="50"
+            color="#254E7B"
+            onClick={() => setActiveTabs("moodlog")}
+          />
+        )}
+        <span>Journal</span>
       </div>
       <div className={`${Styles.bnTab}`}>
         {activeTabs === "favourites" ? (
@@ -76,13 +96,13 @@ function TabBar(props) {
         {activeTabs === "add" ? (
           <AiFillPlusSquare
             size="50"
-            color="##254E7B"
+            color="#254E7B"
             onClick={() => setActiveTabs("add")}
           />
         ) : (
           <AiOutlinePlusSquare
             size="50"
-            color="##254E7B"
+            color="#254E7B"
             onClick={() => setActiveTabs("add")}
           />
         )}
@@ -92,13 +112,13 @@ function TabBar(props) {
         {activeTabs === "settings" ? (
           <IoSettingsSharp
             size="50"
-            color="##254E7B"
+            color="#254E7B"
             onClick={() => setActiveTabs("settings")}
           />
         ) : (
           <IoSettingsOutline
             size="50"
-            color="##254E7B"
+            color="#254E7B"
             onClick={() => setActiveTabs("settings")}
           />
         )}
