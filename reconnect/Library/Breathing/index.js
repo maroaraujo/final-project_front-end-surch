@@ -1,7 +1,7 @@
 import { nanoid } from 'nanoid';
 
 let breathing = [
-    {imgUrl:'https://i.ytimg.com/an_webp/F28MGLlpP90/mqdefault_6s.webp?du=3000&sqp=CPu0s5cG&rs=AOn4CLC8hI5wVLXqGXMvzD8CV_p2R3ixdw',
+    {imgUrl:'https://i.ytimg.com/an_webp/F28MGLlpP90/mqdefault_6s.webp?du=3000&sqp=CPb-tJcG&rs=AOn4CLCdxr5y1f_3-R4m4XYawCciRbOpyQ',
      videoUrl:'https://www.youtube.com/watch?v=F28MGLlpP90',
      title:'15 Minute Deep breathing Exercise | City of Hope'},
 
