@@ -12,7 +12,12 @@ import {
   IoJournalOutline,
 } from "react-icons/io5";
 import { AiOutlinePlusSquare, AiFillPlusSquare } from "react-icons/ai";
-import { BsEmojiSmile, BsEmojiSmileFill } from "react-icons/bs";
+import {
+  BsEmojiSmile,
+  BsEmojiSmileFill,
+  BsJournalBookmarkFill,
+  BsJournalBookmark,
+} from "react-icons/bs";
 
 import { useUser } from "@auth0/nextjs-auth0";
 
@@ -61,13 +66,13 @@ function TabBar(props) {
       </div>
       <div className={`${Styles.bnTab}`}>
         {activeTabs === "moodlog" ? (
-          <IoJournal
+          <BsJournalBookmarkFill
             size="50"
             color="#254E7B"
             onClick={() => setActiveTabs("moodlog")}
           />
         ) : (
-          <IoJournalOutline
+          <BsJournalBookmark
             size="50"
             color="#254E7B"
             onClick={() => setActiveTabs("moodlog")}
