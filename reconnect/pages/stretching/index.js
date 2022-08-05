@@ -1,11 +1,11 @@
-import stretching from '../../Library/Breathing';
+import stretching from '../../Library/Stretching';
 import VideoList from '../../component/VideoList';
 
 const Stretching = () =>{
 
     return(
         <div>
-            <VideoList array={stretching} pageTitle='Stretching Exercises' type={'stretching'}/>
+            <VideoList array={stretching} pageTitle='Stretching' type={'stretching'}/>
         </div>
     )
 }
