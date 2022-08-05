@@ -73,7 +73,6 @@ export default function BarChart(props) {
 
     const monthNumber = Number(date.slice(5, 7));
     const dateNumber = Number(date.slice(8));
-
     const monthString = toMonthName(monthNumber);
 
     const labelDate = dateNumber + " " + monthString;

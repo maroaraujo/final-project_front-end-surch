@@ -3,7 +3,7 @@ import styles from "../component/Moodlog/moodlog.module.css";
 import { HiArrowLeft } from "react-icons/hi";
 import Image from "next/image";
 import { useUser } from "@auth0/nextjs-auth0";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import BarChart from "../component/BarChart/barChart";
 import awful from "../public/images/awful.png";
 import bad from "../public/images/bad.png";
@@ -79,9 +79,49 @@ export default function MoodLog() {
   const [date, setDate] = useState(new Date());
   const [userMood, setUserMood] = useState(dummyData);
 
-  let selectedDate = date.toLocaleDateString("en-GB") // it is coming in this format 04/08/2022
-let comparableDate = selectedDate.slice()
+  let notesArray = [];
 
+  // This function is going to change the date of the calendar to compare with the database date format
+  function compareData() {
+    let selectedDate = date.toLocaleDateString("en-GB"); // it is coming in this format 04/08/2022
+    //comparable date 2022-08-03
+    let yearFirst = selectedDate.slice(6);
+    let monthSecond = selectedDate.slice(3, 5);
+    let dateThird = selectedDate.slice(0, 2);
+    let comparableDate = yearFirst + "-" + monthSecond + "-" + dateThird;
+    console.log("comparabledate", comparableDate);
+
+    for (let i = 0; i < dummyData.length; i++) {
+      if (comparableDate === dummyData[i].date)
+        notesArray = [
+          dummyData[i].whatmakesfeel,
+          dummyData[i].notes,
+          dummyData[i].mood,
+        ];
+    }
+    return notesArray;
+  }
+
+  compareData();
+
+  console.log("notesArray", notesArray);
+
+  let moodEmoji = great;
+  if (notesArray[2] === "awful") {
+    moodEmoji = awful;
+  }
+  if (notesArray[2] === "bad") {
+    moodEmoji = bad;
+  }
+  if (notesArray[2] === "ok") {
+    moodEmoji = ok;
+  }
+  if (notesArray[2] === "good") {
+    moodEmoji = good;
+  }
+  if (notesArray[2] === "great") {
+    moodEmoji = great;
+  }
   return (
     <div className={styles.moodLogContainer}>
       <Head>
@@ -100,15 +140,28 @@ let comparableDate = selectedDate.slice()
           <Calendar date={date} setDate={setDate} userMood={userMood} />
         </div>
         <div className={styles.moodOfSelectedDate}>
-          <div className={styles.moodOfSelectedTextContainer}>
+          
             <h4>{date.toLocaleDateString("en-GB")}</h4>
-            {/* {userMood.filter(userMood.date === date)} */}
-            <p>notes</p>
-            <p>I was with fam</p>
-          </div>
-          <div className={styles.moodOfSelectedEmoji}>
-            <Image src={awful} alt={"awful"} width={71} height={71}></Image>
-          </div>
+          
+          {notesArray[2] ? (
+            <div>
+            <div className={styles.moodOfSelectedEmoji}>
+                <Image
+                  src={moodEmoji}
+                  alt={"hi"}
+                  width={71}
+                  height={71}
+                ></Image>
+              </div>
+              <div className={styles.moodOfSelectedTextContainer}>
+                <p>{notesArray[0]}</p>
+                <p>{notesArray[1]}</p>
+              </div>
+              
+            </div>
+          ) : (
+            <p className={styles.moodOfSelectedTextContainer}>You didn't entry any mood for this day</p>
+          )}
         </div>
         <div className={stylesHome.spacetoNavBar}></div>
         {console.log("datapicker object", date)}
