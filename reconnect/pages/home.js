@@ -74,10 +74,10 @@ export default function Home() {
 
         <div>
         <h1 className={styles.title}>All Activities</h1>
-        <ActivityCard title={"Meditation"} image={meditationPic} url={"https://reconnect-surch.netlify.app/meditation"}/>
-        <ActivityCard title={"Breathing Exercises"} image={breathingPic} url={"https://reconnect-surch.netlify.app/breathingExercises"}/>
-        <ActivityCard title={"Stretching"} image={stretchingPic} url={"https://reconnect-surch.netlify.app/stretching"}/>
-        <ActivityCard title={"Yoga "} image={yogaPic} url={"https://reconnect-surch.netlify.app/yoga"}/>
+        <ActivityCard title={"Meditation"} image={meditationPic} url={"/meditation"}/>
+        <ActivityCard title={"Breathing Exercises"} image={breathingPic} url={"/breathing"}/>
+        <ActivityCard title={"Stretching"} image={stretchingPic} url={"/stretching"}/>
+        <ActivityCard title={"Yoga "} image={yogaPic} url={"/yoga"}/>
         </div>
         <div className={styles.spacetoNavBar}>
         </div>
