@@ -14,6 +14,7 @@ import Calendar from "../component/Calendar/Calendar";
 import BackButton from "../component/BackButton/BackButton";
 import CloudyBackground from "../component/CloudyBackground/CloudyBackground";
 import stylesHome from "../styles/Home.module.css";
+import DatePicker from "sassy-datepicker";
 
 const dummyData = [
   {
@@ -78,6 +79,9 @@ export default function MoodLog() {
   const [date, setDate] = useState(new Date());
   const [userMood, setUserMood] = useState(dummyData);
 
+  let selectedDate = date.toLocaleDateString("en-GB") // it is coming in this format 04/08/2022
+let comparableDate = selectedDate.slice()
+
   return (
     <div className={styles.moodLogContainer}>
       <Head>
@@ -97,8 +101,9 @@ export default function MoodLog() {
         </div>
         <div className={styles.moodOfSelectedDate}>
           <div className={styles.moodOfSelectedTextContainer}>
-            <h4>2 Aug 2022</h4>
-            <p>I was on the beach</p>
+            <h4>{date.toLocaleDateString("en-GB")}</h4>
+            {/* {userMood.filter(userMood.date === date)} */}
+            <p>notes</p>
             <p>I was with fam</p>
           </div>
           <div className={styles.moodOfSelectedEmoji}>
@@ -106,6 +111,7 @@ export default function MoodLog() {
           </div>
         </div>
         <div className={stylesHome.spacetoNavBar}></div>
+        {console.log("datapicker object", date)}
       </main>
     </div>
   );
