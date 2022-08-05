@@ -1,4 +1,4 @@
-import yoga from '../../Library/yoga';
+import yoga from '../../Library/Yoga';
 import VideoList from '../../component/VideoList';
 
 const Yoga = () =>{
