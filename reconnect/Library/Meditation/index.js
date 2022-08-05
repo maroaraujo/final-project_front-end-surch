@@ -11,6 +11,7 @@ let meditation = [
     
 ]
 
-meditation.forEach(e => e.id=nanoid());
+meditation.forEach(e => {e.id=nanoid();
+e.isFavourite=false;});
 
 export default meditation

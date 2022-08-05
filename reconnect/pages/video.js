@@ -1,15 +1,16 @@
 import VideoDescription from "../component/VideoDescription/index";
-import breathing from "../Library/Breathing"
+import breathing from "../Library/Breathing";
+import BackButton from "../component/BackButton/BackButton";
 
 export default function Video() {
-    
-    let url = breathing[0].videoUrl;
-    let title = breathing[0].title
-    
+
+    console.log(breathing[0])
 
     return(
-        
+        <>
+        <BackButton url='./home' />
         <VideoDescription video={breathing[0]}/>
+        </>
     )
     
     

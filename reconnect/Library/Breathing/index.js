@@ -11,7 +11,8 @@ let breathing = [
 
 ]
 
-breathing.forEach(e => e.id=nanoid());
+breathing.forEach(e => {e.id=nanoid();
+                        e.isFavourite=false;});
 
 export default breathing;
 

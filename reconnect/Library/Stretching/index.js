@@ -11,6 +11,7 @@ let stretching = [
      
 ];
 
-stretching.forEach(e => e.id=nanoid());
+stretching.forEach(e => {e.id=nanoid();
+                        e.isFavourite=false;});
 
 export default stretching;

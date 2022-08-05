@@ -35,3 +35,19 @@
 .background {
     margin-top: -5vh;
 }
+
+.video_page {
+    display: flex;
+    flex-direction: column;
+}
+
+.video_player {
+    margin-top: 125px;
+}
+
+.title {
+    font-size: 1.7em;
+    width: 160%;
+}
+
+    

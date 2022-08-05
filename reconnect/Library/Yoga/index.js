@@ -11,6 +11,8 @@ let yoga = [
 
 ]
 
-yoga.forEach(e => e.id=nanoid());
+yoga.forEach(
+    e => {e.id=nanoid();
+    e.isFavourite=false;});
 
 export default yoga;

@@ -1,13 +1,12 @@
 import ReactPlayer from 'react-player';
 import React from 'react';
 import { useState } from 'react';
+import styles from "../../styles/video.module.css"
 
 
 export default function VideoDescription({video}) {
 
-    const { videoUrl, title } = video
-
-    console.log('url',videoUrl,'title',title)
+    let { videoUrl, title, isFavourite} = video
 
     let initialState = {
         url: null,
@@ -17,23 +16,23 @@ export default function VideoDescription({video}) {
         light: true, 
         played: 0, 
         loaded: 0,
-        controls:false
+        controls:false,
     }
 
-    const [state, setState]= useState(initialState)
-    
+    const [state, setState] = useState(initialState)
+    const [isLiked, setLiked] = useState(isFavourite)
     
     function handlePlayPause() {
-        setState({playing : !state.playing})
+        setState({ playing : !state.playing })
     }
     
     function handleDuration(duration) {
         console.log('onDuration',duration)
-        setState({duration})
+        setState({ duration })
     }
 
     function handlePlayed(played) {
-        setState({played})
+        setState({ played })
     }
 
     function handleProgress(state) {
@@ -60,14 +59,21 @@ export default function VideoDescription({video}) {
     }
 
     function handlePlayed(played) {
-        setState({played})
+        setState({ played })
     }
-        
+    
+    function handleLiked() {
+        setLiked(!isLiked)
+        isFavourite = isLiked;
+        // video.isFavourite = state.favourite;
+        console.log('isLiked',isLiked,'isFavourite',isFavourite)
+    }
     
 
     return (
         <>
         <ReactPlayer 
+            className={styles.video_player}
             ref={ref}
             url={videoUrl}
             playing={state.playing}
@@ -76,10 +82,11 @@ export default function VideoDescription({video}) {
             onSeek={e => console.log('onSeek', e)}
             
             />
-        <h1>{title}</h1>
-        <button onClick={handlePlayPause}>{state.playing ? 'Pause' : 'Play'}</button>
+        <h1 className={styles.title}>{title}</h1>
+        <button onClick={handlePlayPause}>{ state.playing ? 'Pause' : 'Play' }</button>
         
         <button onClick={handlePlayed}>skip</button>
+        <button onClick={handleLiked}>{ isLiked ? 'Unlike' : 'Like' }</button>
         <h3>duration:{state.duration}</h3>
         <label for='progress bar'>video progress bar</label>
         {/* <input

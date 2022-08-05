@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-import { useState } from "react";
 import stylesvideo from "../../styles/video.module.css";
 import styles from "../../styles/Home.module.css";
 import BackButton from "../../component/BackButton/BackButton";
@@ -12,7 +11,6 @@ import Video from "../video";
 
 export default function VideoList ({array, pageTitle, type}) {
     
-    const router = useRouter();
     console.log('type',typeof type)
 
     return (
