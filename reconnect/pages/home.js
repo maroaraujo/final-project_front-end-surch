@@ -12,10 +12,16 @@ import breathingPic from "../public/images/Breathing.png";
 import stretchingPic from "../public/images/Stretching.png";
 import yogaPic from "../public/images/Yoga.png";
 import { useUser } from "@auth0/nextjs-auth0";
+import { useRouter } from "next/router";
 import ExploreCard from "../component/ExploreCard/ExploreCard";
 
 export default function Home() {
+
   const { user, error, isLoading } = useUser();
+  const router = useRouter();
+  
+  
+  
 
   return (
     <div className={styles.container}>
@@ -61,10 +67,10 @@ export default function Home() {
 
         <div>
           <h1 className={styles.title}>All Activities</h1>
-          <ActivityCard title={"Meditation"} image={meditationPic} />
-          <ActivityCard title={"Breathing Exercises"} image={breathingPic} />
-          <ActivityCard title={"Stretching"} image={stretchingPic} />
-          <ActivityCard title={"Yoga "} image={yogaPic} />
+          <ActivityCard title={"Meditation"} image={meditationPic} url={'meditation'}/>
+          <ActivityCard title={"Breathing Exercises"} image={breathingPic} url={'breathing'}/>
+          <ActivityCard title={"Stretching"} image={stretchingPic} url={'stretching'}/>
+          <ActivityCard title={"Yoga"} image={yogaPic} url={'yoga'}/>
         </div>
         <div className={styles.spacetoNavBar}></div>
       </main>
