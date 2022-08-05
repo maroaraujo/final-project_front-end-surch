@@ -12,7 +12,7 @@ import {
   IoJournalOutline,
 } from "react-icons/io5";
 import { AiOutlinePlusSquare, AiFillPlusSquare } from "react-icons/ai";
-import { FaRegSmileBeam, FaSmileBeam } from "react-icons/fa";
+import { BsEmojiSmile, BsEmojiSmileFill } from "react-icons/bs";
 
 import { useUser } from "@auth0/nextjs-auth0";
 
@@ -93,13 +93,13 @@ function TabBar(props) {
       </div>
       <div className={`${Styles.bnTab}`}>
         {activeTabs === "add" ? (
-          <FaSmileBeam
+          <BsEmojiSmileFill
             size="50"
             color="#254E7B"
             onClick={() => setActiveTabs("add")}
           />
         ) : (
-          <FaRegSmileBeam
+          <BsEmojiSmile
             size="50"
             color="#254E7B"
             onClick={() => setActiveTabs("add")}
