@@ -1,8 +1,8 @@
 import { useUser } from "@auth0/nextjs-auth0";
 import Logout from "../component/Logout/logout";
+import TabBar from "../component/TabBar/TabBar";
 import Image from "next/image";
 import backgroundImage from "../public/images/SettingsBackGround.png"
-
 import styles from "../styles/Settings.module.css"
 
 export default function Settings() {
@@ -18,23 +18,17 @@ export default function Settings() {
         objectFit="cover"
         quality={100}
       />
-      
+
     </div>
 
       <div className={styles.body}>
-      
+
     <h3>Notifications</h3>
 
     <h3>Dark Mode</h3>
 
       {user ? <Logout /> : null} 
       </div>
-    </main>
+      </main>
   );
 }
-
-/*
-
-
-
-*/
