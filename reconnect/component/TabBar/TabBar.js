@@ -12,6 +12,8 @@ import {
   IoJournalOutline,
 } from "react-icons/io5";
 import { AiOutlinePlusSquare, AiFillPlusSquare } from "react-icons/ai";
+import { FaRegSmileBeam, FaSmileBeam } from "react-icons/fa";
+
 import { useUser } from "@auth0/nextjs-auth0";
 
 function TabBar(props) {
@@ -31,14 +33,11 @@ function TabBar(props) {
         router.push("/favourites");
         break;
       case "add":
-        router.push("/moodtracker");
+        router.push("/gratitudewall");
         break;
       case "settings":
         router.push("/settings");
         break;
-      // default:
-      //   router.push("/home");
-      //   break;
     }
   }, [activeTabs, router.pathname]);
 
@@ -94,19 +93,19 @@ function TabBar(props) {
       </div>
       <div className={`${Styles.bnTab}`}>
         {activeTabs === "add" ? (
-          <AiFillPlusSquare
+          <FaSmileBeam
             size="50"
             color="#254E7B"
             onClick={() => setActiveTabs("add")}
           />
         ) : (
-          <AiOutlinePlusSquare
+          <FaRegSmileBeam
             size="50"
             color="#254E7B"
             onClick={() => setActiveTabs("add")}
           />
         )}
-        <span>Add</span>
+        <span>Gratitude</span>
       </div>
       <div className={`${Styles.bnTab}`}>
         {activeTabs === "settings" ? (
