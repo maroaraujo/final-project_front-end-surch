@@ -2,6 +2,12 @@ import ReactPlayer from 'react-player';
 import React from 'react';
 import { useState } from 'react';
 import styles from "../../styles/video.module.css"
+import Image from 'next/image';
+import backgroundImage from "../../public/images/Media Player Background.png"
+import playbutton from "../../public/images/MediaPlayButton.png"
+import pausebutton from "../../public/images/MediaPauseButton.png"
+import skip15forward from "../../public/images/MediaSkipButton.png"
+import skip15backward from "../../public/images/MediaSkipBackButton.png"
 
 
 export default function VideoDescription({video}) {
@@ -71,7 +77,17 @@ export default function VideoDescription({video}) {
     
 
     return (
-        <>
+        <div>
+        <div className={styles.backgroundImage}>
+      <Image
+        alt="MediaPlayerBackground"
+        src={backgroundImage}
+        layout="fill"
+        objectFit="cover"
+        quality={100}
+      />
+      
+    </div>
         <ReactPlayer 
             className={styles.video_player}
             ref={ref}
@@ -82,23 +98,24 @@ export default function VideoDescription({video}) {
             onSeek={e => console.log('onSeek', e)}
             
             />
-        <h1 className={styles.title}>{title}</h1>
-        <button onClick={handlePlayPause}>{ state.playing ? 'Pause' : 'Play' }</button>
+        <h4 className={styles.title}>{title}</h4>
+        <div className={styles.mediabutton}>
+        <Image src={skip15forward} alt="skipforward" onClick={handlePlayed}/>
+        <Image src={state.playing ? pausebutton : playbutton} alt="playbutton" onClick={handlePlayPause}/>
+        <Image src={skip15backward} alt="skipback" onClick={handlePlayed}/>
+        </div>
         
-        <button onClick={handlePlayed}>skip</button>
-        <button onClick={handleLiked}>{ isLiked ? 'Unlike' : 'Like' }</button>
+        </div>
+    )
+    
+}
+/*<button onClick={handleLiked}>{ isLiked ? 'Unlike' : 'Like' }</button>
         <h3>duration:{state.duration}</h3>
-        <label for='progress bar'>video progress bar</label>
+        
         {/* <input
             type='range' min={0} max={0.999999} step='any'
             value={state.played}
             onMouseDown={handleSeekMouseDown}
             onChange={handleSeekChange}
-            onMouseUp={handleSeekMouseUp}/> */}
-        <progress className='progress_Bar' max={1} value={state.played} />
-        </>
-    )
-    
-}
-/*
- */
+            onMouseUp={handleSeekMouseUp}/> 
+            <progress className='progress_Bar' max={1} value={state.played} /> */
