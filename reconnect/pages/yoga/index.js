@@ -1,13 +1,13 @@
-import breathing from '../../Library/Breathing';
+import yoga from '../../Library/yoga';
 import VideoList from '../../component/VideoList';
 
-const Breathing = () =>{
+const Yoga = () =>{
 
     return(
         <div>
-            <VideoList array={breathing} pageTitle='Breathing Exercises' type={'breathing'}/>
+            <VideoList array={yoga} pageTitle='Yoga' type={'yoga'}/>
         </div>
     )
 }
 
-export default Breathing;
+export default Yoga;

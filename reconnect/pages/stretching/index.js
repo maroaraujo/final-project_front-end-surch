@@ -5,7 +5,7 @@ const Stretching = () =>{
 
     return(
         <div>
-            <VideoList array={breathing} pageTitle='Breathing Exercises' type={'breathing'}/>
+            <VideoList array={stretching} pageTitle='Stretching Exercises' type={'stretching'}/>
         </div>
     )
 }

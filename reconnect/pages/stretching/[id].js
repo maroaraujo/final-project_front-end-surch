@@ -1,11 +1,17 @@
+import VideoDescription from "../../component/VideoDescription/index";
+import stretching from "../../Library/Stretching";
+import BackButton from "../../component/BackButton/BackButton";
 
+function VideoPlayer() { 
 
-const Details = () =>{
-    return (
-        <div>
-            <h1>details page</h1>
-        </div>
+    return(
+        <>
+        <BackButton url='/stretching' />
+        <VideoDescription video={stretching[0]}/>
+        </>
     )
+    
+    
 }
 
-export default Details
+export default VideoPlayer;
