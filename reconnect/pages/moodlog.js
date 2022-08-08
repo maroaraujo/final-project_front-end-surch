@@ -160,7 +160,7 @@ export default function MoodLog() {
             </div>
           ) : (
             <p className={styles.moodOfSelectedTextContainer}>
-              You didn't entry any mood for this day
+              You have no entry for this day
             </p>
           )}
         </div>
