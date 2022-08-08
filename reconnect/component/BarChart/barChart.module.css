@@ -54,7 +54,7 @@ Start of BarChart using CSS and html only
 .bar1 {
   width: 0.7rem;
   border-radius: 25px;
-  height: 23%;
+  height: var(--bar1-height);
   background-color: #254e7b;
   position: absolute;
   left: 12.5%;
@@ -74,7 +74,7 @@ Start of BarChart using CSS and html only
 .bar2 {
   width: 0.7rem;
   border-radius: 25px;
-  height: 41%;
+  height: var(--bar2-height);
   background-color: #85c1e5;
   position: absolute;
   left: 25%;
@@ -94,7 +94,7 @@ Start of BarChart using CSS and html only
 .bar3 {
   width: 0.7rem;
   border-radius: 25px;
-  height: 59%;
+  height: var(--bar3-height);
   background-color: #254e7b;
   position: absolute;
   left: 37.5%;
@@ -114,7 +114,7 @@ Start of BarChart using CSS and html only
 .bar4 {
   width: 0.7rem;
   border-radius: 25px;
-  height: 93%;
+  height: var(--bar4-height);
   background-color: #85c1e5;
   position: absolute;
   left: 50%;
@@ -134,7 +134,7 @@ Start of BarChart using CSS and html only
 .bar5 {
   width: 0.7rem;
   border-radius: 25px;
-  height: 76%;
+  height: var(--bar5-height);
   background-color: #254e7b;
   position: absolute;
   left: 62.5%;
@@ -154,7 +154,7 @@ Start of BarChart using CSS and html only
 .bar6 {
   width: 0.7rem;
   border-radius: 25px;
-  height: 76%;
+  height: var(--bar6-height);
   background-color: #85c1e5;
   position: absolute;
   left: 75%;
@@ -174,7 +174,7 @@ Start of BarChart using CSS and html only
 .bar7 {
   width: 0.7rem;
   border-radius: 25px;
-  height: 76%;
+  height: var(--bar7-height);
   background-color: #254e7b;
   position: absolute;
   left: 87.5%;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./barChart.module.css";
 import Image from "next/image";
 import awful from "../../public/images/awful.png";
@@ -6,8 +6,79 @@ import bad from "../../public/images/bad.png";
 import ok from "../../public/images/ok.png";
 import good from "../../public/images/good.png";
 import great from "../../public/images/great.png";
+import { useEffect } from "react";
 
 export default function BarChart(props) {
+  useEffect(() => {
+    // This function is updating the CSS height of the bar depending on the mood
+    function setBarHeight(barNumber, arrayIndex) {
+      switch (props.userMood[arrayIndex].mood) {
+        case "awful":
+          document.documentElement.style.setProperty(
+            `--bar${barNumber}-height`,
+            "23%"
+          );
+          break;
+
+        case "bad":
+          document.documentElement.style.setProperty(
+            `--bar${barNumber}-height`,
+            "41%"
+          );
+          break;
+
+        case "ok":
+          document.documentElement.style.setProperty(
+            `--bar${barNumber}-height`,
+            "59%"
+          );
+          break;
+
+        case "good":
+          document.documentElement.style.setProperty(
+            `--bar${barNumber}-height`,
+            "76%"
+          );
+          break;
+
+        case "great":
+          document.documentElement.style.setProperty(
+            `--bar${barNumber}-height`,
+            "93%"
+          );
+          break;
+      }
+    }
+
+    setBarHeight(1, props.userMood.length - 1);
+    setBarHeight(2, props.userMood.length - 2);
+    setBarHeight(3, props.userMood.length - 3);
+    setBarHeight(4, props.userMood.length - 4);
+    setBarHeight(5, props.userMood.length - 5);
+    setBarHeight(6, props.userMood.length - 6);
+    setBarHeight(7, props.userMood.length - 7);
+  }, [props.userMood]);
+
+  function getDateLabel(arrayIndex) {
+    const date = props.userMood[arrayIndex].date;
+
+    function toMonthName(monthNumber) {
+      const date = new Date();
+      date.setMonth(monthNumber - 1);
+
+      return date.toLocaleString("en-US", {
+        month: "short",
+      });
+    }
+
+    const monthNumber = Number(date.slice(5, 7));
+    const dateNumber = Number(date.slice(8));
+    const monthString = toMonthName(monthNumber);
+
+    const labelDate = dateNumber + " " + monthString;
+    return labelDate;
+  }
+
   return (
     <>
       <h4 className={styles.barChartTitle}>Last Week's Stats</h4>
@@ -15,31 +86,38 @@ export default function BarChart(props) {
         <div className={styles.barChart1Container}>
           <div className={styles.bar1Container}>
             <div className={styles.bar1}>
-              <p>{props.date1}</p>
+              {/* dummyData.length -1 , date and mood*/}
+              <p>{getDateLabel(props.userMood.length - 1)}</p>
             </div>
 
             <div className={styles.bar2}>
-              <p>{props.date2}</p>
+              {/* dummyData.length -2 */}
+              <p>{getDateLabel(props.userMood.length - 2)}</p>
             </div>
 
             <div className={styles.bar3}>
-              <p>{props.date3}</p>
+              {/* dummyData.length -3 */}
+              <p>{getDateLabel(props.userMood.length - 3)}</p>
             </div>
 
             <div className={styles.bar4}>
-              <p>{props.date4}</p>
+              {/* dummyData.length -4 */}
+              <p>{getDateLabel(props.userMood.length - 4)}</p>
             </div>
 
             <div className={styles.bar5}>
-              <p>{props.date5}</p>
+              {/* dummyData.length -5 */}
+              <p>{getDateLabel(props.userMood.length - 5)}</p>
             </div>
 
             <div className={styles.bar6}>
-              <p>{props.date6}</p>
+              {/* dummyData.length -6 */}
+              <p>{getDateLabel(props.userMood.length - 6)}</p>
             </div>
           </div>
           <div className={styles.bar7}>
-            <p>{props.date7}</p>
+            {/* dummyData.length -7 */}
+            <p>{getDateLabel(props.userMood.length - 7)}</p>
           </div>
 
           <ul className={styles.yAxis}>
