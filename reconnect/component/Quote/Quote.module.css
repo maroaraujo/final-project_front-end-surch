@@ -1,0 +1,25 @@
+.quoteBox {
+    background: #5584b1;
+    border-radius: 15px;
+    width: 90vw;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+  }
+  .quoteText {
+    color: white;
+    padding: 2vh 2vh 2vh 2vh;
+    margin: 0;
+  }
+  .quoteAuthor {
+    color: white;
+    padding-left: 4vw; 
+  }
+  .authorContainer{
+    display:flex;
+    align-items: bottom;
+    justify-content: space-between;
+    margin-top: -3vh;
+    margin-right: 3vw;
+    margin-bottom: 1.2vh;
+  }
+  

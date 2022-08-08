@@ -132,8 +132,10 @@ export default function MoodLog() {
       </Head>
 
       <main className={styles.moodLogMain}>
-        <BackButton url={"/moodtracker"} />
-        <h1 className={stylesHome.title}>Mood Log</h1>
+
+        <BackButton url={"https://reconnect-surch.netlify.app/home"} />
+        <h1 className={stylesHome.title}>Journal</h1>
+
         <CloudyBackground />
 
         <BarChart userMood={userMood} />
