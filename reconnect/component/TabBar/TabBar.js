@@ -44,7 +44,7 @@ function TabBar(props) {
         router.push("/settings");
         break;
     }
-  }, [activeTabs, router.pathname]);
+  }, [activeTabs]);
 
   return (
     <div className={`${Styles.bottomNav}`}>
