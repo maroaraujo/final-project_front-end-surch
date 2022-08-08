@@ -74,6 +74,7 @@ const dummyData = [
     notes: "my fault",
   },
 ];
+//
 export default function MoodLog() {
   const { user, error, isLoading } = useUser();
   const [date, setDate] = useState(new Date());
@@ -140,12 +141,11 @@ export default function MoodLog() {
           <Calendar date={date} setDate={setDate} userMood={userMood} />
         </div>
         <div className={styles.moodOfSelectedDate}>
-          
-            <h4>{date.toLocaleDateString("en-GB")}</h4>
-          
+          <h4>{date.toLocaleDateString("en-GB")}</h4>
+
           {notesArray[2] ? (
             <div>
-            <div className={styles.moodOfSelectedEmoji}>
+              <div className={styles.moodOfSelectedEmoji}>
                 <Image
                   src={moodEmoji}
                   alt={"hi"}
@@ -157,10 +157,11 @@ export default function MoodLog() {
                 <p>{notesArray[0]}</p>
                 <p>{notesArray[1]}</p>
               </div>
-              
             </div>
           ) : (
-            <p className={styles.moodOfSelectedTextContainer}>You didn't entry any mood for this day</p>
+            <p className={styles.moodOfSelectedTextContainer}>
+              You didn't entry any mood for this day
+            </p>
           )}
         </div>
         <div className={stylesHome.spacetoNavBar}></div>
