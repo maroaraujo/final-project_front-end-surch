@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import MoodState from "./MoodState/MoodState";
 import awful from "../../public/images/awful.png";
 import bad from "../../public/images/bad.png";
@@ -7,74 +7,82 @@ import good from "../../public/images/good.png";
 import great from "../../public/images/great.png";
 import styles from "../../styles/Home.module.css";
 import {useRouter} from "next/router"
+import MoodContext from "../MoodContext/MoodContext";
 
 function MoodQuestion(props) {
-
+  const [mood, setMood] = useContext(MoodContext)
     const router = useRouter();
     
-    let initialMood = {
-      isAwful: false,
-      isBad: false, 
-      isOK: false, 
-      isGreat: false, 
-      isGood: false
-    }
+    // let initialMood = {
+    //   isAwful: false,
+    //   isBad: false, 
+    //   isOK: false, 
+    //   isGreat: false, 
+    //   isGood: false
+    // }
 
-    const [mood, setMood] = useState(initialMood);
+    // const [mood, setMood] = useState(initialMood);
 
     
   
     function handleClick(e){
-
+      
       console.log(e);
       let selectedMood = e.target.alt;
 
       switch (selectedMood) {
         case 'awful':
-          return setMood({
+          return (setMood({
             isAwful: true,
             isBad: false, 
             isOK: false, 
             isGreat: false, 
-            isGood: false })
+            isGood: false }),
+            router.push("/moodtracker"))
         case 'bad':
-          return setMood({
+          return (setMood({
             isAwful: false,
             isBad: true, 
             isOK: false, 
             isGreat: false, 
-            isGood: false })
+            isGood: false }),
+            router.push("/moodtracker"))
         case 'ok':
-          return setMood({
+          return (setMood({
             isAwful: false,
             isBad: false, 
             isOK: true, 
             isGreat: false, 
-            isGood: false })
+            isGood: false }),
+            router.push("/moodtracker"))
         case 'good':
-          return setMood({
+          return (setMood({
             isAwful: false,
             isBad: false, 
             isOK: false, 
             isGreat: false, 
-            isGood: true })
+            isGood: true }),
+            router.push("/moodtracker")
+          )
         case 'great':
-        return setMood({
+        return (setMood({
           isAwful: false,
           isBad: false, 
           isOK: false, 
           isGreat: true, 
-          isGood: false })
+          isGood: false }),
+          router.push("/moodtracker"))
         default:
           return null
       }
+      
+      
       }
     
 
       
     
-    
-  
+
       
 
 return (
