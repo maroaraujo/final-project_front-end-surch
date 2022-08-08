@@ -9,6 +9,7 @@ function MoodState(props) {
         alt={props.alt}
         width={26.43}
         height={26.43}
+        handleClick={props.handleClick}
       ></Image>
       <p>{props.mood}</p>
     </div>
