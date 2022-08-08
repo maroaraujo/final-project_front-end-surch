@@ -8,8 +8,17 @@ import {
   IoStar,
   IoSettingsOutline,
   IoSettingsSharp,
+  IoJournal,
+  IoJournalOutline,
 } from "react-icons/io5";
 import { AiOutlinePlusSquare, AiFillPlusSquare } from "react-icons/ai";
+import {
+  BsEmojiSmile,
+  BsEmojiSmileFill,
+  BsJournalBookmarkFill,
+  BsJournalBookmark,
+} from "react-icons/bs";
+
 import { useUser } from "@auth0/nextjs-auth0";
 
 function TabBar(props) {
@@ -22,21 +31,20 @@ function TabBar(props) {
       case "home":
         router.push("/home");
         break;
+      case "moodlog":
+        router.push("/moodlog");
+        break;
       case "favourites":
         router.push("/favourites");
         break;
       case "add":
-        router.push("/add");
+        router.push("/gratitudewall");
         break;
       case "settings":
         router.push("/settings");
         break;
-      // default:
-      //   router.push("/home");
-      //   break;
     }
   }, [activeTabs, router.pathname]);
-  // const { state, dispatch } = useContext(GlobalContext);
 
   return (
     <div className={`${Styles.bottomNav}`}>
@@ -57,6 +65,22 @@ function TabBar(props) {
         <span>Home</span>
       </div>
       <div className={`${Styles.bnTab}`}>
+        {activeTabs === "moodlog" ? (
+          <BsJournalBookmarkFill
+            size="50"
+            color="#254E7B"
+            onClick={() => setActiveTabs("moodlog")}
+          />
+        ) : (
+          <BsJournalBookmark
+            size="50"
+            color="#254E7B"
+            onClick={() => setActiveTabs("moodlog")}
+          />
+        )}
+        <span>Journal</span>
+      </div>
+      <div className={`${Styles.bnTab}`}>
         {activeTabs === "favourites" ? (
           <IoStar
             size="50"
@@ -74,19 +98,19 @@ function TabBar(props) {
       </div>
       <div className={`${Styles.bnTab}`}>
         {activeTabs === "add" ? (
-          <AiFillPlusSquare
+          <BsEmojiSmileFill
             size="50"
             color="#254E7B"
             onClick={() => setActiveTabs("add")}
           />
         ) : (
-          <AiOutlinePlusSquare
+          <BsEmojiSmile
             size="50"
             color="#254E7B"
             onClick={() => setActiveTabs("add")}
           />
         )}
-        <span>Add</span>
+        <span>Gratitude</span>
       </div>
       <div className={`${Styles.bnTab}`}>
         {activeTabs === "settings" ? (
@@ -102,7 +126,7 @@ function TabBar(props) {
             onClick={() => setActiveTabs("settings")}
           />
         )}
-        <span>Account</span>
+        <span>Settings</span>
       </div>
     </div>
   );

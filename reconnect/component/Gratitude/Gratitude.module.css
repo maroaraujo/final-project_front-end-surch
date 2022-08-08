@@ -1,0 +1,17 @@
+.input{
+    border-radius: 15px;
+    width: 45vw;
+    height: 30px;
+}
+.inputContainer{
+    display:flex;
+    justify-content: left;
+}
+.addButton{
+    margin:3px;
+    margin-left: -4vw; 
+}
+.ptags{
+    margin-bottom:1vh;
+    margin-top: 1vh;
+}
