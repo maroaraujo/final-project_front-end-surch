@@ -8,7 +8,7 @@ import BackButton from "../component/BackButton/BackButton";
 import MoodContext from "../component/MoodContext/MoodContext.js";
 import { useContext } from "react";
 
-function moodtracker() {
+function Moodtracker() {
   const [mood, setMood] = useContext(MoodContext);
   let initialMood = {
     isAwful: false,
@@ -22,7 +22,7 @@ function moodtracker() {
   }
   return (
     <div className={styles.main}>
-      <BackButton url={"https://reconnect-surch.netlify.app/home"} />
+      <BackButton url={"/home"} />
       <h1 className={styles.title}>
         How are <br />
         you feeling?
@@ -53,4 +53,4 @@ function moodtracker() {
   );
 }
 
-export default moodtracker;
+export default Moodtracker;
