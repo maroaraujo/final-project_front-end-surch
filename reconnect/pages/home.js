@@ -10,7 +10,7 @@ import MoodQuestion from "../component/MoodQuestion/MoodQuestion";
 import Gratitude from "../component/Gratitude/Gratitude";
 
 import Quote from "../component/Quote/Quote";
-import ChallengeCard from "../component/ChallengeCard/ChallengeCard";
+import ChallengeSection from "../component/ChallengeCard/";
 import ActivityCard from "../component/ActivityCard/ActivityCard";
 import meditationPic from "../public/images/maditation.png";
 import breathingPic from "../public/images/Breathing.png";
@@ -21,6 +21,7 @@ import { useRouter } from "next/router";
 import ExploreCard from "../component/ExploreCard/ExploreCard";
 import MoodContext from "../component/MoodContext/MoodContext.js";
 import { useContext } from "react";
+import ChallengeSection from "../component/ChallengeSection";
 
 
 export default function Home() {
@@ -53,27 +54,7 @@ export default function Home() {
         <MoodQuestion className={styles.moodQuestion} />
         <Gratitude/>
         <Quote/>
-        <h1 className={styles.title}>Challenges of the week</h1>
-        <div className={styles.challenges}>
-          <ChallengeCard challenge={"Go to the Park"}/>
-          <ChallengeCard challenge={"Walk 5k steps"}/>
-          <ChallengeCard challenge={"Get 15 mins of sun"}/>
-          <ChallengeCard challenge={"Go for a coffee with a friend"}/>
-
-        </div>
-
-        <h1 className={styles.title}>Explore</h1>
-        <div className={styles.exploreBox}>
-          <div className={styles.sleepTips}>
-          <ExploreCard url={"https://www.healthline.com/nutrition/17-tips-to-sleep-better"} title={"Better Sleep tips"}/>
-          </div>
-          <div className={styles.increaseHappiness}>
-          <ExploreCard url={"https://www.nhs.uk/mental-health/self-help/tips-and-support/how-to-be-happier/"} title={"Increase Happiness"}/>
-          </div>
-          <div className={styles.healthyMeals}>
-          <ExploreCard url={"https://www.bbcgoodfood.com/recipes/collection/quick-and-healthy-recipes"} title={"Quick Healthy Meals"}/>
-          </div>
-        </div>
+        <ChallengeSection/>
 
         <div>
         <h1 className={styles.title}>All Activities</h1>
