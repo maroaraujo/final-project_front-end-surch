@@ -19,10 +19,10 @@ function Gratitude() {
       //console.log(url);
       const response = await fetch(url);
       const data = await response.json();
-      console.log("this is data INSIDE TRY", data.payload[0].gratitude);
+      console.log("this is data INSIDE TRY", data.payload);
       //const responseData = responseJSON.payload;
-
-      setGratitudeData(data.payload);
+      let randomNumber = Math.floor(Math.random() * data.payload.length)
+      setGratitudeData(data.payload[randomNumber].gratitude);
     } catch (err) {
       const data = "Sorry, we couldn't find the data you wanted.";
       console.log(data);
@@ -124,7 +124,7 @@ function Gratitude() {
             +
           </p>
         </div>
-        <p className={stylesGratitude.ptags}>{gratitudeData[gratitudeData.length-1].gratitude}</p>
+        <p className={stylesGratitude.ptags}> {gratitudeData}</p>
       </div>
       <a href={"/gratitudewall"} className={styles.seeAll}>
         see all
