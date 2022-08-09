@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 
 function Gratitude() {
   const [gratitudeData, setGratitudeData] = useState([]);
+  const [gratitudeDate, setGratitudeDate] = useState("");
   const [textGratitude, setTextGratitude] = useState("");
   //Will need a get request to get latest entry and display on screen.
   //setGratitude will then be rendered on the page with the date
@@ -23,6 +24,10 @@ function Gratitude() {
       //const responseData = responseJSON.payload;
       let randomNumber = Math.floor(Math.random() * data.payload.length)
       setGratitudeData(data.payload[randomNumber].gratitude);
+      let date = (data.payload[randomNumber].date).substring(0,10);
+      
+      setGratitudeDate(date);
+
     } catch (err) {
       const data = "Sorry, we couldn't find the data you wanted.";
       console.log(data);
@@ -124,7 +129,7 @@ function Gratitude() {
             +
           </p>
         </div>
-        <p className={stylesGratitude.ptags}> {gratitudeData}</p>
+        <p className={stylesGratitude.ptags}>{gratitudeDate}<br/>{gratitudeData}</p>
       </div>
       <a href={"/gratitudewall"} className={styles.seeAll}>
         see all
