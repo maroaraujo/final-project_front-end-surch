@@ -53,4 +53,4 @@ function Moodtracker() {
   );
 }
 
-export default moodtracker;
+export default Moodtracker;
