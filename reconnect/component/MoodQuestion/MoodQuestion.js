@@ -11,22 +11,16 @@ import MoodContext from "../MoodContext/MoodContext";
 
 function MoodQuestion(props) {
   const [mood, setMood] = useContext(MoodContext)
-    const router = useRouter();
-    
-    // let initialMood = {
-    //   isAwful: false,
-    //   isBad: false, 
-    //   isOK: false, 
-    //   isGreat: false, 
-    //   isGood: false
-    // }
-
-    // const [mood, setMood] = useState(initialMood);
-
-    
+    const router = useRouter();    
   
-    function handleClick(e){
-      
+    async function handleClick(e){
+
+      Axios.post("http://localhost:5000/", {
+      keycourse: props.value,
+      studentname: text.toLowerCase(),
+    }).then((response) => {
+      console.log(response);
+    });
       console.log(e);
       let selectedMood = e.target.alt;
 
