@@ -5,8 +5,21 @@ import stylesMoodTracker from "../component/Moodtracker/moodtracker.module.css";
 import CloudyBackground from "../component/CloudyBackground/CloudyBackground.js";
 import Button from "../component/Button/Button";
 import BackButton from "../component/BackButton/BackButton";
+import MoodContext from "../component/MoodContext/MoodContext.js";
+import { useContext } from "react";
 
 function moodtracker() {
+  const [mood, setMood] = useContext(MoodContext);
+  let initialMood = {
+    isAwful: false,
+    isBad: false,
+    isOK: false,
+    isGreat: false,
+    isGood: false,
+  };
+  function handleclick(){
+    setMood(initialMood)
+  }
   return (
     <div className={styles.main}>
       <BackButton url={"https://reconnect-surch.netlify.app/home"} />
@@ -33,7 +46,8 @@ function moodtracker() {
       />
       <Button
         text="SEND YOUR MOOD"
-        link="https://reconnect-surch.netlify.app/home"
+        link="/moodlog"
+        handleClick={handleclick}
       />
     </div>
   );

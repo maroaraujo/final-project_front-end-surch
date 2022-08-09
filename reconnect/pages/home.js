@@ -19,12 +19,15 @@ import yogaPic from "../public/images/Yoga.png";
 import { useUser } from "@auth0/nextjs-auth0";
 import { useRouter } from "next/router";
 import ExploreCard from "../component/ExploreCard/ExploreCard";
+import MoodContext from "../component/MoodContext/MoodContext.js";
+import { useContext } from "react";
+
 
 export default function Home() {
 
   const { user, error, isLoading } = useUser();
   const router = useRouter();
-
+  const [mood, setMood] = useContext(MoodContext)
 
   return (
     <div className={styles.container}>
@@ -47,7 +50,7 @@ export default function Home() {
           How are you feeling?
         </h1>
 
-        <MoodQuestion className={styles.moodQuestion} url={"https://reconnect-surch.netlify.app/moodtracker"}/>
+        <MoodQuestion className={styles.moodQuestion} />
         <Gratitude/>
         <Quote/>
         <h1 className={styles.title}>Challenges of the week</h1>

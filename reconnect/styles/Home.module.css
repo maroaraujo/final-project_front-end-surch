@@ -127,6 +127,16 @@
   align-items: center;
 }
 
+.moodStateContainerSelected {
+  padding: 2vh;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  background-color: #cbe2ef;
+}
+
 /*Start of main page gratitude styling*/
 .gratitudeContainer {
   display: flex;
