@@ -4,9 +4,15 @@ import Button from "../component/Button/Button";
 import stylesgratitudewall from "../component/GratitudeWall/gratitudewall.module.css"
 import gratitudebackground from "../public/images/GratitudeBackGround1.png"
 import styles from "../styles/Home.module.css"
+import {useState, useEffect} from "react"
 
 
 export default function gratitudewall() {
+    
+        // its working
+        
+
+
     return (
         <div className={styles.main}>
         <BackButton url={"https://reconnect-surch.netlify.app/home"}/>

@@ -23,6 +23,7 @@ import MoodContext from "../component/MoodContext/MoodContext.js";
 import { useContext } from "react";
 
 
+
 export default function Home() {
 
   const { user, error, isLoading } = useUser();
@@ -71,7 +72,7 @@ export default function Home() {
           <ExploreCard url={"https://www.nhs.uk/mental-health/self-help/tips-and-support/how-to-be-happier/"} title={"Increase Happiness"}/>
           </div>
           <div className={styles.healthyMeals}>
-          <ExploreCard url={"https://www.bbcgoodfood.com/recipes/collection/quick-and-healthy-recipes"} title={"Quick Healthy Meals"}/>
+          <ExploreCard url={"https://www.bbcgoodfood.com/recipes/collection/quick-and-healthy-recipes"} title={"Healthy Meals"}/>
           </div>
         </div>
 
