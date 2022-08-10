@@ -21,7 +21,7 @@ export default function gratitudewall() {
             console.log("this is data INSIDE TRY", data.payload);
             //const responseData = responseJSON.payload;
             setGratitudeData(data.payload);
-
+            
           } catch (err) {
             const data = "Sorry, we couldn't find the data you wanted.";
             console.log(data);
@@ -51,6 +51,14 @@ export default function gratitudewall() {
         <input className={stylesgratitudewall.input} type="text" placeholder="type here"></input>
         <Button text="Save Gratitude" link="addsavelinkhere"/>
         <h4 className={stylesgratitudewall.subtitle}>Gratitude diary</h4>
+        {gratitudeData.map(function(gratitude){
+          return(
+            <p className={stylesgratitudewall.gratitudeDisplay}>{gratitude.gratitude}</p>
+          )
+        })}
+        {/* {gratitudeData[1] && <p>{gratitudeData[1].gratitude}</p>}
+        {gratitudeData[2] && <p>{gratitudeData[1].gratitude}</p>} */}
+        <div className={styles.spacetoNavBar}></div>
         </div>
     )
 }

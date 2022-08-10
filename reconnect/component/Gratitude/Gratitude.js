@@ -11,7 +11,14 @@ function Gratitude() {
   const [textGratitude, setTextGratitude] = useState("");
   //Will need a get request to get latest entry and display on screen.
   //setGratitude will then be rendered on the page with the date
-
+  function formatDate (input) {
+    var datePart = input.match(/\d+/g),
+    year = datePart[0].substring(2), // get only two digits
+    month = datePart[1], day = datePart[2];
+  
+    return day+'/'+month+'/'+year;
+  }
+  
   useEffect(() => {
   async function getGratitude() {
     console.log("Inside Axios to get gratitude");
@@ -26,7 +33,7 @@ function Gratitude() {
       setGratitudeData(data.payload[randomNumber].gratitude);
       let date = (data.payload[randomNumber].date).substring(0,10);
       
-      setGratitudeDate(date);
+      setGratitudeDate(formatDate(date));
 
     } catch (err) {
       const data = "Sorry, we couldn't find the data you wanted.";
