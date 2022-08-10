@@ -10,6 +10,14 @@ import {useState, useEffect} from "react"
 export default function gratitudewall() {
     const [gratitudeData, setGratitudeData] = useState([]);
 
+    function formatDate (input) {
+      var datePart = input.match(/\d+/g),
+      year = datePart[0].substring(2), // get only two digits
+      month = datePart[1], day = datePart[2];
+    
+      return day+'/'+month+'/'+year;
+    }
+
     useEffect(() => {
         async function getGratitude() {
           console.log("Inside Axios to get gratitude");
@@ -50,14 +58,14 @@ export default function gratitudewall() {
         <h4 className={stylesgratitudewall.subtitle}>What are you grateful for?</h4>
         <input className={stylesgratitudewall.input} type="text" placeholder="type here"></input>
         <Button text="Save Gratitude" link="addsavelinkhere"/>
-        <h4 className={stylesgratitudewall.subtitle}>Gratitude diary</h4>
+        <h4 className={stylesgratitudewall.subtitle2}>Gratitude diary</h4>
+        <div className={stylesgratitudewall.gratitudeDisplay}>
         {gratitudeData.map(function(gratitude){
           return(
-            <p className={stylesgratitudewall.gratitudeDisplay}>{gratitude.gratitude}</p>
+            <p >{formatDate(gratitude.date.slice(0, 10))} - {gratitude.gratitude}</p>
           )
         })}
-        {/* {gratitudeData[1] && <p>{gratitudeData[1].gratitude}</p>}
-        {gratitudeData[2] && <p>{gratitudeData[1].gratitude}</p>} */}
+        </div>
         <div className={styles.spacetoNavBar}></div>
         </div>
     )
