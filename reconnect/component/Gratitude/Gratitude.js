@@ -36,9 +36,10 @@ function Gratitude() {
       const data = "Sorry, we couldn't find the data you wanted.";
       console.log(data);
 
-    }
+    }}
     getGratitude();
   }, []);
+
 
   // SEND NEW GRATITUDE
   function handleChange(e) {
