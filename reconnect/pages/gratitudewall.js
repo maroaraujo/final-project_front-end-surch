@@ -7,6 +7,7 @@ import styles from "../styles/Home.module.css"
 import {useState, useEffect} from "react"
 
 
+
 export default function Gratitudewall() {
     const [gratitudeData, setGratitudeData] = useState([]);
 
@@ -37,8 +38,6 @@ export default function Gratitudewall() {
         }
         getGratitude();
          }, []);
-        // its working
-        console.log("gratitudeData", gratitudeData);
 
 
     return (
