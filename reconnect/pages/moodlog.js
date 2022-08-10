@@ -157,7 +157,7 @@ export default function MoodLog() {
         <h1 className={stylesHome.title}>Journal</h1>
 
         <CloudyBackground />
-    {userMood && 
+    {(userMood[0].date !== "2022-01-01") && 
         <>
         <BarChart userMood={userMood} />
         <div className={styles.calendar}>
