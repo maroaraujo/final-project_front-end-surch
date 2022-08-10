@@ -6,11 +6,14 @@ import CloudyBackground from "../component/CloudyBackground/CloudyBackground.js"
 import BackButton from "../component/BackButton/BackButton";
 import MoodContext from "../component/MoodContext/MoodContext.js";
 import { useContext, useState } from "react";
+import { useRouter } from "next/router";
 
 function Moodtracker() {
   const [mood, setMood] = useContext(MoodContext);
   const [why, setWhy] = useState("");
   const [note, setNote] = useState("");
+
+  const router = useRouter();
 
   let initialMood = {
     isAwful: false,
@@ -27,17 +30,34 @@ function Moodtracker() {
     setNote(e.target.value);
   }
 
-  function handleClick(){
-    let currentDate = new Date().toISOString().slice(0, 10)
-    
+  function handleClick() {
+    let currentDate = new Date().toISOString().slice(0, 10);
+
+    let selectedMood;
+    if (mood.isAwful === true) {
+      selectedMood = "awful";
+    }
+    if (mood.isBad === true) {
+      selectedMood = "bad";
+    }
+    if (mood.isOK === true) {
+      selectedMood = "ok";
+    }
+    if (mood.isGreat === true) {
+      selectedMood = "great";
+    }
+    if (mood.isGood === true) {
+      selectedMood = "good";
+    }
+
     const sendData = {
       date: currentDate,
-      mood: mood,
+      mood: selectedMood,
       whatmakesfeel: why,
       notes: note,
-      userId: 1
+      userId: 1,
     };
-    
+
     async function sendMood(data) {
       const response = await fetch(
         "https://reconnect-surch.herokuapp.com/mood",
@@ -49,15 +69,15 @@ function Moodtracker() {
           },
           body: JSON.stringify(data),
         }
-        );
-      }
-      sendMood(sendData);
-      //setGratitudeData([...gratitudeData, sendData])
-      setMood(initialMood)
-      setWhy("");
-      setNote("");
+      );
+    }
+    sendMood(sendData);
+    //setGratitudeData([...gratitudeData, sendData])
+    setMood(initialMood);
+    setWhy("");
+    setNote("");
+    router.push("/moodlog");
   }
-
 
   return (
     <div className={styles.main}>
@@ -87,9 +107,11 @@ function Moodtracker() {
         placeholder="type here ..."
         value={note}
       />
-      <button className={styles.button} onClick={handleClick}>SEND YOUR MOOD</button>
+      <button className={styles.button} onClick={handleClick}>
+        SEND YOUR MOOD
+      </button>
     </div>
-  )
+  );
 }
 
 export default Moodtracker;
