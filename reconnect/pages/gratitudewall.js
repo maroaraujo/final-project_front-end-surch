@@ -7,7 +7,7 @@ import styles from "../styles/Home.module.css"
 import {useState, useEffect} from "react"
 
 
-export default function gratitudewall() {
+export default function Gratitudewall() {
     const [gratitudeData, setGratitudeData] = useState([]);
 
     function formatDate (input) {
