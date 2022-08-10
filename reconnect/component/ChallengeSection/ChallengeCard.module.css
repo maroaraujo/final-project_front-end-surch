@@ -6,15 +6,39 @@
     text-align: center;
   }
   
-.card{
+.cardBefore{
   display: flex;
   justify-items: center;
   align-items: center;
   border-radius: 10px;
+  padding: 10vw;
   max-width: 85.65px;
   padding: 0.3vw;
   box-shadow: 0px 5px 5px #cbe2ef;
   min-height: 100%;
+  background: #CBE2EF;
+}
+
+.cardAfter{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10vw;
+  max-width: 85.65px;
+  padding: 0.3vw;
+  box-shadow: 0px 5px 5px #cbe2ef;
+  min-height: 100%;
+  background: #F8F3EB;
+}
+
+
+.cardBefore input {
+  display:none;
+}
+
+.cardAfter input {
+  display:none;
 }
 
 
@@ -27,7 +51,7 @@
   gap: 8px;
   padding-top: 1vh;
   padding-bottom: 1vh;
-  background: #CBE2EF;
+  
 }
 
 .title a {
@@ -54,9 +78,7 @@
 
 }
 
-#challenge {
- display: none;
-}
+
 
 
 

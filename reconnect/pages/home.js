@@ -1,16 +1,11 @@
 import Head from "next/head";
-
-
 import Image from "next/image";
-
 import styles from "../styles/Home.module.css";
 import DisplayLogo from "../component/DisplayLogo/DisplayLogo";
 import MascotSmall from "../component/MascotSmall/MascotSmall";
 import MoodQuestion from "../component/MoodQuestion/MoodQuestion";
 import Gratitude from "../component/Gratitude/Gratitude";
-
 import Quote from "../component/Quote/Quote";
-import ChallengeSection from "../component/ChallengeCard/";
 import ActivityCard from "../component/ActivityCard/ActivityCard";
 import meditationPic from "../public/images/maditation.png";
 import breathingPic from "../public/images/Breathing.png";
@@ -21,7 +16,7 @@ import { useRouter } from "next/router";
 import ExploreCard from "../component/ExploreCard/ExploreCard";
 import MoodContext from "../component/MoodContext/MoodContext.js";
 import { useContext } from "react";
-import ChallengeSection from "../component/ChallengeSection";
+import ChallengeSection from "../component/ChallengeSection/ChallengeSection";
 
 
 export default function Home() {
@@ -29,6 +24,7 @@ export default function Home() {
   const { user, error, isLoading } = useUser();
   const router = useRouter();
   const [mood, setMood] = useContext(MoodContext)
+  
 
   return (
     <div className={styles.container}>
