@@ -24,6 +24,8 @@ export default function Home() {
   const { user, error, isLoading } = useUser();
   const router = useRouter();
   const [mood, setMood] = useContext(MoodContext)
+
+  
   
 
   return (

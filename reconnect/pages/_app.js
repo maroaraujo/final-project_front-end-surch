@@ -22,11 +22,11 @@ function MyApp({ Component, pageProps }) {
   };
 
   const [mood, setMood] = useState(initialMood);
-  const [numAchievement, setNumAchievement] = useState(0);
+  const [achievementList, setAchievementList] = useState([]);
   
   return (
     <UserProvider>
-      <AchievementContext.Provider value={[numAchievement, setNumAchievement]}>
+      <AchievementContext.Provider value={[achievementList, setAchievementList]}>
       <MoodContext.Provider value={[mood, setMood]}>
         {showTabBar && <TabBar />}
         <Component {...pageProps} />
