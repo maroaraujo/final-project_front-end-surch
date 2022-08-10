@@ -15,12 +15,7 @@ function MoodQuestion(props) {
   
     async function handleClick(e){
 
-      Axios.post("http://localhost:5000/", {
-      keycourse: props.value,
-      studentname: text.toLowerCase(),
-    }).then((response) => {
-      console.log(response);
-    });
+    
       console.log(e);
       let selectedMood = e.target.alt;
 
