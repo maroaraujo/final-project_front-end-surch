@@ -61,7 +61,7 @@ export default function Gratitudewall() {
         <div className={stylesgratitudewall.gratitudeDisplay}>
         {gratitudeData.map(function(gratitude){
           return(
-            <p >{formatDate(gratitude.date.slice(0, 10))} - {gratitude.gratitude}</p>
+            <p key={gratitude.id}>{formatDate(gratitude.date.slice(0, 10))} - {gratitude.gratitude}</p>
           )
         })}
         </div>
