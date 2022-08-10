@@ -15,7 +15,6 @@ function MoodQuestion(props) {
   
     async function handleClick(e){
 
-    
       console.log(e);
       let selectedMood = e.target.alt;
 
@@ -68,11 +67,6 @@ function MoodQuestion(props) {
       
       }
     
-
-      
-    
-
-      
 
 return (
      <div className={styles.moodQuestionContainer} onClick={handleClick}>
