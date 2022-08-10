@@ -3,13 +3,15 @@ import MoodQuestion from "../component/MoodQuestion/MoodQuestion";
 import styles from "../styles/Home.module.css";
 import stylesMoodTracker from "../component/Moodtracker/moodtracker.module.css";
 import CloudyBackground from "../component/CloudyBackground/CloudyBackground.js";
-import Button from "../component/Button/Button";
 import BackButton from "../component/BackButton/BackButton";
 import MoodContext from "../component/MoodContext/MoodContext.js";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 function Moodtracker() {
   const [mood, setMood] = useContext(MoodContext);
+  const [why, setWhy] = useState("");
+  const [note, setNote] = useState("");
+
   let initialMood = {
     isAwful: false,
     isBad: false,
@@ -17,9 +19,46 @@ function Moodtracker() {
     isGreat: false,
     isGood: false,
   };
-  function handleclick(){
-    setMood(initialMood)
+
+  function handleWhyChange(e) {
+    setWhy(e.target.value);
   }
+  function handleNoteChange(e) {
+    setNote(e.target.value);
+  }
+
+  function handleClick(){
+    let currentDate = new Date().toISOString().slice(0, 10)
+    
+    const sendData = {
+      date: currentDate,
+      mood: mood,
+      whatmakesfeel: why,
+      notes: note,
+      userId: 1
+    };
+    
+    async function sendMood(data) {
+      const response = await fetch(
+        "https://reconnect-surch.herokuapp.com/mood",
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+        );
+      }
+      sendMood(sendData);
+      //setGratitudeData([...gratitudeData, sendData])
+      setMood(initialMood)
+      setWhy("");
+      setNote("");
+  }
+
+
   return (
     <div className={styles.main}>
       <BackButton url={"/home"} />
@@ -34,23 +73,23 @@ function Moodtracker() {
       <h6 className={styles.subtitle}>Please Select</h6>
       <h4 className={styles.subtitle}>What makes you feel this way?</h4>
       <input
+        onChange={handleWhyChange}
         className={stylesMoodTracker.input}
         type="text"
         placeholder="type here ..."
+        value={why}
       />
       <h4 className={styles.subtitle}>Other notes you would like to add</h4>
       <input
+        onChange={handleNoteChange}
         className={stylesMoodTracker.input}
         type="text"
         placeholder="type here ..."
+        value={note}
       />
-      <Button
-        text="SEND YOUR MOOD"
-        link="/moodlog"
-        handleClick={handleclick}
-      />
+      <button className={styles.button} onClick={handleClick}>SEND YOUR MOOD</button>
     </div>
-  );
+  )
 }
 
 export default Moodtracker;
