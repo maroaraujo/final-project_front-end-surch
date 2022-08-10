@@ -8,29 +8,9 @@ import {useState, useEffect} from "react"
 
 
 export default function gratitudewall() {
-    const [gratitudeData, setGratitudeData] = useState([]);
-
-    useEffect(() => {
-        async function getGratitude() {
-          console.log("Inside Axios to get gratitude");
-          try {
-            const url = "https://reconnect-surch.herokuapp.com/gratitude";
-            //console.log(url);
-            const response = await fetch(url);
-            const data = await response.json();
-            console.log("this is data INSIDE TRY", data.payload);
-            //const responseData = responseJSON.payload;
-            setGratitudeData(data.payload);
-
-          } catch (err) {
-            const data = "Sorry, we couldn't find the data you wanted.";
-            console.log(data);
-          }
-        }
-        getGratitude();
-         }, []);
+    
         // its working
-        console.log("gratitudeData", gratitudeData);
+        
 
 
     return (
