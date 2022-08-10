@@ -58,10 +58,10 @@ export default function Gratitudewall() {
         <input className={stylesgratitudewall.input} type="text" placeholder="type here"></input>
         <Button text="Save Gratitude" link="addsavelinkhere"/>
         <h4 className={stylesgratitudewall.subtitle2}>Gratitude diary</h4>
-        <div key={gratitudeData} className={stylesgratitudewall.gratitudeDisplay}>
+        <div className={stylesgratitudewall.gratitudeDisplay}>
         {gratitudeData.map(function(gratitude){
           return(
-            <p >{formatDate(gratitude.date.slice(0, 10))} - {gratitude.gratitude}</p>
+            <p key={gratitudeData.id}>{formatDate(gratitude.date.slice(0, 10))} - {gratitude.gratitude}</p>
           )
         })}
         </div>
