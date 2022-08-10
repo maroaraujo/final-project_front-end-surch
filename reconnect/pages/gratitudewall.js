@@ -8,6 +8,7 @@ import {useState, useEffect} from "react"
 
 
 export default function gratitudewall() {
+
     const [gratitudeData, setGratitudeData] = useState([]);
 
     function formatDate (input) {
@@ -37,8 +38,6 @@ export default function gratitudewall() {
         }
         getGratitude();
          }, []);
-        // its working
-        console.log("gratitudeData", gratitudeData);
 
 
     return (
