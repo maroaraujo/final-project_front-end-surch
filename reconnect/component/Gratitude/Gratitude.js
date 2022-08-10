@@ -9,32 +9,37 @@ function Gratitude() {
   const [gratitudeData, setGratitudeData] = useState([]);
   const [gratitudeDate, setGratitudeDate] = useState("");
   const [textGratitude, setTextGratitude] = useState("");
-  //Will need a get request to get latest entry and display on screen.
-  //setGratitude will then be rendered on the page with the date
 
+  function formatDate (input) {
+    var datePart = input.match(/\d+/g),
+    year = datePart[0].substring(2), // get only two digits
+    month = datePart[1], day = datePart[2];
+  
+    return day+'/'+month+'/'+year;
+  }
+  
   useEffect(() => {
-    async function getGratitude() {
-      console.log("Inside the get request gratitude");
-      try {
-        const url = "https://reconnect-surch.herokuapp.com/gratitude";
-        //console.log(url);
-        const response = await fetch(url);
-        const data = await response.json();
-        console.log("this is data INSIDE TRY", data.payload);
-        //const responseData = responseJSON.payload;
-        let randomNumber = Math.floor(Math.random() * data.payload.length);
-        setGratitudeData(data.payload[randomNumber].gratitude);
-        let date = data.payload[randomNumber].date.substring(0, 10);
-        setGratitudeDate(date);
-      } catch (err) {
-        const data = "Sorry, we couldn't find the data you wanted.";
-        console.log(data);
-      }
-    }
+
+  async function getGratitude() {
+    console.log("Inside Axios to get gratitude");
+    try {
+      const url = "https://reconnect-surch.herokuapp.com/gratitude";
+      const response = await fetch(url);
+      const data = await response.json();
+      console.log("this is data INSIDE TRY", data.payload);
+      let randomNumber = Math.floor(Math.random() * data.payload.length)
+      setGratitudeData(data.payload[randomNumber].gratitude);
+      let date = (data.payload[randomNumber].date).substring(0,10);
+      
+      setGratitudeDate(formatDate(date));
+    } catch (err) {
+      const data = "Sorry, we couldn't find the data you wanted.";
+      console.log(data);
+
+    }}
     getGratitude();
   }, []);
-  // its working
-  console.log("gratitudeData", gratitudeData);
+
 
   // SEND NEW GRATITUDE
   function handleChange(e) {

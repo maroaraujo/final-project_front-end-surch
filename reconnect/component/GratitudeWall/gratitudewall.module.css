@@ -14,10 +14,19 @@
     flex-direction: column;
     align-items: left;
     height: 100%;
-    width: 100%;
-    padding-left: 25px;
+    width: 90vw;
     z-index: 1;
-    padding: 80px 0px 0px 26px;
+    padding-top: 8vh ;
+}
+.subtitle2 {
+    color: #254e7b;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    height: 100%;
+    width: 90vw;
+    z-index: 1;
+    padding-top: 4vh ;
 }
 
 .input {
@@ -47,3 +56,10 @@
   z-index: 0;
 }
 
+.gratitudeDisplay{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    z-index: 1;
+    max-width: 90vw;
+}
