@@ -1,17 +1,29 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DatePicker from "sassy-datepicker";
 
 function Calendar(props) {
-  const onChange = (newDate) => {
+  let minDate = "";
+  let maxDate = "";
+
+const onChange = (newDate) => {
     console.log(`New date selected - ${newDate.toString()}`);
     props.setDate(newDate);
   };
+  
 
-  const minDate = props.userMood[0].date.replace(/-/g, ", ");
-  const maxDate = props.userMood[props.userMood.length - 1].date.replace(
+  // useEffect(() => {
+  minDate = props.userMood[0].date.replace(/-/g, ", ").slice(0,12);
+  console.log("minDate",minDate)
+  maxDate = props.userMood[props.userMood.length - 1].date.replace(
     /-/g,
     ", "
-  );
+  ).slice(0,12);
+  console.log("maxDate", maxDate);
+
+  //entryDate = new Date(minDate);
+  //lastDate = new Date(maxDate);
+  //},[props.userMood])
+
 
   return (
     <DatePicker
