@@ -18,86 +18,107 @@ import DatePicker from "sassy-datepicker";
 
 const dummyData = [
   {
-    id: "0",
-    date: "2022-07-27",
-    mood: "great",
-    whatmakesfeel: "I was on the beach",
-    notes: "I was with family",
+    id: null,
+    date: "2022-01-01",
+    mood: null,
+    whatmakesfeel: null,
+    notes: null,
   },
   {
-    id: "1",
-    date: "2022-07-28",
-    mood: "great",
-    whatmakesfeel: "I was on the beach",
-    notes: "I was with family",
+    id: null,
+    date: "2022-01-01",
+    mood: null,
+    whatmakesfeel: null,
+    notes: null,
   },
   {
-    date: "2022-07-29",
-    mood: "bad",
-    whatmakesfeel: "cough covid",
-    notes: "",
+    id: null,
+    date: "2022-01-01",
+    mood: null,
+    whatmakesfeel: null,
+    notes: null,
   },
   {
-    date: "2022-07-30",
-    mood: "ok",
-    whatmakesfeel: "pains",
-    notes: "didn't eat much",
+    id: null,
+    date: "2022-01-01",
+    mood: null,
+    whatmakesfeel: null,
+    notes: null,
   },
   {
-    date: "2022-07-31",
-    mood: "ok",
-    whatmakesfeel: "",
-    notes: "",
+    id: null,
+    date: "2022-01-01",
+    mood: null,
+    whatmakesfeel: null,
+    notes: null,
   },
   {
-    date: "2022-08-01",
-    mood: "good",
-    whatmakesfeel: "getting better",
-    notes: "",
+    id: null,
+    date: "2022-01-01",
+    mood: null,
+    whatmakesfeel: null,
+    notes: null,
   },
   {
-    date: "2022-08-02",
-    mood: "great",
-    whatmakesfeel: "I was on the beach again",
-    notes: "made some friends",
-  },
-  {
-    date: "2022-08-03",
-    mood: "awful",
-    whatmakesfeel: "my friends cough covid",
-    notes: "my fault",
-  },
-  {
-    date: "2022-08-04",
-    mood: "ok",
-    whatmakesfeel: "testing",
-    notes: "my fault",
+    id: null,
+    date: "2022-01-01",
+    mood: null,
+    whatmakesfeel: null,
+    notes: null,
   },
 ];
+
 //
 export default function MoodLog() {
   const { user, error, isLoading } = useUser();
   const [date, setDate] = useState(new Date());
   const [userMood, setUserMood] = useState(dummyData);
+  //const [counter, setCounter] = useState(0)
+
+  //fetch mood data
+
+  useEffect(() => {
+    async function getMood() {
+      console.log("Inside the get request mood");
+      try {
+        const url = "https://reconnect-surch.herokuapp.com/mood";
+        //console.log(url);
+        const response = await fetch(url);
+        const data = await response.json();
+        console.log("this is data INSIDE get mood fetch", data.payload);
+        setUserMood([ ...data.payload]);
+        
+      } catch (err) {
+        const data = "Sorry, we couldn't find the data you wanted.";
+        console.log(data);
+      }
+    }
+    getMood();
+    //setCounter(counter++)
+  }, []);
+
+  console.log("userMood", userMood);
 
   let notesArray = [];
 
   // This function is going to change the date of the calendar to compare with the database date format
   function compareData() {
+    // format of the calendar date is 2022, 07, 27
     let selectedDate = date.toLocaleDateString("en-GB"); // it is coming in this format 04/08/2022
-    //comparable date 2022-08-03
+
+    //comparable date
     let yearFirst = selectedDate.slice(6);
     let monthSecond = selectedDate.slice(3, 5);
     let dateThird = selectedDate.slice(0, 2);
     let comparableDate = yearFirst + "-" + monthSecond + "-" + dateThird;
     console.log("comparabledate", comparableDate);
-
-    for (let i = 0; i < dummyData.length; i++) {
-      if (comparableDate === dummyData[i].date)
+    console.log("usermooddate",userMood[3].date.slice(0,12))
+    for (let i = 0; i < userMood.length; i++) {
+      if (comparableDate === userMood[i].date.slice(0,10))
         notesArray = [
-          dummyData[i].whatmakesfeel,
-          dummyData[i].notes,
-          dummyData[i].mood,
+          userMood[i].whatmakesfeel,
+          userMood[i].notes,
+          userMood[i].mood,
         ];
     }
     return notesArray;
@@ -136,11 +157,14 @@ export default function MoodLog() {
         <h1 className={stylesHome.title}>Journal</h1>
 
         <CloudyBackground />
-
+    {userMood && 
+        <>
         <BarChart userMood={userMood} />
         <div className={styles.calendar}>
           <Calendar date={date} setDate={setDate} userMood={userMood} />
         </div>
+        </>
+    }
         <div className={styles.moodOfSelectedDate}>
           <h4>{date.toLocaleDateString("en-GB")}</h4>
 
