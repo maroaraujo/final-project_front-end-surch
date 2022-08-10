@@ -6,29 +6,31 @@ import { useRouter } from "next/router";
 
 export default function ChallengeSection() {
 
-     const router = useRouter();
-     let [numAchievement, setNumAchievement] = useContext(AchievementContext);
-
-
-     function handleClick(e) {
+    const router = useRouter();
+    let [numAchievement, setNumAchievement] = useContext(AchievementContext);
     
-        if (e.target.checked){
-            
-            const updatedNumAchievement = numAchievement + 1  
-            setNumAchievement(updatedNumAchievement);
-            numAchievement = updatedNumAchievement;
-            console.log(numAchievement);
-            router.push("/achievement");
-            
-        } else {
-            const updatedNumAchievement = numAchievement - 1  
-            setNumAchievement(updatedNumAchievement)
-            console.log(numAchievement);
-            
-        }
+
+
+
+    async function handleClick(e) {
+        
+    if (e.target.checked){
+        
+        const updatedNumAchievement = numAchievement + 1  
+        setNumAchievement(updatedNumAchievement);
+        numAchievement = updatedNumAchievement;
+        console.log(numAchievement);
+        router.push("/achievement");
+        
+    } else {
+        const updatedNumAchievement = numAchievement - 1  
+        setNumAchievement(updatedNumAchievement)
+        console.log(numAchievement);
+        
     }
-    
-    
+}
+
+
 
     return(
         <div>
