@@ -3,7 +3,7 @@ import styles from "../component/Moodlog/moodlog.module.css";
 import { HiArrowLeft } from "react-icons/hi";
 import Image from "next/image";
 import { useUser } from "@auth0/nextjs-auth0";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import BarChart from "../component/BarChart/barChart";
 import awful from "../public/images/awful.png";
 import bad from "../public/images/bad.png";
@@ -15,64 +15,13 @@ import BackButton from "../component/BackButton/BackButton";
 import CloudyBackground from "../component/CloudyBackground/CloudyBackground";
 import stylesHome from "../styles/Home.module.css";
 import DatePicker from "sassy-datepicker";
-
-const dummyData = [
-  {
-    id: null,
-    date: "2022-01-01",
-    mood: null,
-    whatmakesfeel: null,
-    notes: null,
-  },
-  {
-    id: null,
-    date: "2022-01-01",
-    mood: null,
-    whatmakesfeel: null,
-    notes: null,
-  },
-  {
-    id: null,
-    date: "2022-01-01",
-    mood: null,
-    whatmakesfeel: null,
-    notes: null,
-  },
-  {
-    id: null,
-    date: "2022-01-01",
-    mood: null,
-    whatmakesfeel: null,
-    notes: null,
-  },
-  {
-    id: null,
-    date: "2022-01-01",
-    mood: null,
-    whatmakesfeel: null,
-    notes: null,
-  },
-  {
-    id: null,
-    date: "2022-01-01",
-    mood: null,
-    whatmakesfeel: null,
-    notes: null,
-  },
-  {
-    id: null,
-    date: "2022-01-01",
-    mood: null,
-    whatmakesfeel: null,
-    notes: null,
-  },
-];
+import UserMoodContext from "../component/UserMoodContext/UserMoodContext.js";
 
 //
 export default function MoodLog() {
   const { user, error, isLoading } = useUser();
   const [date, setDate] = useState(new Date());
-  const [userMood, setUserMood] = useState(dummyData);
+  const [userMood, setUserMood] = useContext(UserMoodContext);
   //const [counter, setCounter] = useState(0)
 
   //fetch mood data
@@ -86,8 +35,7 @@ export default function MoodLog() {
         const response = await fetch(url);
         const data = await response.json();
         console.log("this is data INSIDE get mood fetch", data.payload);
-        setUserMood([ ...data.payload]);
-        
+        setUserMood([...data.payload]);
       } catch (err) {
         const data = "Sorry, we couldn't find the data you wanted.";
         console.log(data);
@@ -112,9 +60,9 @@ export default function MoodLog() {
     let dateThird = selectedDate.slice(0, 2);
     let comparableDate = yearFirst + "-" + monthSecond + "-" + dateThird;
     console.log("comparabledate", comparableDate);
-    console.log("usermooddate",userMood[3].date.slice(0,12))
+    console.log("usermooddate", userMood[3].date.slice(0, 12));
     for (let i = 0; i < userMood.length; i++) {
-      if (comparableDate === userMood[i].date.slice(0,10))
+      if (comparableDate === userMood[i].date.slice(0, 10))
         notesArray = [
           userMood[i].whatmakesfeel,
           userMood[i].notes,
@@ -157,14 +105,14 @@ export default function MoodLog() {
         <h1 className={stylesHome.title}>Journal</h1>
 
         <CloudyBackground />
-    {(userMood[0].date !== "2022-01-01") && 
-        <>
-        <BarChart userMood={userMood} />
-        <div className={styles.calendar}>
-          <Calendar date={date} setDate={setDate} userMood={userMood} />
-        </div>
-        </>
-    }
+        {userMood[0].date !== "2022-01-01" && (
+          <>
+            <BarChart userMood={userMood} />
+            <div className={styles.calendar}>
+              <Calendar date={date} setDate={setDate} userMood={userMood} />
+            </div>
+          </>
+        )}
         <div className={styles.moodOfSelectedDate}>
           <h4>{date.toLocaleDateString("en-GB")}</h4>
 
