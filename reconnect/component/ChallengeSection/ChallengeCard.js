@@ -26,7 +26,16 @@ export default function ChallengeCard({ challenge, id, isCompleted }) {
     );
     const data = await response.json();
 
-    setAchievementList([...achievementList, updatedItem]);
+    const updatedAchievement = achievementList.map((obj) => {
+      if (obj.id === updatedItem.id) {
+        return { ...obj, completion: updatedItem.completion };
+      }
+
+      return obj;
+    });
+
+    console.log(updatedAchievement);
+    setAchievementList([...updatedAchievement]);
     router.push("/achievement");
   }
 
