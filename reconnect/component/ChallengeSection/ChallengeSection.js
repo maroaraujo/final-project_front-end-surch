@@ -5,30 +5,36 @@ import { useRouter } from "next/router";
 import AchievementContext from "../AchievementContext/AchievementContext";
 
 export default function ChallengeSection() {
-    
-    const [achievementList, setAchievementList] = useContext(AchievementContext);
-    const router = useRouter();
+  const [achievementList, setAchievementList] = useContext(AchievementContext);
+  const router = useRouter();
 
-    async function getChallenge() {
-       
-        const response = await fetch('https://reconnect-surch.herokuapp.com/achievement');
-        const data = await response.json();
-        setAchievementList(data.payload);
-    }
+  //   async function getChallenge() {
+  //     const response = await fetch(
+  //       "https://reconnect-surch.herokuapp.com/achievement"
+  //     );
+  //     const data = await response.json();
+  //     setAchievementList(data.payload);
+  //   }
 
-    useEffect(()=>{getChallenge()},[]);
-        
-    
-    return(
-        <div>
-            <h1 className={styles.title}>Challenges of the week</h1>
-            <div className={styles.challenges} > 
-            {achievementList.map((e)=> (
-                <ChallengeCard key={e.id} id={e.id} challenge={e.achievement} completion={e.completion} />
-            ))}
-            </div>
-        </div>
-    )
+  //   useEffect(() => {
+  //     getChallenge();
+  //   }, []);
+
+  return (
+    <div>
+      <h1 className={styles.title}>Challenges of the week</h1>
+      <div className={styles.challenges}>
+        {achievementList.map((e) => (
+          <ChallengeCard
+            key={e.id}
+            id={e.id}
+            challenge={e.achievement}
+            completion={e.completion}
+          />
+        ))}
+      </div>
+    </div>
+  );
 }
 
 /*
@@ -64,4 +70,3 @@ async function handleClick(e) {
     }
 
  */
-
