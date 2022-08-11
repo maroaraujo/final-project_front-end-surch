@@ -1,14 +1,10 @@
 import Head from "next/head";
-
-
 import Image from "next/image";
-
 import styles from "../styles/Home.module.css";
 import DisplayLogo from "../component/DisplayLogo/DisplayLogo";
 import MascotSmall from "../component/MascotSmall/MascotSmall";
 import MoodQuestion from "../component/MoodQuestion/MoodQuestion";
 import Gratitude from "../component/Gratitude/Gratitude";
-
 import Quote from "../component/Quote/Quote";
 import ChallengeCard from "../component/ChallengeCard/ChallengeCard";
 import ActivityCard from "../component/ActivityCard/ActivityCard";
@@ -21,6 +17,7 @@ import { useRouter } from "next/router";
 import ExploreCard from "../component/ExploreCard/ExploreCard";
 import MoodContext from "../component/MoodContext/MoodContext.js";
 import { useContext } from "react";
+
 
 
 
