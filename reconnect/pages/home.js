@@ -54,7 +54,7 @@ export default function Home() {
           <MascotSmall className={styles.mascotSmall} />
         </div>
         <h1 className={styles.title}>
-          Hi {user ? user.name : "Guest"},
+          Hi {user ? user.given_name : "Guest"},
           <br />
           How are you feeling?
         </h1>

@@ -31,7 +31,7 @@ export default function Welcome() {
       <main className={styles.welcomemain}>
         <DisplayLogo />
         <h1 className={stylesHome.title}>
-        Hi {user ? user.name : "Guest"}, <br />
+        Hi {user ? user.given_name : "Guest"}, <br />
         Reconnect with yourself
         </h1>
         <h4 className={stylesHome.subtitle}>Take a deep breath...</h4>
