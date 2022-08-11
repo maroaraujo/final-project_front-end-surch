@@ -34,9 +34,6 @@ function TabBar(props) {
       case "moodlog":
         router.push("/moodlog");
         break;
-      case "favourites":
-        router.push("/favourites");
-        break;
       case "add":
         router.push("/gratitudewall");
         break;
@@ -79,22 +76,6 @@ function TabBar(props) {
           />
         )}
         <span>Journal</span>
-      </div>
-      <div className={`${Styles.bnTab}`}>
-        {activeTabs === "favourites" ? (
-          <IoStar
-            size="50"
-            color="#254E7B"
-            onClick={() => setActiveTabs("favourites")}
-          />
-        ) : (
-          <IoStarOutline
-            size="50"
-            color="#254E7B"
-            onClick={() => setActiveTabs("favourites")}
-          />
-        )}
-        <span>Favourites</span>
       </div>
       <div className={`${Styles.bnTab}`}>
         {activeTabs === "add" ? (
