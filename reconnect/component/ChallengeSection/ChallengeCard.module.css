@@ -1,0 +1,85 @@
+.challengeText{
+    font-size: 14px;
+    overflow-wrap: break-word;
+    hyphens: manual;
+    margin:0;
+    text-align: center;
+  }
+  
+.cardBefore{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10vw;
+  max-width: 85.65px;
+  padding: 0.3vw;
+  box-shadow: 0px 5px 5px #cbe2ef;
+  min-height: 100%;
+  background: #CBE2EF;
+}
+
+.cardAfter{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10vw;
+  max-width: 85.65px;
+  padding: 0.3vw;
+  box-shadow: 0px 5px 5px #cbe2ef;
+  min-height: 100%;
+  background: #F8F3EB;
+}
+
+
+.cardBefore input {
+  display:none;
+}
+
+.cardAfter input {
+  display:none;
+}
+
+
+
+.challenges {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 90vw;
+  gap: 8px;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  
+}
+
+.title a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 30px;
+  margin-top: 3vh;
+  z-index: 1;
+  color: #254e7b;
+  text-align: center;
+  margin-top: 27px;
+  margin-bottom: 24px;
+
+}
+
+
+
+
+
+
