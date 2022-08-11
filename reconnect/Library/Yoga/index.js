@@ -1,12 +1,14 @@
 import { nanoid } from 'nanoid';
+import healthy from "../../public/images/healthy.jpeg"
+import yoga2 from "../../public/images/yoga2.jpeg"
 
 let yoga = [
-    {imgUrl:'https://i.ytimg.com/an_webp/ZiQh8jA5tVM/mqdefault_6s.webp?du=3000&sqp=CMrwtJcG&rs=AOn4CLA9KU4qA3tOLI3atTa-ZkPlNufyzA',
+    {imgUrl: healthy,
      videoUrl:'https://www.youtube.com/watch?v=ZiQh8jA5tVM',
      title:'Healthy Body Yoga - Yoga With Adriene'},
      
-     {imgUrl:'https://i.ytimg.com/an_webp/s-7lyvblFNI/mqdefault_6s.webp?du=3000&sqp=CObotJcG&rs=AOn4CLBpRzWlo87V9oUZ5jWyQCHVvXEqHg',
-     videoUrl:'https://www.youtube.com/watch?v=s-7lyvblFNI',
+     {imgUrl:yoga2,
+     videoUrl:'https://www.youtube.com/watch?v=X3-gKPNyrTA',
      title:'Stretches for Neck, Shoulder & Upper Back Pain Relief | 10 min. Yoga to release Tension and Relax'}
 
 ]

@@ -10,23 +10,11 @@ import {useRouter} from "next/router"
 import MoodContext from "../MoodContext/MoodContext";
 
 function MoodQuestion(props) {
-    const [mood, setMood] = useContext(MoodContext)
-    const router = useRouter();
-    
-    // let initialMood = {
-    //   isAwful: false,
-    //   isBad: false, 
-    //   isOK: false, 
-    //   isGreat: false, 
-    //   isGood: false
-    // }
-
-    // const [mood, setMood] = useState(initialMood);
-
-    
+const [mood, setMood] = useContext(MoodContext)
+    const router = useRouter();    
   
-    function handleClick(e){
-      
+    async function handleClick(e){
+
       console.log(e);
       let selectedMood = e.target.alt;
 
@@ -79,11 +67,6 @@ function MoodQuestion(props) {
       
       }
     
-
-      
-    
-
-      
 
 return (
      <div className={styles.moodQuestionContainer} onClick={handleClick}>
