@@ -19,6 +19,7 @@ import { useContext, useEffect } from "react";
 import ChallengeSection from "../component/ChallengeSection/ChallengeSection";
 import AchievementContext from "../component/AchievementContext/AchievementContext";
 
+
 export default function Home() {
   const { user, error, isLoading } = useUser();
   const router = useRouter();
