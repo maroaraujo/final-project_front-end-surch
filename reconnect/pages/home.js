@@ -19,7 +19,6 @@ import { useContext, useEffect } from "react";
 import ChallengeSection from "../component/ChallengeSection/ChallengeSection";
 import AchievementContext from "../component/AchievementContext/AchievementContext";
 
-
 export default function Home() {
   const { user, error, isLoading } = useUser();
   const router = useRouter();
@@ -36,7 +35,7 @@ export default function Home() {
 
   useEffect(() => {
     getChallenge();
-  }, [achievementList]);
+  }, []);
 
   return (
     <div className={styles.container}>
@@ -61,7 +60,6 @@ export default function Home() {
         <Gratitude />
         <Quote />
         <ChallengeSection />
-        
 
         <div>
           <h1 className={styles.title}>All Activities</h1>
