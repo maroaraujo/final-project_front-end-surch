@@ -17,13 +17,15 @@ import ExploreCard from "../component/ExploreCard/ExploreCard";
 import MoodContext from "../component/MoodContext/MoodContext.js";
 import { useContext } from "react";
 import ChallengeSection from "../component/ChallengeSection/ChallengeSection";
+import AchievementContext from "../component/AchievementContext/AchievementContext";
 
 
 export default function Home() {
 
   const { user, error, isLoading } = useUser();
   const router = useRouter();
-  const [mood, setMood] = useContext(MoodContext)
+  const [mood, setMood] = useContext(MoodContext);
+  const [achievementList, setAchievementList] = useContext(AchievementContext);
 
   
   

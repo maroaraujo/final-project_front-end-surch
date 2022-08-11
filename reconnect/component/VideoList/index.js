@@ -16,7 +16,7 @@ export default function VideoList ({array, pageTitle, type}) {
     return (
     <div >
         <div className={stylesvideo.cloudbody}>
-        <BackButton url={"https://reconnect-surch.netlify.app/home"} />
+        <BackButton url={"/home"} />
         <h1 className={styles.title}>{pageTitle}</h1>
         <CloudyBackground className={stylesvideo.background}/>
         </div>
