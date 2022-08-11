@@ -28,7 +28,7 @@ export default function Welcome() {
         Hi {user.name}, <br />
         Reconnect with yourself
         </h1>
-<h4>Take a deep breath...</h4>
+        <h4 className={stylesHome.subtitle}>Take a deep breath...</h4>
         <Image className={styles.sun} src={happysun} alt="Welcome Happy Sun" ></Image>
         <button className={styles.getstarted}>
         <Link href="https://reconnect-surch.netlify.app/home">GET STARTED</Link></button>
