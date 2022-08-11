@@ -38,6 +38,8 @@ export default function Home() {
     getChallenge();
   }, []);
 
+  console.log(user);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -52,7 +54,7 @@ export default function Home() {
           <MascotSmall className={styles.mascotSmall} />
         </div>
         <h1 className={styles.title}>
-          Hi Guest,
+          Hi {user ? user.name : "Guest"},
           <br />
           How are you feeling?
         </h1>
