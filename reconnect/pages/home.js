@@ -1,16 +1,11 @@
 import Head from "next/head";
-
-
 import Image from "next/image";
-
 import styles from "../styles/Home.module.css";
 import DisplayLogo from "../component/DisplayLogo/DisplayLogo";
 import MascotSmall from "../component/MascotSmall/MascotSmall";
 import MoodQuestion from "../component/MoodQuestion/MoodQuestion";
 import Gratitude from "../component/Gratitude/Gratitude";
-
 import Quote from "../component/Quote/Quote";
-import ChallengeCard from "../component/ChallengeCard/ChallengeCard";
 import ActivityCard from "../component/ActivityCard/ActivityCard";
 import meditationPic from "../public/images/maditation.png";
 import breathingPic from "../public/images/Breathing.png";
@@ -20,15 +15,28 @@ import { useUser } from "@auth0/nextjs-auth0";
 import { useRouter } from "next/router";
 import ExploreCard from "../component/ExploreCard/ExploreCard";
 import MoodContext from "../component/MoodContext/MoodContext.js";
-import { useContext } from "react";
-
+import { useContext, useEffect } from "react";
+import ChallengeSection from "../component/ChallengeSection/ChallengeSection";
+import AchievementContext from "../component/AchievementContext/AchievementContext";
 
 
 export default function Home() {
-
   const { user, error, isLoading } = useUser();
   const router = useRouter();
-  const [mood, setMood] = useContext(MoodContext)
+  const [mood, setMood] = useContext(MoodContext);
+  const [achievementList, setAchievementList] = useContext(AchievementContext);
+
+  async function getChallenge() {
+    const response = await fetch(
+      "https://reconnect-surch.herokuapp.com/achievement"
+    );
+    const data = await response.json();
+    setAchievementList([...data.payload]);
+  }
+
+  useEffect(() => {
+    getChallenge();
+  }, [achievementList]);
 
   return (
     <div className={styles.container}>
@@ -39,11 +47,9 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-
         <DisplayLogo />
         <div className={styles.mascotContainer}>
           <MascotSmall className={styles.mascotSmall} />
-
         </div>
         <h1 className={styles.title}>
           Hi Guest,
@@ -52,39 +58,31 @@ export default function Home() {
         </h1>
 
         <MoodQuestion className={styles.moodQuestion} />
-        <Gratitude/>
-        <Quote/>
-        <h1 className={styles.title}>Challenges of the week</h1>
-        <div className={styles.challenges}>
-          <ChallengeCard challenge={"Go to the Park"}/>
-          <ChallengeCard challenge={"Walk 5k steps"}/>
-          <ChallengeCard challenge={"Get 15 mins of sun"}/>
-          <ChallengeCard challenge={"Go for a coffee with a friend"}/>
-
-        </div>
-
-        <h1 className={styles.title}>Explore</h1>
-        <div className={styles.exploreBox}>
-          <div className={styles.sleepTips}>
-          <ExploreCard url={"https://www.healthline.com/nutrition/17-tips-to-sleep-better"} title={"Better Sleep tips"}/>
-          </div>
-          <div className={styles.increaseHappiness}>
-          <ExploreCard url={"https://www.nhs.uk/mental-health/self-help/tips-and-support/how-to-be-happier/"} title={"Increase Happiness"}/>
-          </div>
-          <div className={styles.healthyMeals}>
-          <ExploreCard url={"https://www.bbcgoodfood.com/recipes/collection/quick-and-healthy-recipes"} title={"Healthy Meals"}/>
-          </div>
-        </div>
+        <Gratitude />
+        <Quote />
+        <ChallengeSection />
+        
 
         <div>
-        <h1 className={styles.title}>All Activities</h1>
-        <ActivityCard title={"Meditation"} image={meditationPic} url={"/meditation"}/>
-        <ActivityCard title={"Breathing Exercises"} image={breathingPic} url={"/breathing"}/>
-        <ActivityCard title={"Stretching"} image={stretchingPic} url={"/stretching"}/>
-        <ActivityCard title={"Yoga "} image={yogaPic} url={"/yoga"}/>
+          <h1 className={styles.title}>All Activities</h1>
+          <ActivityCard
+            title={"Meditation"}
+            image={meditationPic}
+            url={"/meditation"}
+          />
+          <ActivityCard
+            title={"Breathing Exercises"}
+            image={breathingPic}
+            url={"/breathing"}
+          />
+          <ActivityCard
+            title={"Stretching"}
+            image={stretchingPic}
+            url={"/stretching"}
+          />
+          <ActivityCard title={"Yoga "} image={yogaPic} url={"/yoga"} />
         </div>
-        <div className={styles.spacetoNavBar}>
-        </div>
+        <div className={styles.spacetoNavBar}></div>
       </main>
     </div>
   );

@@ -10,7 +10,7 @@ import {useRouter} from "next/router"
 import MoodContext from "../MoodContext/MoodContext";
 
 function MoodQuestion(props) {
-  const [mood, setMood] = useContext(MoodContext)
+const [mood, setMood] = useContext(MoodContext)
     const router = useRouter();    
   
     async function handleClick(e){
