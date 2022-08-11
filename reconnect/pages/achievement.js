@@ -11,21 +11,21 @@ import complete1puzzle from "../public/images/1completed.png";
 import allcomplete from "../public/images/allcomplete.png";
 
 export default function Achievement() {
-  const [achievementList, setAchievementList] = useState([]);
+  const [achievementList, setAchievementList] = useContext(AchievementContext);
   let puzzle;
 
-  async function getChallenge() {
-    const response = await fetch(
-      "https://reconnect-surch.herokuapp.com/achievement"
-    );
-    const data = await response.json();
-    let updatedList = data.payload;
-    setAchievementList(updatedList);
-  }
+  // async function getChallenge() {
+  //   const response = await fetch(
+  //     "https://reconnect-surch.herokuapp.com/achievement"
+  //   );
+  //   const data = await response.json();
+  //   let updatedList = data.payload;
+  //   setAchievementList(updatedList);
+  // }
 
-  useEffect(() => {
-    getChallenge();
-  }, []);
+  // useEffect(() => {
+  //   getChallenge();
+  // }, []);
 
   let completionList = [];
   achievementList.forEach((e) => completionList.push(e.completion));
