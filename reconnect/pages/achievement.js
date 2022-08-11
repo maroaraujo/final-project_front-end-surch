@@ -10,27 +10,32 @@ import complete2puzzle from "../public/images/2completed.png";
 import complete1puzzle from "../public/images/1completed.png";
 import allcomplete from "../public/images/allcomplete.png";
 
-
 export default function Achievement() {
-  
-  const [achievementList, setAchievementList]= useState([]);
+  const [achievementList, setAchievementList] = useState([]);
   let puzzle;
-  
+
   async function getChallenge() {
-      
-    const response = await fetch('https://reconnect-surch.herokuapp.com/achievement');
+    const response = await fetch(
+      "https://reconnect-surch.herokuapp.com/achievement"
+    );
     const data = await response.json();
     let updatedList = data.payload;
     setAchievementList(updatedList);
-
   }
-  
-  useEffect(() => {getChallenge()}, []);
+
+  useEffect(() => {
+    getChallenge();
+  }, []);
 
   let completionList = [];
-  achievementList.forEach(e => completionList.push(e.completion))
-  console.log('achievementList', achievementList,'completionList', completionList)
-  let achievementCount = completionList.filter(e => e===true)
+  achievementList.forEach((e) => completionList.push(e.completion));
+  console.log(
+    "achievementList",
+    achievementList,
+    "completionList",
+    completionList
+  );
+  let achievementCount = completionList.filter((e) => e === true);
 
   switch (achievementCount.length) {
     case 0:
@@ -49,24 +54,24 @@ export default function Achievement() {
       puzzle = allcomplete;
       break;
   }
-  
 
-  
-  
   return (
     <main className={styles.main}>
       <h1 className={stylesAchievement.title}>Achievements</h1>
       <CloudyBackground />
       <BackButton url="/home" />
-      {<div><div className={stylesAchievement.puzzleContainer}>
-        <Image src={puzzle} alt="puzzle" layout="fill" quality={100} />
-      </div>
-      <h1 className={stylesAchievement.subTitle} >
-        Well done! You earned <br />
-        {achievementCount.length} puzzle pieces to <br />
-        reconnect with yourself
-      </h1>
-      </div>}
+      {
+        <div>
+          <div className={stylesAchievement.puzzleContainer}>
+            <Image src={puzzle} alt="puzzle" layout="fill" quality={100} />
+          </div>
+          <h1 className={stylesAchievement.subTitle}>
+            Well done! You earned <br />
+            {achievementCount.length} puzzle pieces to <br />
+            reconnect with yourself
+          </h1>
+        </div>
+      }
     </main>
   );
 }
