@@ -1,11 +1,13 @@
 import { nanoid } from 'nanoid';
+import breathing1 from "../../public/images/maxresdefault.jpg" 
+import lake from "../../public/images/lake(1).jpg"
 
 let breathing = [
-    {imgUrl:'https://i.ytimg.com/an_webp/F28MGLlpP90/mqdefault_6s.webp?du=3000&sqp=CPb-tJcG&rs=AOn4CLCdxr5y1f_3-R4m4XYawCciRbOpyQ',
+    {imgUrl:lake,
      videoUrl:'https://www.youtube.com/watch?v=F28MGLlpP90',
      title:'15 Minute Deep breathing Exercise | City of Hope'},
 
-     {imgUrl:'https://i.ytimg.com/vi/tEmt1Znux58/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB-6lH2zKCDoNNyCBZ6Ma8lDDBWkQ',
+     {imgUrl:breathing1,
      videoUrl:'https://www.youtube.com/watch?v=tEmt1Znux58',
      title:'Box breathing relaxation technique: how to calm feelings of stress or anxiety'}
 
