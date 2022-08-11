@@ -38,7 +38,16 @@ export default function Home() {
     getChallenge();
   }, []);
 
-  console.log(user);
+
+  let userName;
+
+  if (user){
+    if (user.given_name) {
+      userName = user.given_name;
+    } else {
+      userName = user.name;
+    }
+  }
 
   return (
     <div className={styles.container}>
@@ -54,7 +63,7 @@ export default function Home() {
           <MascotSmall className={styles.mascotSmall} />
         </div>
         <h1 className={styles.title}>
-          Hi {user ? user.given_name : "Guest"},
+          Hi {user ? userName : "Guest"},
           <br />
           How are you feeling?
         </h1>

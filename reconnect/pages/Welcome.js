@@ -18,6 +18,17 @@ export default function Welcome() {
   if (error) return <div>{error.message}</div>;
 
   console.log(user)
+  let userName;
+
+  if (user){
+    if (user.given_name) {
+      userName = user.given_name;
+    } else {
+      userName = user.name;
+    }
+  }
+
+  
 
   return (
     
@@ -31,7 +42,7 @@ export default function Welcome() {
       <main className={styles.welcomemain}>
         <DisplayLogo />
         <h1 className={stylesHome.title}>
-        Hi {user ? user.given_name : "Guest"}, <br />
+        Hi {user ? userName : "Guest"}, <br />
         Reconnect with yourself
         </h1>
         <h4 className={stylesHome.subtitle}>Take a deep breath...</h4>
