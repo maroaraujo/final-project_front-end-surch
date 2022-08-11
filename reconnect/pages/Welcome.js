@@ -14,7 +14,11 @@ export default function Welcome() {
 
   const { user, error, isLoading } = useUser();
 
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>{error.message}</div>;
+
   return (
+    
     <div className={styles.welcomecontainer}>
       <Head>
         <title>Welcome to Reconnect</title>
@@ -25,7 +29,7 @@ export default function Welcome() {
       <main className={styles.welcomemain}>
         <DisplayLogo />
         <h1 className={stylesHome.title}>
-        Hi {user.name}, <br />
+        Hi {user ? user.name : "Guest"}, <br />
         Reconnect with yourself
         </h1>
         <h4 className={stylesHome.subtitle}>Take a deep breath...</h4>
