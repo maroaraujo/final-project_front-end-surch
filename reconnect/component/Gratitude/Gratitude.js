@@ -2,7 +2,6 @@ import Image from "next/image";
 import brain from "../../public/images/brain.png";
 import styles from "../../styles/Home.module.css";
 import stylesGratitude from "./Gratitude.module.css";
-import Axios from "axios";
 import { useState, useEffect } from "react";
 
 function Gratitude() {
