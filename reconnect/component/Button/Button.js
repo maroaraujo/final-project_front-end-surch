@@ -5,7 +5,8 @@ import Link from "next/link"
 function Button(props) {
   return (
     <button className={styles.button} onClick={props.handleClick}>
-   <Link href={props.link}>{props.text}</Link></button>
+    <Link href={props.link}>{props.text}</Link>
+    </button>
   
   )
 }
