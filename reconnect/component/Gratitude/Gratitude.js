@@ -20,12 +20,10 @@ function Gratitude() {
   useEffect(() => {
 
   async function getGratitude() {
-    console.log("Inside Axios to get gratitude");
     try {
       const url = "https://reconnect-surch.herokuapp.com/gratitude";
       const response = await fetch(url);
       const data = await response.json();
-      console.log("this is data INSIDE TRY", data.payload);
       let randomNumber = Math.floor(Math.random() * data.payload.length)
       setGratitudeData(data.payload[randomNumber].gratitude);
       let date = (data.payload[randomNumber].date).substring(0,10);
@@ -33,7 +31,6 @@ function Gratitude() {
       setGratitudeDate(formatDate(date));
     } catch (err) {
       const data = "Sorry, we couldn't find the data you wanted.";
-      console.log(data);
 
     }}
     getGratitude();
@@ -44,13 +41,10 @@ function Gratitude() {
   function handleChange(e) {
     setTextGratitude(e.target.value);
   }
-  console.log("textGratitude", textGratitude);
 
   function handleClick(e) {
     //console.log("textGratitude", textGratitude);
     let currentDate = new Date().toISOString().slice(0, 10);
-    
-    console.log("currentDate", currentDate);
 
     //This is the object that we are sending to the database
     const sendData = {
@@ -74,6 +68,7 @@ function Gratitude() {
 
     }
     sendGratitude(sendData);
+    setTextGratitude("");
   }
 
 
@@ -87,10 +82,11 @@ function Gratitude() {
             className={stylesGratitude.input}
             placeholder="   type here"
             onChange={handleChange}
+            value={textGratitude}
           ></input>
-          <p onClick={handleClick} className={stylesGratitude.addButton}>
+          <button onClick={handleClick} className={stylesGratitude.addButton}>
             +
-          </p>
+          </button>
         </div>
         <p className={stylesGratitude.ptags}>
           {gratitudeDate}

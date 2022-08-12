@@ -9,9 +9,10 @@
 }
 .addButton{
     margin:3px;
-    margin-left: -5vw;
+    margin-left: -3.5vh;
     font-weight: bold; 
     align-items: center;
+    border-radius: 50%;
 }
 .ptags{
     margin-bottom:1vh;
