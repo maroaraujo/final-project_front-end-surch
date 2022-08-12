@@ -101,6 +101,7 @@ function Moodtracker() {
         type="text"
         placeholder="type here ..."
         value={why}
+        id="question1"
       />
       <h4 className={styles.subtitle}>Other notes you would like to add</h4>
       <input
@@ -109,6 +110,7 @@ function Moodtracker() {
         type="text"
         placeholder="type here ..."
         value={note}
+        id="question2"
       />
       <button className={styles.button} onClick={handleClick}>
         SEND YOUR MOOD

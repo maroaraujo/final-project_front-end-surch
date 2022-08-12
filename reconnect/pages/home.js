@@ -19,6 +19,7 @@ import { useContext, useEffect } from "react";
 import ChallengeSection from "../component/ChallengeSection/ChallengeSection";
 import AchievementContext from "../component/AchievementContext/AchievementContext";
 
+
 export default function Home() {
   const { user, error, isLoading } = useUser();
   const router = useRouter();
@@ -37,6 +38,17 @@ export default function Home() {
     getChallenge();
   }, []);
 
+
+  let userName;
+
+  if (user){
+    if (user.given_name) {
+      userName = user.given_name;
+    } else {
+      userName = user.name;
+    }
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -51,7 +63,7 @@ export default function Home() {
           <MascotSmall className={styles.mascotSmall} />
         </div>
         <h1 className={styles.title}>
-          Hi Guest,
+          Hi {user ? userName : "Guest"},
           <br />
           How are you feeling?
         </h1>
