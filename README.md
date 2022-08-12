@@ -6,8 +6,6 @@
 
 - [Project Description](#project-description)
 
-* [Team Manifesto]()
-
 * [User Manual]()
 
 ---
@@ -20,10 +18,9 @@ Who we are
 
 [Wanteng](https://github.com/ten-hub),
 
-[Ismail Ali](https://githttps://github.com/),
+[Ismail Ali](https://githttps://github.com/Ismailali99),
 
 [Maria Roberta AEMoller](https://github.com/maroaraujo),
-Team Manifesto
 
 Brief
 The brief was to create an app that will solve a real world
@@ -38,14 +35,14 @@ Project description
 Skills and retrospect
 
 Colour and Font references
-
+(maria writting)
 Testing
 
 Future Vision
 
 ## API Reference
 
-#### OUr API is hosted on [API URL](https://reconnect-surch.herokuapp.com/)
+#### Our API is hosted on [API URL](https://reconnect-surch.herokuapp.com/)
 
 #### Mood
 
@@ -57,15 +54,15 @@ Future Vision
 
 #### Gratitude
 
-| Method | Path                      | Additional Info                                        | Result                           | Response                                                                     |
-| ------ | ------------------------- | ------------------------------------------------------ | -------------------------------- | ---------------------------------------------------------------------------- |
-| GET    | /gratitude                |                                                        | Log of the user's gratitude wall | { success: True, payload: Skills array }                                     |
-| POST   | /gratitude                | [{ userId: String, complete: Boolean, notes: String }] | create a new skill               | { success: True, payload: new skills was added to database }                 |
-| DELETE | /gratitude/<gratitude_id> |                                                        | delete skill by ID               | { success: True, payload: The skills with id: <skills_id> has been deleted } |
+| Method | Path                      | Additional Info                                         | Result                                              | Response                                                                           |
+| ------ | ------------------------- | ------------------------------------------------------- | --------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| GET    | /gratitude                |                                                         | Log of the user's gratitude wall                    | { success: True, payload: User's gratitude array }                                 |
+| POST   | /gratitude                | { gratitude: String, date: YYYY-MM-DD, userId: Number } | Create a new entry for the user's gratitude wall    | { success: True, payload: User's gratitude entry object }                          |
+| DELETE | /gratitude/<gratitude_id> |                                                         | Delete the user's gratitude entry at <gratitude_id> | { success: True, payload: The gratitude with id: <gratitude_id> has been deleted } |
 
-| Method | Path              | Additional Info                                  | Result             | Response                                                                  |
-| ------ | ----------------- | ------------------------------------------------ | ------------------ | ------------------------------------------------------------------------- |
-| GET    | /goals            |                                                  | all goals          | { success: True, payload: Goals array }                                   |
-| POST   | /goals            | [{ title: String, star: Number, notes: String }] | create a new goal  | { success: True, payload: new goals was added to database }               |
-| PUT    | /goals/<goals_id> | { title: String, star: Number, notes: String }   | updated goal by ID | { success: True, message: You've updated a goal, payload: Updated goal }  |
-| DELETE | /goals/<goals_id> |                                                  | delete goal by ID  | { success: True, payload: The goal with id: <goals_id> has been deleted } |
+#### Achievement
+
+| Method | Path                          | Additional Info                                              | Result                                 | Response                                                                           |
+| ------ | ----------------------------- | ------------------------------------------------------------ | -------------------------------------- | ---------------------------------------------------------------------------------- |
+| GET    | /achievement                  |                                                              | All achievement of the week            | { success: True, payload: achievement array }                                      |
+| PUT    | /achievement/<achievement_id> | { achievement: String, completion: Boolean, userId: Number } | Update achievement by <achievement_id> | { success: True, payload: You have updated achievement with id: <achievement_id> } |
