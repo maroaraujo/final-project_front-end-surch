@@ -7,11 +7,13 @@ import BackButton from "../component/BackButton/BackButton";
 import MoodContext from "../component/MoodContext/MoodContext.js";
 import { useContext, useState } from "react";
 import { useRouter } from "next/router";
+import UserMoodContext from "../component/UserMoodContext/UserMoodContext.js";
 
 function Moodtracker() {
   const [mood, setMood] = useContext(MoodContext);
   const [why, setWhy] = useState("");
   const [note, setNote] = useState("");
+  const [userMood, setUserMood] = useContext(UserMoodContext);
 
   const router = useRouter();
 
@@ -73,6 +75,7 @@ function Moodtracker() {
     }
     sendMood(sendData);
     //setGratitudeData([...gratitudeData, sendData])
+    setUserMood([...userMood, sendData]);
     setMood(initialMood);
     setWhy("");
     setNote("");
