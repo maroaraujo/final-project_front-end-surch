@@ -4,26 +4,38 @@
 
 ## Index
 
+- [How to download](#How-to-download-the-app-on-your-phone)
+- [Who we are](#who-we-are)
+- [Brief](#brief)
 - [Project Description](#project-description)
-
-* [Manual](#manual)
+- [Tech Stack](#tech-stack)
+- [Colour and Font references](#colour-and-font-references)
+- [Learning Journey](#learning-journey)
+- [Testing](#testing)
+- [Future Vision](#future-vision)
+- [User Manual](#user-manual)
+- [API reference](#api-reference)
+- [Support and Feedback](#support-and-feedback)
 
 <br/>
 
 ---
 
 ## How to download the app on your phone
- 
-Enter on the ![website](https://reconnect-surch.netlify.app/).
- 
+
+Here is the [URL](https://reconnect-surch.netlify.app/). for app.
+
 On the top of your mobile, click on the kebab/ 3dots menu
-<a><img src="https://ibb.co/QDSRJ2p" alt="3dotsmenu"/></a>
- 
-Click on the download button. ![download](https://ibb.co/QDSRJ2p)
-<a><img src="https://ibb.co/QDSRJ2p" alt="download"/></a>
- 
+
+<a><img src="./reconnect/public/images/firstpage.png" alt="3dotsmenu"  height="500"/></a>
+
+Click on the download button. [download](https://ibb.co/QDSRJ2p)
+
+<a><img src="./reconnect/public/images/Screenshot_20220812-132400.png" alt="download" height="500"/></a>
+
 After you're going to have an icon on your home for the reconnect app.
-<a><img src="https://ibb.co/wNx5MdY" alt="icon"/></a>
+
+<a><img src="./reconnect/public/images/home.png" alt="icon" height="500"/></a>
 
 <br/>
 
@@ -42,6 +54,7 @@ After you're going to have an icon on your home for the reconnect app.
 ---
 
 ## Brief
+
 The brief was to create an app that will solve a real world
 problem people are facing and how technology could be used to solve it.
 The decision was to make a wellness app that does not have a paywall blocking the majority of features as well as making it user friendly.
@@ -51,6 +64,7 @@ The decision was to make a wellness app that does not have a paywall blocking th
 ---
 
 ## Project Description
+
 Reconnect is a full stack self-care app that helps to keep track of your mood and thoughts, as well as to promote different activities to help develop healthy habits. In week 13 of our [School of Code](https://www.schoolofcode.co.uk/) bootcamp, we were challenged to build a full stack app within 4 weeks. We decided to come up with a self-care app for people who are experiencing different level anxiety and depression. Depression and anciety went up by more than 25% in the first year of pandemic alone. Even after the pandemic, there is only a small fraction of people in need have access to effective and affordable mental health care. The gaps in mental health services coverage ramin wide globally. The number of new digital health app are rising to meet the demand but a lot of them requires a payment and only offer a short trail period.
 We aim to create a free self-care app that are accessible to teenagers and adults to help with better track their wellness and mental health, ultimately live a healthier lifetyles. Many of us are relying on apps to help meeting our daily goals and manage our life. Finding a beneficial self-care tool to help with our mental health shouldn't financial burden.
 After ideating around this theme and identifying existing problems, we researched a lot of different mental health related app to help with the app fidelity frame. As the result, "Reconnect" is a React web app that allows you to track your mood and explore different healthy habits options for you to find one that suits your lifestyle.
@@ -77,7 +91,9 @@ pallet coloehttps://ibb.co/F0zmXQR</a>
 <br/>
 
 ---
+
 ## Learning Journey
+
 This was our first experience of as a group building our first full stack project within a month. This exercise aimed to apply all knowledge gained from the School of Code bootcamp, using our existing knowledge to experimenet something new, as well as learning and applying the following **skills**:
 
 - Agile methodologies and tools
@@ -117,13 +133,15 @@ The front end of the app has been tested using cypress. The user journey is mapp
 ---
 
 ## Future Vision
+
 There were many things that were omitted from the first iteration of this app. These are things that have been left as stretch goals and will be looked into implementing in the future.
-* Support groups- an area in which users could find links to support groups or blogs to talk through issues.
-* Crisis button- a button that will be rendered on every page to direct users to https://www.samaritans.org if ever needed.
-* Push notifications- to send users notifications to remind them to complete daily tasks or send motivational quotes through the day, can be toggled.
-* Self affirmation- a media player/sound player to listen to your favourite affirmations once a day to promote positive thinking.
-* Favourites- activities would have a like feature which will add it to your favourites so you have quick access to them. 
-* Search function- make all the activities be filterable/searchable so you can find new things more easily.
+
+- Support groups- an area in which users could find links to support groups or blogs to talk through issues.
+- Crisis button- a button that will be rendered on every page to direct users to https://www.samaritans.org if ever needed.
+- Push notifications- to send users notifications to remind them to complete daily tasks or send motivational quotes through the day, can be toggled.
+- Self affirmation- a media player/sound player to listen to your favourite affirmations once a day to promote positive thinking.
+- Favourites- activities would have a like feature which will add it to your favourites so you have quick access to them.
+- Search function- make all the activities be filterable/searchable so you can find new things more easily.
 
 <br/>
 
@@ -168,6 +186,7 @@ To start the front and back end
 <br/>
 
 ### **Mood Router**
+
 <br/>
 
 | Method | Path            | Additional Info                                                                           | Result                                    | Response                                                                 |
@@ -177,6 +196,7 @@ To start the front and back end
 | DELETE | /mood/<mood_id> |                                                                                           | Delete the user's mood entry at <mood_id> | { success: True, payload: The mood with id: <mood_id> has been deleted } |
 
 ### **Gratitude Router**
+
 <br/>
 
 | Method | Path                      | Additional Info                                         | Result                                              | Response                                                                           |
@@ -186,6 +206,7 @@ To start the front and back end
 | DELETE | /gratitude/<gratitude_id> |                                                         | Delete the user's gratitude entry at <gratitude_id> | { success: True, payload: The gratitude with id: <gratitude_id> has been deleted } |
 
 ### **Achievement Router**
+
 <br/>
 
 | Method | Path                          | Additional Info                                              | Result                                 | Response                                                                           |
@@ -194,6 +215,7 @@ To start the front and back end
 | PUT    | /achievement/<achievement_id> | { achievement: String, completion: Boolean, userId: Number } | Update achievement by <achievement_id> | { success: True, payload: You have updated achievement with id: <achievement_id> } |
 
 ---
+
 <br/>
 
 ## Support and Feedback
