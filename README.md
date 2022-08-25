@@ -85,8 +85,6 @@ After ideating around this theme and identifying existing problems, we researche
 
 As part of the study, we searched for colors that evoke tranquility and relaxation. Our color palette was generated with different shades of blue to bring security and good energies to the user. We did contrast and colorblind tests for more accessibility.
 
-<a> <img src="https://www.liblogo.com/img-logo/mi900dc07-miro-logo-designops-summit-2021.png" alt="miro" width="40" height="40"/>
-pallet coloehttps://ibb.co/F0zmXQR</a>
 
 <br/>
 
