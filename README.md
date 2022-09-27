@@ -21,7 +21,7 @@
 
 ---
 
-## Our [presentation](https://docs.google.com/presentation/d/1CVKoWleJ3tmRQn9C2ja9aKNRVN_qRFsWoKqKkcC-HQ8/edit?usp=sharing). 
+## Our [slides presentation](https://docs.google.com/presentation/d/1CVKoWleJ3tmRQn9C2ja9aKNRVN_qRFsWoKqKkcC-HQ8/edit?usp=sharing). 
 
 ## How to download the app on your phone
 
