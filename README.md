@@ -17,6 +17,10 @@
 - [API reference](#api-reference)
 - [Support and Feedback](#support-and-feedback)
 
+ 
+[Backend repository](https://github.com/maroaraujo/final-project_back-end-surch).
+
+
 <br/>
 
 ---
