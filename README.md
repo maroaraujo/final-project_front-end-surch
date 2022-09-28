@@ -1,6 +1,6 @@
 <img src="./reconnect/public/images/logo.png" height=100></img>
 
-# Final Project - Reconnect by Team SURCH
+# Final Project - Reconnect by Team SURCH (Front-end)
 
 ## Index
 
@@ -18,7 +18,7 @@
 - [Support and Feedback](#support-and-feedback)
 
  
-[Backend repository](https://github.com/maroaraujo/final-project_back-end-surch).
+Our [Backend repository](https://github.com/maroaraujo/final-project_back-end-surch).
 
 
 <br/>
